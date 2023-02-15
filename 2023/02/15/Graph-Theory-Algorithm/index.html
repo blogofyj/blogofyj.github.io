@@ -4,10 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="My_CSDN, Hexo">
-    <meta name="description" content="Welcome to check my CSDN account, Something about JAVA are all in it.My account is “Prophet_Kin”
-例如：Java自定义异常类
-123456789">
+    <meta name="keywords" content="Graph Theory Algorithms, Hexo">
+    <meta name="description" content="最短路径算法（Dijkstra算法、Bellman-Ford算法、Floyd算法）Dijkstra算法（Dijkstra’s Algorithm）：1234567891011121314151617181920212223242526272">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>My_CSDN | Hexo</title>
+    <title>Graph Theory Algorithms | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -341,7 +339,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">My_CSDN</h1>
+                    <h1 class="description center-align post-title">Graph Theory Algorithms</h1>
                 </div>
             </div>
         </div>
@@ -377,7 +375,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-11-20
+                    2023-02-15
                 </div>
                 
 
@@ -398,14 +396,11 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to check my CSDN account, Something about JAVA are all in it.My account is <strong>“Prophet_Kin”</strong></p>
-<p>例如：<br>Java自定义异常类</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Scanner</span><br><span class="line"></span><br><span class="line">public class DemoRegisterException&#123;</span><br><span class="line">	static String[] usernames = &#123;&quot;张三&quot;， “李四”， “王五”&#125;；</span><br><span class="line">	</span><br><span class="line">	public static void main(String[] args) throws RegisterException&#123;</span><br><span class="line">		Scanner sc = new Scanner(System.in);</span><br><span class="line">		System.out.println(&quot;请输入用户名&quot;);</span><br><span class="line">		String username = sc.next();</span><br><span class="line">		checkUsername(username)</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public static void checkUsername(String username) throws RegisterException&#123;</span><br><span class="line">		for(String name: usernames)&#123;</span><br><span class="line">			if(name.equals(username))&#123;</span><br><span class="line">				try&#123;</span><br><span class="line">					throws new RegisterException(&quot;该用户名已被注册&quot;);</span><br><span class="line">				&#125;catch(RegisterException e)&#123;</span><br><span class="line">					e.printStackTrace();</span><br><span class="line">					return;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.println(&quot;注册成功！&quot;)</span><br><span class="line">	&#125;</span><br><span class="line"> &#125;</span><br><span class="line"> </span><br><span class="line"> public class RegisterException extends Exception&#123;</span><br><span class="line">	public RegisterException()&#123;</span><br><span class="line">		super();</span><br><span class="line">	&#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+                <h2 id="最短路径算法（Dijkstra算法、Bellman-Ford算法、Floyd算法）Dijkstra算法（Dijkstra’s-Algorithm）：Bellman-Ford算法（Bellman-Ford-Algorithm）：Floyd算法（Floyd’s-Algorithm）："><a href="#最短路径算法（Dijkstra算法、Bellman-Ford算法、Floyd算法）Dijkstra算法（Dijkstra’s-Algorithm）：Bellman-Ford算法（Bellman-Ford-Algorithm）：Floyd算法（Floyd’s-Algorithm）：" class="headerlink" title="最短路径算法（Dijkstra算法、Bellman-Ford算法、Floyd算法）Dijkstra算法（Dijkstra’s Algorithm）：Bellman-Ford算法（Bellman-Ford Algorithm）：Floyd算法（Floyd’s Algorithm）："></a>最短路径算法（Dijkstra算法、Bellman-Ford算法、Floyd算法）<br>Dijkstra算法（Dijkstra’s Algorithm）：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">public static Map&lt;Integer, Integer&gt; dijkstra(Map&lt;Integer, Map&lt;Integer, Integer&gt;&gt; graph, int start) &#123;</span><br><span class="line">    PriorityQueue&lt;Pair&lt;Integer, Integer&gt;&gt; queue = new PriorityQueue&lt;&gt;((a, b) -&gt; a.getKey() - b.getKey());</span><br><span class="line">    queue.offer(new Pair&lt;&gt;(0, start));</span><br><span class="line">    Map&lt;Integer, Integer&gt; visited = new HashMap&lt;&gt;();</span><br><span class="line">    visited.put(start, null);</span><br><span class="line">    Map&lt;Integer, Integer&gt; distances = new HashMap&lt;&gt;();</span><br><span class="line">    distances.put(start, 0);</span><br><span class="line">    </span><br><span class="line">    while (!queue.isEmpty()) &#123;</span><br><span class="line">        Pair&lt;Integer, Integer&gt; pair = queue.poll();</span><br><span class="line">        int node = pair.getValue();</span><br><span class="line">        int distance = pair.getKey();</span><br><span class="line">        </span><br><span class="line">        if (distances.get(node) &lt; distance) &#123;</span><br><span class="line">            continue;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        for (int neighbor : graph.get(node).keySet()) &#123;</span><br><span class="line">            int newDistance = distances.get(node) + graph.get(node).get(neighbor);</span><br><span class="line">            if (!distances.containsKey(neighbor) || newDistance &lt; distances.get(neighbor)) &#123;</span><br><span class="line">                distances.put(neighbor, newDistance);</span><br><span class="line">                visited.put(neighbor, node);</span><br><span class="line">                queue.offer(new Pair&lt;&gt;(newDistance, neighbor));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    return distances;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>Bellman-Ford算法（Bellman-Ford Algorithm）：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">public static Map&lt;Integer, Integer&gt; bellmanFord(Map&lt;Integer, Map&lt;Integer, Integer&gt;&gt; graph, int start) &#123;</span><br><span class="line">    Map&lt;Integer, Integer&gt; distances = new HashMap&lt;&gt;();</span><br><span class="line">    distances.put(start, 0);</span><br><span class="line">    </span><br><span class="line">    for (int i = 0; i &lt; graph.size() - 1; i++) &#123;</span><br><span class="line">        for (int node : graph.keySet()) &#123;</span><br><span class="line">            for (int neighbor : graph.get(node).keySet()) &#123;</span><br><span class="line">                if (!distances.containsKey(node)) &#123;</span><br><span class="line">                    continue;</span><br><span class="line">                &#125;</span><br><span class="line">                int newDistance = distances.get(node) + graph.get(node).get(neighbor);</span><br><span class="line">                if (!distances.containsKey(neighbor) || newDistance &lt; distances.get(neighbor)) &#123;</span><br><span class="line">                    distances.put(neighbor, newDistance);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    for (int node : graph.keySet()) &#123;</span><br><span class="line">        for (int neighbor : graph.get(node).keySet()) &#123;</span><br><span class="line">            if (!distances.containsKey(node)) &#123;</span><br><span class="line">                continue;</span><br><span class="line">            &#125;</span><br><span class="line">            int newDistance = distances.get(node) + graph.get(node).get(neighbor);</span><br><span class="line">            if (!distances.containsKey(neighbor) || newDistance &lt; distances.get(neighbor)) &#123;</span><br><span class="line">                throw new IllegalArgumentException(&quot;Negative cycle detected&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    return distances;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>Floyd算法（Floyd’s Algorithm）：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">public static int[][] floyd(int[][] graph) &#123;</span><br><span class="line">    int n = graph.length;</span><br><span class="line">    int[][] dist = new int[n][n];</span><br><span class="line">    for (int i = 0; i &lt; n; i++) &#123;</span><br><span class="line">        for (int j = 0; j &lt; n; j++) &#123;</span><br><span class="line">            dist[i][j] = graph[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    for (int k = 0; k &lt; n; k++) &#123;</span><br><span class="line">        for (int i = 0; i &lt; n; i++) &#123;</span><br><span class="line">            for (int j = 0; j &lt; n; j++) &#123;</span><br><span class="line">                if (dist[i][k] != Integer.MAX_VALUE &amp;&amp; dist[k][j] != Integer.MAX_VALUE &amp;&amp; dist[i][k] + dist[k][j] &lt; dist[i][j]) &#123;</span><br><span class="line">                    dist[i][j] = dist[i][k] + dist[k][j];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    return dist;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></h2><p>最小生成树算法（Prim算法、Kruskal算法）等<br>Kruskal算法（Kruskal’s Algorithm）：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">public static List&lt;Edge&gt; kruskal(List&lt;Edge&gt; edges, int n) &#123;</span><br><span class="line">    List&lt;Edge&gt; mst = new ArrayList&lt;&gt;();</span><br><span class="line">    UnionFind uf = new UnionFind(n);</span><br><span class="line">    Collections.sort(edges, (a, b) -&gt; a.weight - b.weight);</span><br><span class="line">    </span><br><span class="line">    for (Edge edge : edges) &#123;</span><br><span class="line">        int u = edge.u;</span><br><span class="line">        int v = edge.v;</span><br><span class="line">        if (uf.find(u) != uf.find(v)) &#123;</span><br><span class="line">            mst.add(edge);</span><br><span class="line">            uf.union(u, v);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    return mst;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class UnionFind &#123;</span><br><span class="line">    int[] parent;</span><br><span class="line">    int[] size;</span><br><span class="line">    </span><br><span class="line">    public UnionFind(int n) &#123;</span><br><span class="line">        parent = new int[n];</span><br><span class="line">        size = new int[n];</span><br><span class="line">        for (int i = 0; i &lt; n; i++) &#123;</span><br><span class="line">            parent[i] = i;</span><br><span class="line">            size[i] = 1;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public int find(int x) &#123;</span><br><span class="line">        if (parent[x</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>Prim算法（Prim’s Algorithm）：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">public static List&lt;Edge&gt; prim(List&lt;List&lt;Edge&gt;&gt; graph, int start) &#123;</span><br><span class="line">    List&lt;Edge&gt; mst = new ArrayList&lt;&gt;();</span><br><span class="line">    PriorityQueue&lt;Edge&gt; queue = new PriorityQueue&lt;&gt;((a, b) -&gt; a.weight - b.weight);</span><br><span class="line">    boolean[] visited = new boolean[graph.size()];</span><br><span class="line">    visited[start] = true;</span><br><span class="line">    queue.addAll(graph.get(start));</span><br><span class="line">    </span><br><span class="line">    while (!queue.isEmpty()) &#123;</span><br><span class="line">        Edge edge = queue.poll();</span><br><span class="line">        int u = edge.u;</span><br><span class="line">        int v = edge.v;</span><br><span class="line">        if (visited[u] &amp;&amp; visited[v]) &#123;</span><br><span class="line">            continue;</span><br><span class="line">        &#125;</span><br><span class="line">        mst.add(edge);</span><br><span class="line">        if (!visited[u]) &#123;</span><br><span class="line">            visited[u] = true;</span><br><span class="line">            queue.addAll(graph.get(u));</span><br><span class="line">        &#125;</span><br><span class="line">        if (!visited[v]) &#123;</span><br><span class="line">            visited[v] = true;</span><br><span class="line">            queue.addAll(graph.get(v));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    return mst;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>The course about Cyber Security：</p>
-<p>Lesson One：cyber security course for beginner:[1] <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=U_P23SqJaDc">https://www.youtube.com/watch?v=U_P23SqJaDc</a></p>
-<p>Lesson Two: Computer Networking Course - Network Engineering:[2] <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=qiQR5rTSshw">https://www.youtube.com/watch?v=qiQR5rTSshw</a></p>
-<p>Lesson Three: Certified Ethical Hacking:[3] <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=CZePtb2Z3r4">https://www.youtube.com/watch?v=CZePtb2Z3r4</a></p>
 
                 
             </div>
@@ -432,7 +427,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://blogofyj.github.io/2021/11/20/My-CSDN/">https://blogofyj.github.io/2021/11/20/My-CSDN/</a>
+                    <a href="https://blogofyj.github.io/2023/02/15/Graph-Theory-Algorithm/">https://blogofyj.github.io/2023/02/15/Graph-Theory-Algorithm/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -546,9 +541,48 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
+            <div class="card">
+                <a href="/2023/02/15/Graph-Theory-Algorithm/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Graph Theory Algorithms">
+                        
+                        <span class="card-title">Graph Theory Algorithms</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-15
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            John Doe
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2023/02/15/Search-Algorithm/">
                     <div class="card-image">
@@ -566,45 +600,8 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-02-15
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            John Doe
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/11/20/Algorithm/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="算法汇总">
-                        
-                        <span class="card-title">算法汇总</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-15
                             </span>
                         <span class="publish-author">
                             
