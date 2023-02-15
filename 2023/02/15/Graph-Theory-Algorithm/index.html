@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Graph Theory Algorithms, Hexo">
-    <meta name="description" content="最短路径算法（Dijkstra算法、Bellman-Ford算法、Floyd算法）Dijkstra算法（Dijkstra’s Algorithm）：1234567891011121314151617181920212223242526272">
+    <meta name="keywords" content="Graph Theory Algorithms, Blogs Of YJ">
+    <meta name="description" content="最短路径算法（Dijkstra算法、Bellman-Ford算法、Floyd算法）Dijkstra算法（Dijkstra’s Algorithm）：
+public static Map&amp;lt;Integer, Integer&amp;gt; dij">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +18,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Graph Theory Algorithms | Hexo</title>
+    <title>Graph Theory Algorithms | Blogs Of YJ</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -52,7 +53,7 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -64,7 +65,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Hexo</span>
+                    <span class="logo-span">Blogs Of YJ</span>
                 </a>
             </div>
             
@@ -168,7 +169,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">Hexo</div>
+        <div class="logo-name">Blogs Of YJ</div>
         <div class="logo-desc">
             
             Never really desperate, only the lost of the soul.
@@ -396,11 +397,158 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="最短路径算法（Dijkstra算法、Bellman-Ford算法、Floyd算法）Dijkstra算法（Dijkstra’s-Algorithm）：Bellman-Ford算法（Bellman-Ford-Algorithm）：Floyd算法（Floyd’s-Algorithm）："><a href="#最短路径算法（Dijkstra算法、Bellman-Ford算法、Floyd算法）Dijkstra算法（Dijkstra’s-Algorithm）：Bellman-Ford算法（Bellman-Ford-Algorithm）：Floyd算法（Floyd’s-Algorithm）：" class="headerlink" title="最短路径算法（Dijkstra算法、Bellman-Ford算法、Floyd算法）Dijkstra算法（Dijkstra’s Algorithm）：Bellman-Ford算法（Bellman-Ford Algorithm）：Floyd算法（Floyd’s Algorithm）："></a>最短路径算法（Dijkstra算法、Bellman-Ford算法、Floyd算法）<br>Dijkstra算法（Dijkstra’s Algorithm）：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">public static Map&lt;Integer, Integer&gt; dijkstra(Map&lt;Integer, Map&lt;Integer, Integer&gt;&gt; graph, int start) &#123;</span><br><span class="line">    PriorityQueue&lt;Pair&lt;Integer, Integer&gt;&gt; queue = new PriorityQueue&lt;&gt;((a, b) -&gt; a.getKey() - b.getKey());</span><br><span class="line">    queue.offer(new Pair&lt;&gt;(0, start));</span><br><span class="line">    Map&lt;Integer, Integer&gt; visited = new HashMap&lt;&gt;();</span><br><span class="line">    visited.put(start, null);</span><br><span class="line">    Map&lt;Integer, Integer&gt; distances = new HashMap&lt;&gt;();</span><br><span class="line">    distances.put(start, 0);</span><br><span class="line">    </span><br><span class="line">    while (!queue.isEmpty()) &#123;</span><br><span class="line">        Pair&lt;Integer, Integer&gt; pair = queue.poll();</span><br><span class="line">        int node = pair.getValue();</span><br><span class="line">        int distance = pair.getKey();</span><br><span class="line">        </span><br><span class="line">        if (distances.get(node) &lt; distance) &#123;</span><br><span class="line">            continue;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        for (int neighbor : graph.get(node).keySet()) &#123;</span><br><span class="line">            int newDistance = distances.get(node) + graph.get(node).get(neighbor);</span><br><span class="line">            if (!distances.containsKey(neighbor) || newDistance &lt; distances.get(neighbor)) &#123;</span><br><span class="line">                distances.put(neighbor, newDistance);</span><br><span class="line">                visited.put(neighbor, node);</span><br><span class="line">                queue.offer(new Pair&lt;&gt;(newDistance, neighbor));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    return distances;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>Bellman-Ford算法（Bellman-Ford Algorithm）：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">public static Map&lt;Integer, Integer&gt; bellmanFord(Map&lt;Integer, Map&lt;Integer, Integer&gt;&gt; graph, int start) &#123;</span><br><span class="line">    Map&lt;Integer, Integer&gt; distances = new HashMap&lt;&gt;();</span><br><span class="line">    distances.put(start, 0);</span><br><span class="line">    </span><br><span class="line">    for (int i = 0; i &lt; graph.size() - 1; i++) &#123;</span><br><span class="line">        for (int node : graph.keySet()) &#123;</span><br><span class="line">            for (int neighbor : graph.get(node).keySet()) &#123;</span><br><span class="line">                if (!distances.containsKey(node)) &#123;</span><br><span class="line">                    continue;</span><br><span class="line">                &#125;</span><br><span class="line">                int newDistance = distances.get(node) + graph.get(node).get(neighbor);</span><br><span class="line">                if (!distances.containsKey(neighbor) || newDistance &lt; distances.get(neighbor)) &#123;</span><br><span class="line">                    distances.put(neighbor, newDistance);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    for (int node : graph.keySet()) &#123;</span><br><span class="line">        for (int neighbor : graph.get(node).keySet()) &#123;</span><br><span class="line">            if (!distances.containsKey(node)) &#123;</span><br><span class="line">                continue;</span><br><span class="line">            &#125;</span><br><span class="line">            int newDistance = distances.get(node) + graph.get(node).get(neighbor);</span><br><span class="line">            if (!distances.containsKey(neighbor) || newDistance &lt; distances.get(neighbor)) &#123;</span><br><span class="line">                throw new IllegalArgumentException(&quot;Negative cycle detected&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    return distances;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>Floyd算法（Floyd’s Algorithm）：<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">public static int[][] floyd(int[][] graph) &#123;</span><br><span class="line">    int n = graph.length;</span><br><span class="line">    int[][] dist = new int[n][n];</span><br><span class="line">    for (int i = 0; i &lt; n; i++) &#123;</span><br><span class="line">        for (int j = 0; j &lt; n; j++) &#123;</span><br><span class="line">            dist[i][j] = graph[i][j];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    for (int k = 0; k &lt; n; k++) &#123;</span><br><span class="line">        for (int i = 0; i &lt; n; i++) &#123;</span><br><span class="line">            for (int j = 0; j &lt; n; j++) &#123;</span><br><span class="line">                if (dist[i][k] != Integer.MAX_VALUE &amp;&amp; dist[k][j] != Integer.MAX_VALUE &amp;&amp; dist[i][k] + dist[k][j] &lt; dist[i][j]) &#123;</span><br><span class="line">                    dist[i][j] = dist[i][k] + dist[k][j];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    return dist;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></h2><p>最小生成树算法（Prim算法、Kruskal算法）等<br>Kruskal算法（Kruskal’s Algorithm）：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">public static List&lt;Edge&gt; kruskal(List&lt;Edge&gt; edges, int n) &#123;</span><br><span class="line">    List&lt;Edge&gt; mst = new ArrayList&lt;&gt;();</span><br><span class="line">    UnionFind uf = new UnionFind(n);</span><br><span class="line">    Collections.sort(edges, (a, b) -&gt; a.weight - b.weight);</span><br><span class="line">    </span><br><span class="line">    for (Edge edge : edges) &#123;</span><br><span class="line">        int u = edge.u;</span><br><span class="line">        int v = edge.v;</span><br><span class="line">        if (uf.find(u) != uf.find(v)) &#123;</span><br><span class="line">            mst.add(edge);</span><br><span class="line">            uf.union(u, v);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    return mst;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class UnionFind &#123;</span><br><span class="line">    int[] parent;</span><br><span class="line">    int[] size;</span><br><span class="line">    </span><br><span class="line">    public UnionFind(int n) &#123;</span><br><span class="line">        parent = new int[n];</span><br><span class="line">        size = new int[n];</span><br><span class="line">        for (int i = 0; i &lt; n; i++) &#123;</span><br><span class="line">            parent[i] = i;</span><br><span class="line">            size[i] = 1;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public int find(int x) &#123;</span><br><span class="line">        if (parent[x</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>Prim算法（Prim’s Algorithm）：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">public static List&lt;Edge&gt; prim(List&lt;List&lt;Edge&gt;&gt; graph, int start) &#123;</span><br><span class="line">    List&lt;Edge&gt; mst = new ArrayList&lt;&gt;();</span><br><span class="line">    PriorityQueue&lt;Edge&gt; queue = new PriorityQueue&lt;&gt;((a, b) -&gt; a.weight - b.weight);</span><br><span class="line">    boolean[] visited = new boolean[graph.size()];</span><br><span class="line">    visited[start] = true;</span><br><span class="line">    queue.addAll(graph.get(start));</span><br><span class="line">    </span><br><span class="line">    while (!queue.isEmpty()) &#123;</span><br><span class="line">        Edge edge = queue.poll();</span><br><span class="line">        int u = edge.u;</span><br><span class="line">        int v = edge.v;</span><br><span class="line">        if (visited[u] &amp;&amp; visited[v]) &#123;</span><br><span class="line">            continue;</span><br><span class="line">        &#125;</span><br><span class="line">        mst.add(edge);</span><br><span class="line">        if (!visited[u]) &#123;</span><br><span class="line">            visited[u] = true;</span><br><span class="line">            queue.addAll(graph.get(u));</span><br><span class="line">        &#125;</span><br><span class="line">        if (!visited[v]) &#123;</span><br><span class="line">            visited[v] = true;</span><br><span class="line">            queue.addAll(graph.get(v));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    return mst;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+                <p>最短路径算法（Dijkstra算法、Bellman-Ford算法、Floyd算法）<br>Dijkstra算法（Dijkstra’s Algorithm）：</p>
+<pre><code>public static Map&lt;Integer, Integer&gt; dijkstra(Map&lt;Integer, Map&lt;Integer, Integer&gt;&gt; graph, int start) &#123;
+    PriorityQueue&lt;Pair&lt;Integer, Integer&gt;&gt; queue = new PriorityQueue&lt;&gt;((a, b) -&gt; a.getKey() - b.getKey());
+    queue.offer(new Pair&lt;&gt;(0, start));
+    Map&lt;Integer, Integer&gt; visited = new HashMap&lt;&gt;();
+    visited.put(start, null);
+    Map&lt;Integer, Integer&gt; distances = new HashMap&lt;&gt;();
+    distances.put(start, 0);
+    
+    while (!queue.isEmpty()) &#123;
+        Pair&lt;Integer, Integer&gt; pair = queue.poll();
+        int node = pair.getValue();
+        int distance = pair.getKey();
+        
+        if (distances.get(node) &lt; distance) &#123;
+            continue;
+        &#125;
+        
+        for (int neighbor : graph.get(node).keySet()) &#123;
+            int newDistance = distances.get(node) + graph.get(node).get(neighbor);
+            if (!distances.containsKey(neighbor) || newDistance &lt; distances.get(neighbor)) &#123;
+                distances.put(neighbor, newDistance);
+                visited.put(neighbor, node);
+                queue.offer(new Pair&lt;&gt;(newDistance, neighbor));
+            &#125;
+        &#125;
+    &#125;
+    
+    return distances;
+&#125;
+</code></pre>
+<p>Bellman-Ford算法（Bellman-Ford Algorithm）：</p>
+<pre><code>public static Map&lt;Integer, Integer&gt; bellmanFord(Map&lt;Integer, Map&lt;Integer, Integer&gt;&gt; graph, int start) &#123;
+    Map&lt;Integer, Integer&gt; distances = new HashMap&lt;&gt;();
+    distances.put(start, 0);
+    
+    for (int i = 0; i &lt; graph.size() - 1; i++) &#123;
+        for (int node : graph.keySet()) &#123;
+            for (int neighbor : graph.get(node).keySet()) &#123;
+                if (!distances.containsKey(node)) &#123;
+                    continue;
+                &#125;
+                int newDistance = distances.get(node) + graph.get(node).get(neighbor);
+                if (!distances.containsKey(neighbor) || newDistance &lt; distances.get(neighbor)) &#123;
+                    distances.put(neighbor, newDistance);
+                &#125;
+            &#125;
+        &#125;
+    &#125;
+    
+    for (int node : graph.keySet()) &#123;
+        for (int neighbor : graph.get(node).keySet()) &#123;
+            if (!distances.containsKey(node)) &#123;
+                continue;
+            &#125;
+            int newDistance = distances.get(node) + graph.get(node).get(neighbor);
+            if (!distances.containsKey(neighbor) || newDistance &lt; distances.get(neighbor)) &#123;
+                throw new IllegalArgumentException(&quot;Negative cycle detected&quot;);
+            &#125;
+        &#125;
+    &#125;
+    
+    return distances;
+&#125;
+</code></pre>
+<p>Floyd算法（Floyd’s Algorithm）：</p>
+<pre><code>public static int[][] floyd(int[][] graph) &#123;
+    int n = graph.length;
+    int[][] dist = new int[n][n];
+    for (int i = 0; i &lt; n; i++) &#123;
+        for (int j = 0; j &lt; n; j++) &#123;
+            dist[i][j] = graph[i][j];
+        &#125;
+    &#125;
+    
+    for (int k = 0; k &lt; n; k++) &#123;
+        for (int i = 0; i &lt; n; i++) &#123;
+            for (int j = 0; j &lt; n; j++) &#123;
+                if (dist[i][k] != Integer.MAX_VALUE &amp;&amp; dist[k][j] != Integer.MAX_VALUE &amp;&amp; dist[i][k] + dist[k][j] &lt; dist[i][j]) &#123;
+                    dist[i][j] = dist[i][k] + dist[k][j];
+                &#125;
+            &#125;
+        &#125;
+    &#125;
+    
+    return dist;
+&#125;
+</code></pre>
+<hr>
+<p>最小生成树算法（Prim算法、Kruskal算法）等<br>Kruskal算法（Kruskal’s Algorithm）：</p>
+<pre><code>public static List&lt;Edge&gt; kruskal(List&lt;Edge&gt; edges, int n) &#123;
+    List&lt;Edge&gt; mst = new ArrayList&lt;&gt;();
+    UnionFind uf = new UnionFind(n);
+    Collections.sort(edges, (a, b) -&gt; a.weight - b.weight);
+    
+    for (Edge edge : edges) &#123;
+        int u = edge.u;
+        int v = edge.v;
+        if (uf.find(u) != uf.find(v)) &#123;
+            mst.add(edge);
+            uf.union(u, v);
+        &#125;
+    &#125;
+    
+    return mst;
+&#125;
 
+class UnionFind &#123;
+    int[] parent;
+    int[] size;
+    
+    public UnionFind(int n) &#123;
+        parent = new int[n];
+        size = new int[n];
+        for (int i = 0; i &lt; n; i++) &#123;
+            parent[i] = i;
+            size[i] = 1;
+        &#125;
+    &#125;
+    
+    public int find(int x) &#123;
+        if (parent[x
+</code></pre>
+<p>Prim算法（Prim’s Algorithm）：</p>
+<pre><code>public static List&lt;Edge&gt; prim(List&lt;List&lt;Edge&gt;&gt; graph, int start) &#123;
+    List&lt;Edge&gt; mst = new ArrayList&lt;&gt;();
+    PriorityQueue&lt;Edge&gt; queue = new PriorityQueue&lt;&gt;((a, b) -&gt; a.weight - b.weight);
+    boolean[] visited = new boolean[graph.size()];
+    visited[start] = true;
+    queue.addAll(graph.get(start));
+    
+    while (!queue.isEmpty()) &#123;
+        Edge edge = queue.poll();
+        int u = edge.u;
+        int v = edge.v;
+        if (visited[u] &amp;&amp; visited[v]) &#123;
+            continue;
+        &#125;
+        mst.add(edge);
+        if (!visited[u]) &#123;
+            visited[u] = true;
+            queue.addAll(graph.get(u));
+        &#125;
+        if (!visited[v]) &#123;
+            visited[v] = true;
+            queue.addAll(graph.get(v));
+        &#125;
+    &#125;
+    
+    return mst;
+&#125;
+</code></pre>
 
                 
             </div>
@@ -417,7 +565,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">John Doe</a>
+                    <a href="/about" rel="external nofollow noreferrer">YangJin</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -440,7 +588,7 @@
                     All articles in this blog are used except for special statements
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     reprint policy. If reproduced, please indicate source
-                    <a href="/about" target="_blank">John Doe</a>
+                    <a href="/about" target="_blank">YangJin</a>
                     !
                 </span>
             </div>
@@ -568,7 +716,7 @@
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
-                            John Doe
+                            YangJin
                             
                         </span>
                     </div>
@@ -606,7 +754,7 @@
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
-                            John Doe
+                            YangJin
                             
                         </span>
                     </div>
@@ -795,7 +943,7 @@
             
                 <span id="year">2019-2023</span>
             
-            <a href="/about" target="_blank">John Doe</a>
+            <a href="/about" target="_blank">YangJin</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>

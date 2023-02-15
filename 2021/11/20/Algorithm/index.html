@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="算法汇总, Hexo">
+    <meta name="keywords" content="算法汇总, Blogs Of YJ">
     <meta name="description" content="排序算法：冒泡排序、选择排序、插入排序、快速排序、归并排序、堆排序等。
 搜索算法：线性搜索、二分搜索、广度优先搜索、深度优先搜索等。
 图论算法：最短路径算法（Dijkstra算法、Bellman-Ford算法、Floyd算法）、最小生成树算">
@@ -19,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>算法汇总 | Hexo</title>
+    <title>算法汇总 | Blogs Of YJ</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -54,7 +54,7 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -66,7 +66,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Hexo</span>
+                    <span class="logo-span">Blogs Of YJ</span>
                 </a>
             </div>
             
@@ -170,7 +170,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">Hexo</div>
+        <div class="logo-name">Blogs Of YJ</div>
         <div class="logo-desc">
             
             Never really desperate, only the lost of the soul.
@@ -407,22 +407,59 @@
 <p>数学算法：欧几里得算法（求最大公约数）、素数筛法、快速幂算法等。</p>
 <p>机器学习算法：线性回归、逻辑回归、决策树、支持向量机、神经网络等。</p>
 <p>排序算法：<br>冒泡排序：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">Python版</span><br><span class="line">def bubble_sort(arr):</span><br><span class="line">    n = len(arr)</span><br><span class="line">    # 遍历 n-1 轮，每轮将一个最大的元素移动到末尾</span><br><span class="line">    for i in range(n-1):</span><br><span class="line">        # 在每轮遍历中，比较相邻的两个元素，如果前一个元素大于后一个元素，就交换它们</span><br><span class="line">        for j in range(n-i-1):</span><br><span class="line">            if arr[j] &gt; arr[j+1]:</span><br><span class="line">                arr[j], arr[j+1] = arr[j+1], arr[j]</span><br><span class="line">    return arr</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line">JAVA版</span><br><span class="line">public static void bubbleSort(int[] arr) &#123;</span><br><span class="line">    int n = arr.length;</span><br><span class="line">    // 遍历 n-1 轮，每轮将一个最大的元素移动到末尾</span><br><span class="line">    for (int i = 0; i &lt; n - 1; i++) &#123;</span><br><span class="line">        // 在每轮遍历中，比较相邻的两个元素，如果前一个元素大于后一个元素，就交换它们</span><br><span class="line">        for (int j = 0; j &lt; n - i - 1; j++) &#123;</span><br><span class="line">            if (arr[j] &gt; arr[j+1]) &#123;</span><br><span class="line">                int temp = arr[j];</span><br><span class="line">                arr[j] = arr[j+1];</span><br><span class="line">                arr[j+1] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>选择排序：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">Python版</span><br><span class="line">def selection_sort(arr):</span><br><span class="line">    n = len(arr)</span><br><span class="line">    # 遍历 n-1 轮，每轮选出一个最小元素</span><br><span class="line">    for i in range(n-1):</span><br><span class="line">        # 从未排序部分选出最小元素的下标</span><br><span class="line">        min_idx = i</span><br><span class="line">        for j in range(i+1, n):</span><br><span class="line">            if arr[j] &lt; arr[min_idx]:</span><br><span class="line">                min_idx = j</span><br><span class="line">        # 将最小元素交换到已排序部分的末尾</span><br><span class="line">        arr[i], arr[min_idx] = arr[min_idx], arr[i]</span><br><span class="line">    return arr</span><br><span class="line">---</span><br><span class="line">JAVA版</span><br><span class="line">public static void selectionSort(int[] arr) &#123;</span><br><span class="line">    int n = arr.length;</span><br><span class="line">    // 遍历 n-1 轮，每轮选出一个最小元素</span><br><span class="line">    for (int i = 0; i &lt; n - 1; i++) &#123;</span><br><span class="line">        // 从未排序部分选出最小元素的下标</span><br><span class="line">        int minIdx = i;</span><br><span class="line">        for (int j = i + 1; j &lt; n; j++) &#123;</span><br><span class="line">            if (arr[j] &lt; arr[minIdx]) &#123;</span><br><span class="line">                minIdx = j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        // 将最小元素交换到已排序部分的末尾</span><br><span class="line">        int temp = arr[i];</span><br><span class="line">        arr[i] = arr[minIdx];</span><br><span class="line">        arr[minIdx] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>插入排序：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">Python版</span><br><span class="line">def insertion_sort(arr):</span><br><span class="line">    n = len(arr)</span><br><span class="line">    # 从第二个元素开始遍历</span><br><span class="line">    for i in range(1, n):</span><br><span class="line">        # 将当前元素插入到已排序部分的正确位置</span><br><span class="line">        key = arr[i]</span><br><span class="line">        j = i - 1</span><br><span class="line">        while j &gt;= 0 and arr[j] &gt; key:</span><br><span class="line">            arr[j+1] = arr[j]</span><br><span class="line">            j -= 1</span><br><span class="line">        arr[j+1] = key</span><br><span class="line">    return arr</span><br><span class="line">---</span><br><span class="line">JAVA版</span><br><span class="line">public static void insertionSort(int[] arr) &#123;</span><br><span class="line">    int n = arr.length;</span><br><span class="line">    // 从第二个元素开始遍历</span><br><span class="line">    for (int i = 1; i &lt; n; i++) &#123;</span><br><span class="line">        // 将当前元素插入到已排序部分的正确位置</span><br><span class="line">        int key = arr[i];</span><br><span class="line">        int j = i - 1;</span><br><span class="line">        while (j &gt;= 0 &amp;&amp; arr[j] &gt; key) &#123;</span><br><span class="line">            arr[j+1] = arr[j];</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">        arr[j+1] = key;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>快速排序：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">Python版</span><br><span class="line">def quick_sort(arr):</span><br><span class="line">    if len(arr) &lt;= 1:</span><br><span class="line">        return arr</span><br><span class="line">    else:</span><br><span class="line">        pivot = arr[0]  # 选择第一个元素作为基准值</span><br><span class="line">        left = [x for x in arr[1:] if x &lt; pivot]  # 左子数组</span><br><span class="line">        right = [x for x in arr[1:] if x &gt;= pivot]  # 右子数组</span><br><span class="line">        return quick_sort(left) + [pivot] + quick_sort(right)</span><br><span class="line">---</span><br><span class="line">JAVA版</span><br><span class="line">public static void quickSort(int[] arr, int left, int right) &#123;</span><br><span class="line">    if (left &gt;= right) &#123;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    int pivot = arr[left];  // 选择左端点作为基准值</span><br><span class="line">    int i = left, j = right;</span><br><span class="line">    while (i &lt; j) &#123;</span><br><span class="line">        // 从右端点向左扫描，找到第一个小于基准值的元素</span><br><span class="line">        while (i &lt; j &amp;&amp; arr[j] &gt;= pivot) &#123;</span><br><span class="line">            j--;</span><br><span class="line">        &#125;</span><br><span class="line">        if (i &lt; j) &#123;</span><br><span class="line">            arr[i] = arr[j];</span><br><span class="line">        &#125;</span><br><span class="line">        // 从左端点向右扫描，找到第一个大于基准值的元素</span><br><span class="line">        while (i &lt; j &amp;&amp; arr[i] &lt; pivot) &#123;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">        if (i &lt; j) &#123;</span><br><span class="line">            arr[j] = arr[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    arr[i] = pivot;  // 将基准值放入正确位置</span><br><span class="line">    quickSort(arr, left, i-1);  // 递归排序左子数组</span><br><span class="line">    quickSort(arr, i+1, right);  // 递归排序右子数组</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>归并排序：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">Python版</span><br><span class="line">def merge_sort(arr):</span><br><span class="line">    if len(arr) &lt;= 1:</span><br><span class="line">        return arr</span><br><span class="line">    else:</span><br><span class="line">        mid = len(arr) // 2</span><br><span class="line">        left = merge_sort(arr[:mid])</span><br><span class="line">        right = merge_sort(arr[mid:])</span><br><span class="line">        return merge(left, right)</span><br><span class="line"></span><br><span class="line">def merge(left, right):</span><br><span class="line">    i, j = 0, 0</span><br><span class="line">    res = []</span><br><span class="line">    while i &lt; len(left) and j &lt; len(right):</span><br><span class="line">        if left[i] &lt;= right[j]:</span><br><span class="line">            res.append(left[i])</span><br><span class="line">            i += 1</span><br><span class="line">        else:</span><br><span class="line">            res.append(right[j])</span><br><span class="line">            j += 1</span><br><span class="line">    res += left[i:]</span><br><span class="line">    res += right[j:]</span><br><span class="line">    return res</span><br><span class="line">---</span><br><span class="line">JAVA版</span><br><span class="line">public static void mergeSort(int[] arr, int left, int right) &#123;</span><br><span class="line">    if (left &gt;= right) &#123;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    int mid = (left + right) / 2;</span><br><span class="line">    mergeSort(arr, left, mid);</span><br><span class="line">    mergeSort(arr, mid+1, right);</span><br><span class="line">    merge(arr, left, mid, right);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public static void merge(int[] arr, int left, int mid, int right) &#123;</span><br><span class="line">    int[] tmp = new int[right - left + 1];</span><br><span class="line">    int i = left, j = mid+1, k = 0;</span><br><span class="line">    while (i &lt;= mid &amp;&amp; j &lt;= right) &#123;</span><br><span class="line">        if (arr[i] &lt;= arr[j]) &#123;</span><br><span class="line">            tmp[k++] = arr[i++];</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            tmp[k++] = arr[j++];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    while (i &lt;= mid) &#123;</span><br><span class="line">        tmp[k++] = arr[i++];</span><br><span class="line">    &#125;</span><br><span class="line">    while (j &lt;= right) &#123;</span><br><span class="line">        tmp[k++] = arr[j++];</span><br><span class="line">    &#125;</span><br><span class="line">    for (i = left, k = 0; i &lt;= right; i++, k++) &#123;</span><br><span class="line">        arr[i] = tmp[k];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>堆排序：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">Python版</span><br><span class="line">def heap_sort(arr):</span><br><span class="line">    build_heap(arr)</span><br><span class="line">    for i in range(len(arr)-1, 0, -1):</span><br><span class="line">        arr[i], arr[0] = arr[0], arr[i]</span><br><span class="line">        heapify(arr, i, 0)</span><br><span class="line"></span><br><span class="line">def build_heap(arr):</span><br><span class="line">    n = len(arr)</span><br><span class="line">    for i in range(n // 2 - 1, -1, -1):</span><br><span class="line">        heapify(arr, n, i)</span><br><span class="line"></span><br><span class="line">def heapify(arr, n, i):</span><br><span class="line">    largest = i</span><br><span class="line">    left = 2 * i + 1</span><br><span class="line">    right = 2 * i + 2</span><br><span class="line">    if left &lt; n and arr[left] &gt; arr[largest]:</span><br><span class="line">        largest = left</span><br><span class="line">    if right &lt; n and arr[right] &gt; arr[largest]:</span><br><span class="line">        largest = right</span><br><span class="line">    if largest != i:</span><br><span class="line">        arr[i], arr[largest] = arr[largest], arr[i]</span><br><span class="line">        heapify(arr, n, largest)</span><br><span class="line">---</span><br><span class="line">JAVA版</span><br><span class="line">public static void heapSort(int[] arr) &#123;</span><br><span class="line">    buildHeap(arr);</span><br><span class="line">    for (int i = arr.length-1; i &gt; 0; i--) &#123;</span><br><span class="line">        swap(arr, i, 0);</span><br><span class="line">        heapify(arr, i, 0);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public static void buildHeap(int[] arr) &#123;</span><br><span class="line">    int n = arr.length;</span><br><span class="line">    for (int i = n/2-1; i &gt;= 0; i--) &#123;</span><br><span class="line">        heapify(arr, n, i);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public static void heapify(int[] arr, int n, int i) &#123;</span><br><span class="line">    int largest = i;</span><br><span class="line">    int left = 2*i+1;</span><br><span class="line">    int right = 2*i+2;</span><br><span class="line">    if (left &lt; n &amp;&amp; arr[left] &gt; arr[largest]) &#123;</span><br><span class="line">        largest = left;</span><br><span class="line">    &#125;</span><br><span class="line">    if (right &lt; n &amp;&amp; arr[right] &gt; arr[largest]) &#123;</span><br><span class="line">        largest = right;</span><br><span class="line">    &#125;</span><br><span class="line">    if (largest != i) &#123;</span><br><span class="line">        swap(arr, i, largest);</span><br><span class="line">        heapify(arr, n, largest);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public static void swap(int[] arr, int i, int j) &#123;</span><br><span class="line">    int temp = arr[i];</span><br><span class="line">    arr[i] = arr[j];</span><br><span class="line">    arr[j] = temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre><code>Python版
+def bubble_sort(arr):
+    n = len(arr)
+    # 遍历 n-1 轮，每轮将一个最大的元素移动到末尾
+    for i in range(n-1):
+        # 在每轮遍历中，比较相邻的两个元素，如果前一个元素大于后一个元素，就交换它们
+        for j in range(n-i-1):
+            if arr[j] &gt; arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+    return arr
+
+---
+JAVA版
+public static void bubbleSort(int[] arr) &#123;
+    int n = arr.length;
+    // 遍历 n-1 轮，每轮将一个最大的元素移动到末尾
+    for (int i = 0; i &lt; n - 1; i++) &#123;
+        // 在每轮遍历中，比较相邻的两个元素，如果前一个元素大于后一个元素，就交换它们
+        for (int j = 0; j &lt; n - i - 1; j++) &#123;
+            if (arr[j] &gt; arr[j+1]) &#123;
+                int temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+            &#125;
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<h2 id="选择排序：-96-96-96-Python版def-selection-sort-arr-n-x3D-len-arr-遍历-n-1-轮，每轮选出一个最小元素-for-i-in-range-n-1-从未排序部分选出最小元素的下标-min-idx-x3D-i-for-j-in-range-i-1-n-if-arr-j-lt-arr-min-idx-min-idx-x3D-j-将最小元素交换到已排序部分的末尾-arr-i-arr-min-idx-x3D-arr-min-idx-arr-i-return-arr"><a href="#选择排序：-96-96-96-Python版def-selection-sort-arr-n-x3D-len-arr-遍历-n-1-轮，每轮选出一个最小元素-for-i-in-range-n-1-从未排序部分选出最小元素的下标-min-idx-x3D-i-for-j-in-range-i-1-n-if-arr-j-lt-arr-min-idx-min-idx-x3D-j-将最小元素交换到已排序部分的末尾-arr-i-arr-min-idx-x3D-arr-min-idx-arr-i-return-arr" class="headerlink" title="选择排序：&#96;&#96;&#96;Python版def selection_sort(arr):    n &#x3D; len(arr)    # 遍历 n-1 轮，每轮选出一个最小元素    for i in range(n-1):        # 从未排序部分选出最小元素的下标        min_idx &#x3D; i        for j in range(i+1, n):            if arr[j] &lt; arr[min_idx]:                min_idx &#x3D; j        # 将最小元素交换到已排序部分的末尾        arr[i], arr[min_idx] &#x3D; arr[min_idx], arr[i]    return arr"></a>选择排序：<br>&#96;&#96;&#96;<br>Python版<br>def selection_sort(arr):<br>    n &#x3D; len(arr)<br>    # 遍历 n-1 轮，每轮选出一个最小元素<br>    for i in range(n-1):<br>        # 从未排序部分选出最小元素的下标<br>        min_idx &#x3D; i<br>        for j in range(i+1, n):<br>            if arr[j] &lt; arr[min_idx]:<br>                min_idx &#x3D; j<br>        # 将最小元素交换到已排序部分的末尾<br>        arr[i], arr[min_idx] &#x3D; arr[min_idx], arr[i]<br>    return arr</h2><p>JAVA版<br>public static void selectionSort(int[] arr) {<br>    int n &#x3D; arr.length;<br>    &#x2F;&#x2F; 遍历 n-1 轮，每轮选出一个最小元素<br>    for (int i &#x3D; 0; i &lt; n - 1; i++) {<br>        &#x2F;&#x2F; 从未排序部分选出最小元素的下标<br>        int minIdx &#x3D; i;<br>        for (int j &#x3D; i + 1; j &lt; n; j++) {<br>            if (arr[j] &lt; arr[minIdx]) {<br>                minIdx &#x3D; j;<br>            }<br>        }<br>        &#x2F;&#x2F; 将最小元素交换到已排序部分的末尾<br>        int temp &#x3D; arr[i];<br>        arr[i] &#x3D; arr[minIdx];<br>        arr[minIdx] &#x3D; temp;<br>    }<br>}</p>
+<pre><code>插入排序：
+</code></pre>
+<h2 id="Python版def-insertion-sort-arr-n-x3D-len-arr-从第二个元素开始遍历-for-i-in-range-1-n-将当前元素插入到已排序部分的正确位置-key-x3D-arr-i-j-x3D-i-1-while-j-gt-x3D-0-and-arr-j-gt-key-arr-j-1-x3D-arr-j-j-x3D-1-arr-j-1-x3D-key-return-arr"><a href="#Python版def-insertion-sort-arr-n-x3D-len-arr-从第二个元素开始遍历-for-i-in-range-1-n-将当前元素插入到已排序部分的正确位置-key-x3D-arr-i-j-x3D-i-1-while-j-gt-x3D-0-and-arr-j-gt-key-arr-j-1-x3D-arr-j-j-x3D-1-arr-j-1-x3D-key-return-arr" class="headerlink" title="Python版def insertion_sort(arr):    n &#x3D; len(arr)    # 从第二个元素开始遍历    for i in range(1, n):        # 将当前元素插入到已排序部分的正确位置        key &#x3D; arr[i]        j &#x3D; i - 1        while j &gt;&#x3D; 0 and arr[j] &gt; key:            arr[j+1] &#x3D; arr[j]            j -&#x3D; 1        arr[j+1] &#x3D; key    return arr"></a>Python版<br>def insertion_sort(arr):<br>    n &#x3D; len(arr)<br>    # 从第二个元素开始遍历<br>    for i in range(1, n):<br>        # 将当前元素插入到已排序部分的正确位置<br>        key &#x3D; arr[i]<br>        j &#x3D; i - 1<br>        while j &gt;&#x3D; 0 and arr[j] &gt; key:<br>            arr[j+1] &#x3D; arr[j]<br>            j -&#x3D; 1<br>        arr[j+1] &#x3D; key<br>    return arr</h2><p>JAVA版<br>public static void insertionSort(int[] arr) {<br>    int n &#x3D; arr.length;<br>    &#x2F;&#x2F; 从第二个元素开始遍历<br>    for (int i &#x3D; 1; i &lt; n; i++) {<br>        &#x2F;&#x2F; 将当前元素插入到已排序部分的正确位置<br>        int key &#x3D; arr[i];<br>        int j &#x3D; i - 1;<br>        while (j &gt;&#x3D; 0 &amp;&amp; arr[j] &gt; key) {<br>            arr[j+1] &#x3D; arr[j];<br>            j–;<br>        }<br>        arr[j+1] &#x3D; key;<br>    }<br>}</p>
+<pre><code>快速排序：
+</code></pre>
+<h2 id="Python版def-quick-sort-arr-if-len-arr-lt-x3D-1-return-arr-else-pivot-x3D-arr-0-选择第一个元素作为基准值-left-x3D-x-for-x-in-arr-1-if-x-lt-pivot-左子数组-right-x3D-x-for-x-in-arr-1-if-x-gt-x3D-pivot-右子数组-return-quick-sort-left-pivot-quick-sort-right"><a href="#Python版def-quick-sort-arr-if-len-arr-lt-x3D-1-return-arr-else-pivot-x3D-arr-0-选择第一个元素作为基准值-left-x3D-x-for-x-in-arr-1-if-x-lt-pivot-左子数组-right-x3D-x-for-x-in-arr-1-if-x-gt-x3D-pivot-右子数组-return-quick-sort-left-pivot-quick-sort-right" class="headerlink" title="Python版def quick_sort(arr):    if len(arr) &lt;&#x3D; 1:        return arr    else:        pivot &#x3D; arr[0]  # 选择第一个元素作为基准值        left &#x3D; [x for x in arr[1:] if x &lt; pivot]  # 左子数组        right &#x3D; [x for x in arr[1:] if x &gt;&#x3D; pivot]  # 右子数组        return quick_sort(left) + [pivot] + quick_sort(right)"></a>Python版<br>def quick_sort(arr):<br>    if len(arr) &lt;&#x3D; 1:<br>        return arr<br>    else:<br>        pivot &#x3D; arr[0]  # 选择第一个元素作为基准值<br>        left &#x3D; [x for x in arr[1:] if x &lt; pivot]  # 左子数组<br>        right &#x3D; [x for x in arr[1:] if x &gt;&#x3D; pivot]  # 右子数组<br>        return quick_sort(left) + [pivot] + quick_sort(right)</h2><p>JAVA版<br>public static void quickSort(int[] arr, int left, int right) {<br>    if (left &gt;&#x3D; right) {<br>        return;<br>    }<br>    int pivot &#x3D; arr[left];  &#x2F;&#x2F; 选择左端点作为基准值<br>    int i &#x3D; left, j &#x3D; right;<br>    while (i &lt; j) {<br>        &#x2F;&#x2F; 从右端点向左扫描，找到第一个小于基准值的元素<br>        while (i &lt; j &amp;&amp; arr[j] &gt;&#x3D; pivot) {<br>            j–;<br>        }<br>        if (i &lt; j) {<br>            arr[i] &#x3D; arr[j];<br>        }<br>        &#x2F;&#x2F; 从左端点向右扫描，找到第一个大于基准值的元素<br>        while (i &lt; j &amp;&amp; arr[i] &lt; pivot) {<br>            i++;<br>        }<br>        if (i &lt; j) {<br>            arr[j] &#x3D; arr[i];<br>        }<br>    }<br>    arr[i] &#x3D; pivot;  &#x2F;&#x2F; 将基准值放入正确位置<br>    quickSort(arr, left, i-1);  &#x2F;&#x2F; 递归排序左子数组<br>    quickSort(arr, i+1, right);  &#x2F;&#x2F; 递归排序右子数组<br>}</p>
+<pre><code>归并排序：
+</code></pre>
+<p>Python版<br>def merge_sort(arr):<br>    if len(arr) &lt;&#x3D; 1:<br>        return arr<br>    else:<br>        mid &#x3D; len(arr) &#x2F;&#x2F; 2<br>        left &#x3D; merge_sort(arr[:mid])<br>        right &#x3D; merge_sort(arr[mid:])<br>        return merge(left, right)</p>
+<h2 id="def-merge-left-right-i-j-x3D-0-0-res-x3D-while-i-lt-len-left-and-j-lt-len-right-if-left-i-lt-x3D-right-j-res-append-left-i-i-x3D-1-else-res-append-right-j-j-x3D-1-res-x3D-left-i-res-x3D-right-j-return-res"><a href="#def-merge-left-right-i-j-x3D-0-0-res-x3D-while-i-lt-len-left-and-j-lt-len-right-if-left-i-lt-x3D-right-j-res-append-left-i-i-x3D-1-else-res-append-right-j-j-x3D-1-res-x3D-left-i-res-x3D-right-j-return-res" class="headerlink" title="def merge(left, right):    i, j &#x3D; 0, 0    res &#x3D; []    while i &lt; len(left) and j &lt; len(right):        if left[i] &lt;&#x3D; right[j]:            res.append(left[i])            i +&#x3D; 1        else:            res.append(right[j])            j +&#x3D; 1    res +&#x3D; left[i:]    res +&#x3D; right[j:]    return res"></a>def merge(left, right):<br>    i, j &#x3D; 0, 0<br>    res &#x3D; []<br>    while i &lt; len(left) and j &lt; len(right):<br>        if left[i] &lt;&#x3D; right[j]:<br>            res.append(left[i])<br>            i +&#x3D; 1<br>        else:<br>            res.append(right[j])<br>            j +&#x3D; 1<br>    res +&#x3D; left[i:]<br>    res +&#x3D; right[j:]<br>    return res</h2><p>JAVA版<br>public static void mergeSort(int[] arr, int left, int right) {<br>    if (left &gt;&#x3D; right) {<br>        return;<br>    }<br>    int mid &#x3D; (left + right) &#x2F; 2;<br>    mergeSort(arr, left, mid);<br>    mergeSort(arr, mid+1, right);<br>    merge(arr, left, mid, right);<br>}</p>
+<p>public static void merge(int[] arr, int left, int mid, int right) {<br>    int[] tmp &#x3D; new int[right - left + 1];<br>    int i &#x3D; left, j &#x3D; mid+1, k &#x3D; 0;<br>    while (i &lt;&#x3D; mid &amp;&amp; j &lt;&#x3D; right) {<br>        if (arr[i] &lt;&#x3D; arr[j]) {<br>            tmp[k++] &#x3D; arr[i++];<br>        } else {<br>            tmp[k++] &#x3D; arr[j++];<br>        }<br>    }<br>    while (i &lt;&#x3D; mid) {<br>        tmp[k++] &#x3D; arr[i++];<br>    }<br>    while (j &lt;&#x3D; right) {<br>        tmp[k++] &#x3D; arr[j++];<br>    }<br>    for (i &#x3D; left, k &#x3D; 0; i &lt;&#x3D; right; i++, k++) {<br>        arr[i] &#x3D; tmp[k];<br>    }<br>}</p>
+<pre><code>堆排序：
+</code></pre>
+<p>Python版<br>def heap_sort(arr):<br>    build_heap(arr)<br>    for i in range(len(arr)-1, 0, -1):<br>        arr[i], arr[0] &#x3D; arr[0], arr[i]<br>        heapify(arr, i, 0)</p>
+<p>def build_heap(arr):<br>    n &#x3D; len(arr)<br>    for i in range(n &#x2F;&#x2F; 2 - 1, -1, -1):<br>        heapify(arr, n, i)</p>
+<h2 id="def-heapify-arr-n-i-largest-x3D-i-left-x3D-2-i-1-right-x3D-2-i-2-if-left-lt-n-and-arr-left-gt-arr-largest-largest-x3D-left-if-right-lt-n-and-arr-right-gt-arr-largest-largest-x3D-right-if-largest-x3D-i-arr-i-arr-largest-x3D-arr-largest-arr-i-heapify-arr-n-largest"><a href="#def-heapify-arr-n-i-largest-x3D-i-left-x3D-2-i-1-right-x3D-2-i-2-if-left-lt-n-and-arr-left-gt-arr-largest-largest-x3D-left-if-right-lt-n-and-arr-right-gt-arr-largest-largest-x3D-right-if-largest-x3D-i-arr-i-arr-largest-x3D-arr-largest-arr-i-heapify-arr-n-largest" class="headerlink" title="def heapify(arr, n, i):    largest &#x3D; i    left &#x3D; 2 * i + 1    right &#x3D; 2 * i + 2    if left &lt; n and arr[left] &gt; arr[largest]:        largest &#x3D; left    if right &lt; n and arr[right] &gt; arr[largest]:        largest &#x3D; right    if largest !&#x3D; i:        arr[i], arr[largest] &#x3D; arr[largest], arr[i]        heapify(arr, n, largest)"></a>def heapify(arr, n, i):<br>    largest &#x3D; i<br>    left &#x3D; 2 * i + 1<br>    right &#x3D; 2 * i + 2<br>    if left &lt; n and arr[left] &gt; arr[largest]:<br>        largest &#x3D; left<br>    if right &lt; n and arr[right] &gt; arr[largest]:<br>        largest &#x3D; right<br>    if largest !&#x3D; i:<br>        arr[i], arr[largest] &#x3D; arr[largest], arr[i]<br>        heapify(arr, n, largest)</h2><p>JAVA版<br>public static void heapSort(int[] arr) {<br>    buildHeap(arr);<br>    for (int i &#x3D; arr.length-1; i &gt; 0; i–) {<br>        swap(arr, i, 0);<br>        heapify(arr, i, 0);<br>    }<br>}</p>
+<p>public static void buildHeap(int[] arr) {<br>    int n &#x3D; arr.length;<br>    for (int i &#x3D; n&#x2F;2-1; i &gt;&#x3D; 0; i–) {<br>        heapify(arr, n, i);<br>    }<br>}</p>
+<p>public static void heapify(int[] arr, int n, int i) {<br>    int largest &#x3D; i;<br>    int left &#x3D; 2<em>i+1;<br>    int right &#x3D; 2</em>i+2;<br>    if (left &lt; n &amp;&amp; arr[left] &gt; arr[largest]) {<br>        largest &#x3D; left;<br>    }<br>    if (right &lt; n &amp;&amp; arr[right] &gt; arr[largest]) {<br>        largest &#x3D; right;<br>    }<br>    if (largest !&#x3D; i) {<br>        swap(arr, i, largest);<br>        heapify(arr, n, largest);<br>    }<br>}</p>
+<p>public static void swap(int[] arr, int i, int j) {<br>    int temp &#x3D; arr[i];<br>    arr[i] &#x3D; arr[j];<br>    arr[j] &#x3D; temp;<br>}</p>
+<pre><code>
 
 
 
-
-
+</code></pre>
 
                 
             </div>
@@ -439,7 +476,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">John Doe</a>
+                    <a href="/about" rel="external nofollow noreferrer">YangJin</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -462,7 +499,7 @@
                     All articles in this blog are used except for special statements
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     reprint policy. If reproduced, please indicate source
-                    <a href="/about" target="_blank">John Doe</a>
+                    <a href="/about" target="_blank">YangJin</a>
                     !
                 </span>
             </div>
@@ -567,6 +604,43 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
+                <a href="/2023/02/15/Search-Algorithm/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Search Algorithm">
+                        
+                        <span class="card-title">Search Algorithm</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-02-15
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            YangJin
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
                 <a href="/2021/11/20/My-CSDN/">
                     <div class="card-image">
                         
@@ -583,55 +657,17 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-20
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            John Doe
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/11/20/Algorithm/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="算法汇总">
-                        
-                        <span class="card-title">算法汇总</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2021-11-20
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
-                            John Doe
+                            YangJin
                             
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -816,7 +852,7 @@
             
                 <span id="year">2019-2023</span>
             
-            <a href="/about" target="_blank">John Doe</a>
+            <a href="/about" target="_blank">YangJin</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>

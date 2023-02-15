@@ -4,13 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Search Algorithm, Blogs Of YJ">
-    <meta name="description" content="搜索算法的Python实现：
-1、二分查找算法（Binary Search Algorithm）：
-def binary_search(arr, target):
-    low, high = 0, len(arr) - 1
-    
- ">
+    <meta name="keywords" content="contact, Blogs Of YJ">
+    <meta name="description" content="Blogs Of YJ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -22,7 +17,7 @@ def binary_search(arr, target):
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Search Algorithm | Blogs Of YJ</title>
+    <title>contact | Blogs Of YJ</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -335,581 +330,107 @@ def binary_search(arr, target):
 
 </header>
 
-    
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/css/barrager.css">
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/js/jquery.barrager.js"></script>
 
-
-
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
-    <div class="container" style="right: 0px;left: 0px;">
-        <div class="row">
-            <div class="col s12 m12 l12">
-                <div class="brand">
-                    <h1 class="description center-align post-title">Search Algorithm</h1>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-
-
-<main class="post-container content">
-
-    
+<div class="bg-cover pd-header about-cover">
+    <div class="container">
     <div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
-<div id="artDetail">
-    <div class="card">
-        <div class="card-content article-info">
-            <div class="row tag-cate">
-                <div class="col s7">
-                    
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
-                    
-                </div>
-                <div class="col s5 right-align">
-                    
-                </div>
-            </div>
-
-            <div class="post-info">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
                 
-                <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2023-02-15
-                </div>
-                
-
-                
-
-                
-
-                
-
+                    subtitle
                 
             </div>
-        </div>
-        <hr class="clearfix">
 
-        
-
-        
-
-        <div class="card-content article-card-content">
-            <div id="articleContent">
-                <p>搜索算法的Python实现：</p>
-<pre><code>1、二分查找算法（Binary Search Algorithm）：
-def binary_search(arr, target):
-    low, high = 0, len(arr) - 1
-    
-    while low &lt;= high:
-        mid = (low + high) // 2
-        if arr[mid] == target:
-            return mid
-        elif arr[mid] &lt; target:
-            low = mid + 1
-        else:
-            high = mid - 1
-    
-    return -1
-
-2、广度优先搜索算法（Breadth First Search Algorithm）：
-from collections import deque
-
-def bfs(graph, start, target):
-    visited = set()
-    queue = deque([(start, [])])
-    
-    while queue:
-        node, path = queue.popleft()
-        if node not in visited:
-            visited.add(node)
-            path = path + [node]
-            if node == target:
-                return path
-            for neighbor in graph[node]:
-                queue.append((neighbor, path))
-    
-    return None
-
-3、深度优先搜索算法（Depth First Search Algorithm）：
-def dfs(graph, start, target, visited=None, path=None):
-    if visited is None:
-        visited = set()
-    if path is None:
-        path = []
-    
-    visited.add(start)
-    path = path + [start]
-    
-    if start == target:
-        return path
-    
-    for neighbor in graph[start]:
-        if neighbor not in visited:
-            new_path = dfs(graph, neighbor, target, visited, path)
-            if new_path:
-                return new_path
-    
-    return None
-
-4、A搜索算法（A Search Algorithm）：
-from queue import PriorityQueue
-
-def a_star(graph, start, target, heuristic):
-    queue = PriorityQueue()
-    queue.put((0, start))
-    visited = &#123;start: 0&#125;
-    
-    while not queue.empty():
-        cost, node = queue.get()
-        if node == target:
-            path = []
-            while node in visited:
-                path.append(node)
-                node = visited[node]
-            return path[::-1]
-        
-        for neighbor, weight in graph[node].items():
-            new_cost = cost + weight
-            if neighbor not in visited or new_cost &lt; visited[neighbor]:
-                visited[neighbor] = new_cost
-                priority = new_cost + heuristic(neighbor, target)
-                queue.put((priority, neighbor))
-    
-    return None
-</code></pre>
-<p>以下是JAVA实现：</p>
-<pre><code>1、二分查找算法（Binary Search Algorithm）：
-public static int binarySearch(int[] arr, int target) &#123;
-    int low = 0;
-    int high = arr.length - 1;
-    
-    while (low &lt;= high) &#123;
-        int mid = (low + high) / 2;
-        if (arr[mid] == target) &#123;
-            return mid;
-        &#125; else if (arr[mid] &lt; target) &#123;
-            low = mid + 1;
-        &#125; else &#123;
-            high = mid - 1;
-        &#125;
-    &#125;
-    
-    return -1;
-&#125;
-2、广度优先搜索算法（Breadth First Search Algorithm）：
-public static List&lt;Integer&gt; bfs(Map&lt;Integer, List&lt;Integer&gt;&gt; graph, int start, int target) &#123;
-    Set&lt;Integer&gt; visited = new HashSet&lt;&gt;();
-    Queue&lt;Pair&lt;Integer, List&lt;Integer&gt;&gt;&gt; queue = new LinkedList&lt;&gt;();
-    queue.offer(new Pair&lt;&gt;(start, new ArrayList&lt;&gt;()));
-    
-    while (!queue.isEmpty()) &#123;
-        Pair&lt;Integer, List&lt;Integer&gt;&gt; pair = queue.poll();
-        int node = pair.getKey();
-        List&lt;Integer&gt; path = pair.getValue();
-        
-        if (!visited.contains(node)) &#123;
-            visited.add(node);
-            path.add(node);
-            if (node == target) &#123;
-                return path;
-            &#125;
-            for (int neighbor : graph.get(node)) &#123;
-                List&lt;Integer&gt; newPath = new ArrayList&lt;&gt;(path);
-                queue.offer(new Pair&lt;&gt;(neighbor, newPath));
-            &#125;
-        &#125;
-    &#125;
-    
-    return null;
-&#125;
-3、深度优先搜索算法（Depth First Search Algorithm）：
-public static List&lt;Integer&gt; dfs(Map&lt;Integer, List&lt;Integer&gt;&gt; graph, int start, int target, Set&lt;Integer&gt; visited, List&lt;Integer&gt; path) &#123;
-    if (visited == null) &#123;
-        visited = new HashSet&lt;&gt;();
-    &#125;
-    if (path == null) &#123;
-        path = new ArrayList&lt;&gt;();
-    &#125;
-    
-    visited.add(start);
-    path.add(start);
-    
-    if (start == target) &#123;
-        return path;
-    &#125;
-    
-    for (int neighbor : graph.get(start)) &#123;
-        if (!visited.contains(neighbor)) &#123;
-            List&lt;Integer&gt; newPath = new ArrayList&lt;&gt;(path);
-            List&lt;Integer&gt; result = dfs(graph, neighbor, target, visited, newPath);
-            if (result != null) &#123;
-                return result;
-            &#125;
-        &#125;
-    &#125;
-    
-    return null;
-&#125;
-4、A搜索算法（A Search Algorithm）：
-public static List&lt;Integer&gt; aStar(Map&lt;Integer, Map&lt;Integer, Integer&gt;&gt; graph, int start, int target, Map&lt;Integer, Integer&gt; heuristic) &#123;
-    PriorityQueue&lt;Pair&lt;Integer, Integer&gt;&gt; queue = new PriorityQueue&lt;&gt;((a, b) -&gt; a.getKey() - b.getKey());
-    queue.offer(new Pair&lt;&gt;(0, start));
-    Map&lt;Integer, Integer&gt; visited = new HashMap&lt;&gt;();
-    visited.put(start, null);
-    Map&lt;Integer, Integer&gt; gScores = new HashMap&lt;&gt;();
-    gScores.put(start, 0);
-    
-    while (!queue.isEmpty()) &#123;
-        Pair&lt;Integer, Integer&gt; pair = queue.poll();
-        int node = pair.getValue();
-        int cost = pair.getKey();
-        
-        if (node == target) &#123;
-            List&lt;Integer&gt; path = new ArrayList&lt;&gt;();
-            while (node != null) &#123;
-                path.add(node);
-                node = visited.get(node);
-            &#125;
-            Collections.reverse(path);
-            return path;
-        &#125;
-        
-        for (int neighbor : graph.get(node).keySet()) &#123;
-            int gScore = gScores.get(node) + graph.get(node).get(neighbor);
-            if (!g
-</code></pre>
-
+            <div class="description center-align">
                 
-            </div>
-            <hr/>
-
-            
-
-    <div class="reprint" id="reprint-statement">
-        
-            <div class="reprint__author">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-user">
-                        Author:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">YangJin</a>
-                </span>
-            </div>
-            <div class="reprint__type">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-link">
-                        Link:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="https://blogofyj.github.io/2023/02/15/Search-Algorithm/">https://blogofyj.github.io/2023/02/15/Search-Algorithm/</a>
-                </span>
-            </div>
-            <div class="reprint__notice">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-copyright">
-                        Reprint policy:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    All articles in this blog are used except for special statements
-                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
-                    reprint policy. If reproduced, please indicate source
-                    <a href="/about" target="_blank">YangJin</a>
-                    !
-                </span>
-            </div>
-        
-    </div>
-
-    <script async defer>
-      document.addEventListener("copy", function (e) {
-        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
-        M.toast({html: toastHTML})
-      });
-
-      function navToReprintStatement() {
-        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
-      }
-    </script>
-
-
-
-            <div class="tag_share" style="display: block;">
-                <div class="post-meta__tag-list" style="display: inline-block;">
-                    
-                        <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                        </div>
-                    
-                </div>
-                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
-                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
-<div id="article-share">
-
-    
-    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-    <script src="/libs/share/js/social-share.min.js"></script>
-    
-
-    
-
-</div>
-
-                </div>
-            </div>
-            
-                <div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
+                <span id="subtitle"></span>
+                <script src="/libs/typed/typed.js"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: [ 
+                            
+                                "从来没有真正的绝境, 只有心灵的迷途",
+                            
+                                "Never really desperate, only the lost of the soul",
+                            
+                        ],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
+                
             </div>
         </div>
     </div>
 </div>
+
 
 <script>
-    $(function () {
-        $('.tabs').tabs();
-    });
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
 </script>
 
+
+    </div>
+</div>
+
+<style>
+    #send{
+        margin-bottom: 10px;
+        width: 49%;
+        background-color: #0ba360;
+    }
+    #clear{
+        margin-bottom: 10px;
+        width: 49%;
+        background-color: #e7c65c;
+    }
+    p{
+        text-align: center;
+    }
+</style>
+<main class="content">
+    <div id="contact" class="container chip-container">
+        <div class="card">
+            <div class="card-content">
+                <div class="tag-title center-align">
+                    <i class="fas fa-comments"></i>&nbsp;&nbsp;Contact
+                </div>
+                
+            </div>
+            <!--valine评论弹幕-->
             
         </div>
-    </div>
 
-    
+        <!--其他评论card-->
+        <div class="card">
+            
 
-    
+            
 
-    
+            
 
-    
+            
 
-    
+            
 
-    
+            
 
-    
+            
 
-    
-
-    
-
-<article id="prenext-posts" class="prev-next articles">
-    <div class="row article-row">
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
-            <div class="card">
-                <a href="/2023/02/15/Graph-Theory-Algorithm/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Graph Theory Algorithms">
-                        
-                        <span class="card-title">Graph Theory Algorithms</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-02-15
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            YangJin
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/11/20/Algorithm/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="算法汇总">
-                        
-                        <span class="card-title">算法汇总</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-20
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            YangJin
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-    </div>
-</article>
-
-</div>
-
-
-
-<!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
-
-
-
-<!-- 代码语言 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
-
-
-<!-- 代码块复制 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
-
-
-<!-- 代码块收缩 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
-
-
-
-    </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
-            <div id="toc-content"></div>
         </div>
     </div>
-</div>
-
-<!-- TOC 悬浮按钮. -->
-
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
-    </a>
-</div>
-
-
-<script src="/libs/tocbot/tocbot.min.js"></script>
-<script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        
-    });
-</script>
-
-    
-
 </main>
-
-
 
 
     <footer class="page-footer bg-color">
