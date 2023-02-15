@@ -407,58 +407,188 @@
 <p>数学算法：欧几里得算法（求最大公约数）、素数筛法、快速幂算法等。</p>
 <p>机器学习算法：线性回归、逻辑回归、决策树、支持向量机、神经网络等。</p>
 <p>排序算法：<br>冒泡排序：</p>
-<pre><code>Python版
-def bubble_sort(arr):
-    n = len(arr)
-    # 遍历 n-1 轮，每轮将一个最大的元素移动到末尾
-    for i in range(n-1):
-        # 在每轮遍历中，比较相邻的两个元素，如果前一个元素大于后一个元素，就交换它们
-        for j in range(n-i-1):
-            if arr[j] &gt; arr[j+1]:
-                arr[j], arr[j+1] = arr[j+1], arr[j]
-    return arr
+<pre class=" language-python"><code class="language-python">Python版
+<span class="token keyword">def</span> <span class="token function">bubble_sort</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    n <span class="token operator">=</span> len<span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true"># 遍历 n-1 轮，每轮将一个最大的元素移动到末尾</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>n<span class="token number">-1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token comment" spellcheck="true"># 在每轮遍历中，比较相邻的两个元素，如果前一个元素大于后一个元素，就交换它们</span>
+        <span class="token keyword">for</span> j <span class="token keyword">in</span> range<span class="token punctuation">(</span>n<span class="token operator">-</span>i<span class="token number">-1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">></span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+                arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
+    <span class="token keyword">return</span> arr
 
+<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
+JAVA版
+public static void bubbleSort<span class="token punctuation">(</span>int<span class="token punctuation">[</span><span class="token punctuation">]</span> arr<span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    int n <span class="token operator">=</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+    <span class="token operator">//</span> 遍历 n<span class="token number">-1</span> 轮，每轮将一个最大的元素移动到末尾
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>int i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">+</span><span class="token operator">+</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+        <span class="token operator">//</span> 在每轮遍历中，比较相邻的两个元素，如果前一个元素大于后一个元素，就交换它们
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>int j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> n <span class="token operator">-</span> i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> j<span class="token operator">+</span><span class="token operator">+</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">></span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+                int temp <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+                arr<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+        <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+</code></pre>
+<h2 id="选择排序：-96-96-96-pythonPython版def-selection-sort-arr-n-x3D-len-arr-遍历-n-1-轮，每轮选出一个最小元素-for-i-in-range-n-1-从未排序部分选出最小元素的下标-min-idx-x3D-i-for-j-in-range-i-1-n-if-arr-j-lt-arr-min-idx-min-idx-x3D-j-将最小元素交换到已排序部分的末尾-arr-i-arr-min-idx-x3D-arr-min-idx-arr-i-return-arr"><a href="#选择排序：-96-96-96-pythonPython版def-selection-sort-arr-n-x3D-len-arr-遍历-n-1-轮，每轮选出一个最小元素-for-i-in-range-n-1-从未排序部分选出最小元素的下标-min-idx-x3D-i-for-j-in-range-i-1-n-if-arr-j-lt-arr-min-idx-min-idx-x3D-j-将最小元素交换到已排序部分的末尾-arr-i-arr-min-idx-x3D-arr-min-idx-arr-i-return-arr" class="headerlink" title="选择排序：&#96;&#96;&#96;pythonPython版def selection_sort(arr):    n &#x3D; len(arr)    # 遍历 n-1 轮，每轮选出一个最小元素    for i in range(n-1):        # 从未排序部分选出最小元素的下标        min_idx &#x3D; i        for j in range(i+1, n):            if arr[j] &lt; arr[min_idx]:                min_idx &#x3D; j        # 将最小元素交换到已排序部分的末尾        arr[i], arr[min_idx] &#x3D; arr[min_idx], arr[i]    return arr"></a>选择排序：<br>&#96;&#96;&#96;python<br>Python版<br>def selection_sort(arr):<br>    n &#x3D; len(arr)<br>    # 遍历 n-1 轮，每轮选出一个最小元素<br>    for i in range(n-1):<br>        # 从未排序部分选出最小元素的下标<br>        min_idx &#x3D; i<br>        for j in range(i+1, n):<br>            if arr[j] &lt; arr[min_idx]:<br>                min_idx &#x3D; j<br>        # 将最小元素交换到已排序部分的末尾<br>        arr[i], arr[min_idx] &#x3D; arr[min_idx], arr[i]<br>    return arr</h2><p>JAVA版<br>public static void selectionSort(int[] arr) {<br>    int n &#x3D; arr.length;<br>    &#x2F;&#x2F; 遍历 n-1 轮，每轮选出一个最小元素<br>    for (int i &#x3D; 0; i &lt; n - 1; i++) {<br>        &#x2F;&#x2F; 从未排序部分选出最小元素的下标<br>        int minIdx &#x3D; i;<br>        for (int j &#x3D; i + 1; j &lt; n; j++) {<br>            if (arr[j] &lt; arr[minIdx]) {<br>                minIdx &#x3D; j;<br>            }<br>        }<br>        &#x2F;&#x2F; 将最小元素交换到已排序部分的末尾<br>        int temp &#x3D; arr[i];<br>        arr[i] &#x3D; arr[minIdx];<br>        arr[minIdx] &#x3D; temp;<br>    }<br>}</p>
+<pre><code>插入排序：
+```python
+Python版
+def insertion_sort(arr):
+    n = len(arr)
+    # 从第二个元素开始遍历
+    for i in range(1, n):
+        # 将当前元素插入到已排序部分的正确位置
+        key = arr[i]
+        j = i - 1
+        while j &gt;= 0 and arr[j] &gt; key:
+            arr[j+1] = arr[j]
+            j -= 1
+        arr[j+1] = key
+    return arr
 ---
 JAVA版
-public static void bubbleSort(int[] arr) &#123;
+public static void insertionSort(int[] arr) &#123;
     int n = arr.length;
-    // 遍历 n-1 轮，每轮将一个最大的元素移动到末尾
-    for (int i = 0; i &lt; n - 1; i++) &#123;
-        // 在每轮遍历中，比较相邻的两个元素，如果前一个元素大于后一个元素，就交换它们
-        for (int j = 0; j &lt; n - i - 1; j++) &#123;
-            if (arr[j] &gt; arr[j+1]) &#123;
-                int temp = arr[j];
-                arr[j] = arr[j+1];
-                arr[j+1] = temp;
-            &#125;
+    // 从第二个元素开始遍历
+    for (int i = 1; i &lt; n; i++) &#123;
+        // 将当前元素插入到已排序部分的正确位置
+        int key = arr[i];
+        int j = i - 1;
+        while (j &gt;= 0 &amp;&amp; arr[j] &gt; key) &#123;
+            arr[j+1] = arr[j];
+            j--;
         &#125;
+        arr[j+1] = key;
     &#125;
 &#125;
 </code></pre>
-<h2 id="选择排序：-96-96-96-Python版def-selection-sort-arr-n-x3D-len-arr-遍历-n-1-轮，每轮选出一个最小元素-for-i-in-range-n-1-从未排序部分选出最小元素的下标-min-idx-x3D-i-for-j-in-range-i-1-n-if-arr-j-lt-arr-min-idx-min-idx-x3D-j-将最小元素交换到已排序部分的末尾-arr-i-arr-min-idx-x3D-arr-min-idx-arr-i-return-arr"><a href="#选择排序：-96-96-96-Python版def-selection-sort-arr-n-x3D-len-arr-遍历-n-1-轮，每轮选出一个最小元素-for-i-in-range-n-1-从未排序部分选出最小元素的下标-min-idx-x3D-i-for-j-in-range-i-1-n-if-arr-j-lt-arr-min-idx-min-idx-x3D-j-将最小元素交换到已排序部分的末尾-arr-i-arr-min-idx-x3D-arr-min-idx-arr-i-return-arr" class="headerlink" title="选择排序：&#96;&#96;&#96;Python版def selection_sort(arr):    n &#x3D; len(arr)    # 遍历 n-1 轮，每轮选出一个最小元素    for i in range(n-1):        # 从未排序部分选出最小元素的下标        min_idx &#x3D; i        for j in range(i+1, n):            if arr[j] &lt; arr[min_idx]:                min_idx &#x3D; j        # 将最小元素交换到已排序部分的末尾        arr[i], arr[min_idx] &#x3D; arr[min_idx], arr[i]    return arr"></a>选择排序：<br>&#96;&#96;&#96;<br>Python版<br>def selection_sort(arr):<br>    n &#x3D; len(arr)<br>    # 遍历 n-1 轮，每轮选出一个最小元素<br>    for i in range(n-1):<br>        # 从未排序部分选出最小元素的下标<br>        min_idx &#x3D; i<br>        for j in range(i+1, n):<br>            if arr[j] &lt; arr[min_idx]:<br>                min_idx &#x3D; j<br>        # 将最小元素交换到已排序部分的末尾<br>        arr[i], arr[min_idx] &#x3D; arr[min_idx], arr[i]<br>    return arr</h2><p>JAVA版<br>public static void selectionSort(int[] arr) {<br>    int n &#x3D; arr.length;<br>    &#x2F;&#x2F; 遍历 n-1 轮，每轮选出一个最小元素<br>    for (int i &#x3D; 0; i &lt; n - 1; i++) {<br>        &#x2F;&#x2F; 从未排序部分选出最小元素的下标<br>        int minIdx &#x3D; i;<br>        for (int j &#x3D; i + 1; j &lt; n; j++) {<br>            if (arr[j] &lt; arr[minIdx]) {<br>                minIdx &#x3D; j;<br>            }<br>        }<br>        &#x2F;&#x2F; 将最小元素交换到已排序部分的末尾<br>        int temp &#x3D; arr[i];<br>        arr[i] &#x3D; arr[minIdx];<br>        arr[minIdx] &#x3D; temp;<br>    }<br>}</p>
-<pre><code>插入排序：
-</code></pre>
-<h2 id="Python版def-insertion-sort-arr-n-x3D-len-arr-从第二个元素开始遍历-for-i-in-range-1-n-将当前元素插入到已排序部分的正确位置-key-x3D-arr-i-j-x3D-i-1-while-j-gt-x3D-0-and-arr-j-gt-key-arr-j-1-x3D-arr-j-j-x3D-1-arr-j-1-x3D-key-return-arr"><a href="#Python版def-insertion-sort-arr-n-x3D-len-arr-从第二个元素开始遍历-for-i-in-range-1-n-将当前元素插入到已排序部分的正确位置-key-x3D-arr-i-j-x3D-i-1-while-j-gt-x3D-0-and-arr-j-gt-key-arr-j-1-x3D-arr-j-j-x3D-1-arr-j-1-x3D-key-return-arr" class="headerlink" title="Python版def insertion_sort(arr):    n &#x3D; len(arr)    # 从第二个元素开始遍历    for i in range(1, n):        # 将当前元素插入到已排序部分的正确位置        key &#x3D; arr[i]        j &#x3D; i - 1        while j &gt;&#x3D; 0 and arr[j] &gt; key:            arr[j+1] &#x3D; arr[j]            j -&#x3D; 1        arr[j+1] &#x3D; key    return arr"></a>Python版<br>def insertion_sort(arr):<br>    n &#x3D; len(arr)<br>    # 从第二个元素开始遍历<br>    for i in range(1, n):<br>        # 将当前元素插入到已排序部分的正确位置<br>        key &#x3D; arr[i]<br>        j &#x3D; i - 1<br>        while j &gt;&#x3D; 0 and arr[j] &gt; key:<br>            arr[j+1] &#x3D; arr[j]<br>            j -&#x3D; 1<br>        arr[j+1] &#x3D; key<br>    return arr</h2><p>JAVA版<br>public static void insertionSort(int[] arr) {<br>    int n &#x3D; arr.length;<br>    &#x2F;&#x2F; 从第二个元素开始遍历<br>    for (int i &#x3D; 1; i &lt; n; i++) {<br>        &#x2F;&#x2F; 将当前元素插入到已排序部分的正确位置<br>        int key &#x3D; arr[i];<br>        int j &#x3D; i - 1;<br>        while (j &gt;&#x3D; 0 &amp;&amp; arr[j] &gt; key) {<br>            arr[j+1] &#x3D; arr[j];<br>            j–;<br>        }<br>        arr[j+1] &#x3D; key;<br>    }<br>}</p>
-<pre><code>快速排序：
-</code></pre>
-<h2 id="Python版def-quick-sort-arr-if-len-arr-lt-x3D-1-return-arr-else-pivot-x3D-arr-0-选择第一个元素作为基准值-left-x3D-x-for-x-in-arr-1-if-x-lt-pivot-左子数组-right-x3D-x-for-x-in-arr-1-if-x-gt-x3D-pivot-右子数组-return-quick-sort-left-pivot-quick-sort-right"><a href="#Python版def-quick-sort-arr-if-len-arr-lt-x3D-1-return-arr-else-pivot-x3D-arr-0-选择第一个元素作为基准值-left-x3D-x-for-x-in-arr-1-if-x-lt-pivot-左子数组-right-x3D-x-for-x-in-arr-1-if-x-gt-x3D-pivot-右子数组-return-quick-sort-left-pivot-quick-sort-right" class="headerlink" title="Python版def quick_sort(arr):    if len(arr) &lt;&#x3D; 1:        return arr    else:        pivot &#x3D; arr[0]  # 选择第一个元素作为基准值        left &#x3D; [x for x in arr[1:] if x &lt; pivot]  # 左子数组        right &#x3D; [x for x in arr[1:] if x &gt;&#x3D; pivot]  # 右子数组        return quick_sort(left) + [pivot] + quick_sort(right)"></a>Python版<br>def quick_sort(arr):<br>    if len(arr) &lt;&#x3D; 1:<br>        return arr<br>    else:<br>        pivot &#x3D; arr[0]  # 选择第一个元素作为基准值<br>        left &#x3D; [x for x in arr[1:] if x &lt; pivot]  # 左子数组<br>        right &#x3D; [x for x in arr[1:] if x &gt;&#x3D; pivot]  # 右子数组<br>        return quick_sort(left) + [pivot] + quick_sort(right)</h2><p>JAVA版<br>public static void quickSort(int[] arr, int left, int right) {<br>    if (left &gt;&#x3D; right) {<br>        return;<br>    }<br>    int pivot &#x3D; arr[left];  &#x2F;&#x2F; 选择左端点作为基准值<br>    int i &#x3D; left, j &#x3D; right;<br>    while (i &lt; j) {<br>        &#x2F;&#x2F; 从右端点向左扫描，找到第一个小于基准值的元素<br>        while (i &lt; j &amp;&amp; arr[j] &gt;&#x3D; pivot) {<br>            j–;<br>        }<br>        if (i &lt; j) {<br>            arr[i] &#x3D; arr[j];<br>        }<br>        &#x2F;&#x2F; 从左端点向右扫描，找到第一个大于基准值的元素<br>        while (i &lt; j &amp;&amp; arr[i] &lt; pivot) {<br>            i++;<br>        }<br>        if (i &lt; j) {<br>            arr[j] &#x3D; arr[i];<br>        }<br>    }<br>    arr[i] &#x3D; pivot;  &#x2F;&#x2F; 将基准值放入正确位置<br>    quickSort(arr, left, i-1);  &#x2F;&#x2F; 递归排序左子数组<br>    quickSort(arr, i+1, right);  &#x2F;&#x2F; 递归排序右子数组<br>}</p>
+<h2 id="快速排序：-96-96-96-pythonPython版def-quick-sort-arr-if-len-arr-lt-x3D-1-return-arr-else-pivot-x3D-arr-0-选择第一个元素作为基准值-left-x3D-x-for-x-in-arr-1-if-x-lt-pivot-左子数组-right-x3D-x-for-x-in-arr-1-if-x-gt-x3D-pivot-右子数组-return-quick-sort-left-pivot-quick-sort-right"><a href="#快速排序：-96-96-96-pythonPython版def-quick-sort-arr-if-len-arr-lt-x3D-1-return-arr-else-pivot-x3D-arr-0-选择第一个元素作为基准值-left-x3D-x-for-x-in-arr-1-if-x-lt-pivot-左子数组-right-x3D-x-for-x-in-arr-1-if-x-gt-x3D-pivot-右子数组-return-quick-sort-left-pivot-quick-sort-right" class="headerlink" title="快速排序：&#96;&#96;&#96;pythonPython版def quick_sort(arr):    if len(arr) &lt;&#x3D; 1:        return arr    else:        pivot &#x3D; arr[0]  # 选择第一个元素作为基准值        left &#x3D; [x for x in arr[1:] if x &lt; pivot]  # 左子数组        right &#x3D; [x for x in arr[1:] if x &gt;&#x3D; pivot]  # 右子数组        return quick_sort(left) + [pivot] + quick_sort(right)"></a>快速排序：<br>&#96;&#96;&#96;python<br>Python版<br>def quick_sort(arr):<br>    if len(arr) &lt;&#x3D; 1:<br>        return arr<br>    else:<br>        pivot &#x3D; arr[0]  # 选择第一个元素作为基准值<br>        left &#x3D; [x for x in arr[1:] if x &lt; pivot]  # 左子数组<br>        right &#x3D; [x for x in arr[1:] if x &gt;&#x3D; pivot]  # 右子数组<br>        return quick_sort(left) + [pivot] + quick_sort(right)</h2><p>JAVA版<br>public static void quickSort(int[] arr, int left, int right) {<br>    if (left &gt;&#x3D; right) {<br>        return;<br>    }<br>    int pivot &#x3D; arr[left];  &#x2F;&#x2F; 选择左端点作为基准值<br>    int i &#x3D; left, j &#x3D; right;<br>    while (i &lt; j) {<br>        &#x2F;&#x2F; 从右端点向左扫描，找到第一个小于基准值的元素<br>        while (i &lt; j &amp;&amp; arr[j] &gt;&#x3D; pivot) {<br>            j–;<br>        }<br>        if (i &lt; j) {<br>            arr[i] &#x3D; arr[j];<br>        }<br>        &#x2F;&#x2F; 从左端点向右扫描，找到第一个大于基准值的元素<br>        while (i &lt; j &amp;&amp; arr[i] &lt; pivot) {<br>            i++;<br>        }<br>        if (i &lt; j) {<br>            arr[j] &#x3D; arr[i];<br>        }<br>    }<br>    arr[i] &#x3D; pivot;  &#x2F;&#x2F; 将基准值放入正确位置<br>    quickSort(arr, left, i-1);  &#x2F;&#x2F; 递归排序左子数组<br>    quickSort(arr, i+1, right);  &#x2F;&#x2F; 递归排序右子数组<br>}</p>
 <pre><code>归并排序：
+```python
+Python版
+def merge_sort(arr):
+    if len(arr) &lt;= 1:
+        return arr
+    else:
+        mid = len(arr) // 2
+        left = merge_sort(arr[:mid])
+        right = merge_sort(arr[mid:])
+        return merge(left, right)
+
+def merge(left, right):
+    i, j = 0, 0
+    res = []
+    while i &lt; len(left) and j &lt; len(right):
+        if left[i] &lt;= right[j]:
+            res.append(left[i])
+            i += 1
+        else:
+            res.append(right[j])
+            j += 1
+    res += left[i:]
+    res += right[j:]
+    return res
+---
+JAVA版
+public static void mergeSort(int[] arr, int left, int right) &#123;
+    if (left &gt;= right) &#123;
+        return;
+    &#125;
+    int mid = (left + right) / 2;
+    mergeSort(arr, left, mid);
+    mergeSort(arr, mid+1, right);
+    merge(arr, left, mid, right);
+&#125;
+
+public static void merge(int[] arr, int left, int mid, int right) &#123;
+    int[] tmp = new int[right - left + 1];
+    int i = left, j = mid+1, k = 0;
+    while (i &lt;= mid &amp;&amp; j &lt;= right) &#123;
+        if (arr[i] &lt;= arr[j]) &#123;
+            tmp[k++] = arr[i++];
+        &#125; else &#123;
+            tmp[k++] = arr[j++];
+        &#125;
+    &#125;
+    while (i &lt;= mid) &#123;
+        tmp[k++] = arr[i++];
+    &#125;
+    while (j &lt;= right) &#123;
+        tmp[k++] = arr[j++];
+    &#125;
+    for (i = left, k = 0; i &lt;= right; i++, k++) &#123;
+        arr[i] = tmp[k];
+    &#125;
+&#125;
 </code></pre>
-<p>Python版<br>def merge_sort(arr):<br>    if len(arr) &lt;&#x3D; 1:<br>        return arr<br>    else:<br>        mid &#x3D; len(arr) &#x2F;&#x2F; 2<br>        left &#x3D; merge_sort(arr[:mid])<br>        right &#x3D; merge_sort(arr[mid:])<br>        return merge(left, right)</p>
-<h2 id="def-merge-left-right-i-j-x3D-0-0-res-x3D-while-i-lt-len-left-and-j-lt-len-right-if-left-i-lt-x3D-right-j-res-append-left-i-i-x3D-1-else-res-append-right-j-j-x3D-1-res-x3D-left-i-res-x3D-right-j-return-res"><a href="#def-merge-left-right-i-j-x3D-0-0-res-x3D-while-i-lt-len-left-and-j-lt-len-right-if-left-i-lt-x3D-right-j-res-append-left-i-i-x3D-1-else-res-append-right-j-j-x3D-1-res-x3D-left-i-res-x3D-right-j-return-res" class="headerlink" title="def merge(left, right):    i, j &#x3D; 0, 0    res &#x3D; []    while i &lt; len(left) and j &lt; len(right):        if left[i] &lt;&#x3D; right[j]:            res.append(left[i])            i +&#x3D; 1        else:            res.append(right[j])            j +&#x3D; 1    res +&#x3D; left[i:]    res +&#x3D; right[j:]    return res"></a>def merge(left, right):<br>    i, j &#x3D; 0, 0<br>    res &#x3D; []<br>    while i &lt; len(left) and j &lt; len(right):<br>        if left[i] &lt;&#x3D; right[j]:<br>            res.append(left[i])<br>            i +&#x3D; 1<br>        else:<br>            res.append(right[j])<br>            j +&#x3D; 1<br>    res +&#x3D; left[i:]<br>    res +&#x3D; right[j:]<br>    return res</h2><p>JAVA版<br>public static void mergeSort(int[] arr, int left, int right) {<br>    if (left &gt;&#x3D; right) {<br>        return;<br>    }<br>    int mid &#x3D; (left + right) &#x2F; 2;<br>    mergeSort(arr, left, mid);<br>    mergeSort(arr, mid+1, right);<br>    merge(arr, left, mid, right);<br>}</p>
-<p>public static void merge(int[] arr, int left, int mid, int right) {<br>    int[] tmp &#x3D; new int[right - left + 1];<br>    int i &#x3D; left, j &#x3D; mid+1, k &#x3D; 0;<br>    while (i &lt;&#x3D; mid &amp;&amp; j &lt;&#x3D; right) {<br>        if (arr[i] &lt;&#x3D; arr[j]) {<br>            tmp[k++] &#x3D; arr[i++];<br>        } else {<br>            tmp[k++] &#x3D; arr[j++];<br>        }<br>    }<br>    while (i &lt;&#x3D; mid) {<br>        tmp[k++] &#x3D; arr[i++];<br>    }<br>    while (j &lt;&#x3D; right) {<br>        tmp[k++] &#x3D; arr[j++];<br>    }<br>    for (i &#x3D; left, k &#x3D; 0; i &lt;&#x3D; right; i++, k++) {<br>        arr[i] &#x3D; tmp[k];<br>    }<br>}</p>
-<pre><code>堆排序：
-</code></pre>
-<p>Python版<br>def heap_sort(arr):<br>    build_heap(arr)<br>    for i in range(len(arr)-1, 0, -1):<br>        arr[i], arr[0] &#x3D; arr[0], arr[i]<br>        heapify(arr, i, 0)</p>
-<p>def build_heap(arr):<br>    n &#x3D; len(arr)<br>    for i in range(n &#x2F;&#x2F; 2 - 1, -1, -1):<br>        heapify(arr, n, i)</p>
-<h2 id="def-heapify-arr-n-i-largest-x3D-i-left-x3D-2-i-1-right-x3D-2-i-2-if-left-lt-n-and-arr-left-gt-arr-largest-largest-x3D-left-if-right-lt-n-and-arr-right-gt-arr-largest-largest-x3D-right-if-largest-x3D-i-arr-i-arr-largest-x3D-arr-largest-arr-i-heapify-arr-n-largest"><a href="#def-heapify-arr-n-i-largest-x3D-i-left-x3D-2-i-1-right-x3D-2-i-2-if-left-lt-n-and-arr-left-gt-arr-largest-largest-x3D-left-if-right-lt-n-and-arr-right-gt-arr-largest-largest-x3D-right-if-largest-x3D-i-arr-i-arr-largest-x3D-arr-largest-arr-i-heapify-arr-n-largest" class="headerlink" title="def heapify(arr, n, i):    largest &#x3D; i    left &#x3D; 2 * i + 1    right &#x3D; 2 * i + 2    if left &lt; n and arr[left] &gt; arr[largest]:        largest &#x3D; left    if right &lt; n and arr[right] &gt; arr[largest]:        largest &#x3D; right    if largest !&#x3D; i:        arr[i], arr[largest] &#x3D; arr[largest], arr[i]        heapify(arr, n, largest)"></a>def heapify(arr, n, i):<br>    largest &#x3D; i<br>    left &#x3D; 2 * i + 1<br>    right &#x3D; 2 * i + 2<br>    if left &lt; n and arr[left] &gt; arr[largest]:<br>        largest &#x3D; left<br>    if right &lt; n and arr[right] &gt; arr[largest]:<br>        largest &#x3D; right<br>    if largest !&#x3D; i:<br>        arr[i], arr[largest] &#x3D; arr[largest], arr[i]<br>        heapify(arr, n, largest)</h2><p>JAVA版<br>public static void heapSort(int[] arr) {<br>    buildHeap(arr);<br>    for (int i &#x3D; arr.length-1; i &gt; 0; i–) {<br>        swap(arr, i, 0);<br>        heapify(arr, i, 0);<br>    }<br>}</p>
-<p>public static void buildHeap(int[] arr) {<br>    int n &#x3D; arr.length;<br>    for (int i &#x3D; n&#x2F;2-1; i &gt;&#x3D; 0; i–) {<br>        heapify(arr, n, i);<br>    }<br>}</p>
-<p>public static void heapify(int[] arr, int n, int i) {<br>    int largest &#x3D; i;<br>    int left &#x3D; 2<em>i+1;<br>    int right &#x3D; 2</em>i+2;<br>    if (left &lt; n &amp;&amp; arr[left] &gt; arr[largest]) {<br>        largest &#x3D; left;<br>    }<br>    if (right &lt; n &amp;&amp; arr[right] &gt; arr[largest]) {<br>        largest &#x3D; right;<br>    }<br>    if (largest !&#x3D; i) {<br>        swap(arr, i, largest);<br>        heapify(arr, n, largest);<br>    }<br>}</p>
-<p>public static void swap(int[] arr, int i, int j) {<br>    int temp &#x3D; arr[i];<br>    arr[i] &#x3D; arr[j];<br>    arr[j] &#x3D; temp;<br>}</p>
-<pre><code>
+<p>堆排序：</p>
+<pre class=" language-python"><code class="language-python">Python版
+<span class="token keyword">def</span> <span class="token function">heap_sort</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    build_heap<span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>len<span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+        heapify<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> i<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
 
+<span class="token keyword">def</span> <span class="token function">build_heap</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    n <span class="token operator">=</span> len<span class="token punctuation">(</span>arr<span class="token punctuation">)</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>n <span class="token operator">//</span> <span class="token number">2</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        heapify<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> n<span class="token punctuation">,</span> i<span class="token punctuation">)</span>
 
+<span class="token keyword">def</span> <span class="token function">heapify</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> n<span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    largest <span class="token operator">=</span> i
+    left <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">*</span> i <span class="token operator">+</span> <span class="token number">1</span>
+    right <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">*</span> i <span class="token operator">+</span> <span class="token number">2</span>
+    <span class="token keyword">if</span> left <span class="token operator">&lt;</span> n <span class="token operator">and</span> arr<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">></span> arr<span class="token punctuation">[</span>largest<span class="token punctuation">]</span><span class="token punctuation">:</span>
+        largest <span class="token operator">=</span> left
+    <span class="token keyword">if</span> right <span class="token operator">&lt;</span> n <span class="token operator">and</span> arr<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">></span> arr<span class="token punctuation">[</span>largest<span class="token punctuation">]</span><span class="token punctuation">:</span>
+        largest <span class="token operator">=</span> right
+    <span class="token keyword">if</span> largest <span class="token operator">!=</span> i<span class="token punctuation">:</span>
+        arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>largest<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>largest<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+        heapify<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> n<span class="token punctuation">,</span> largest<span class="token punctuation">)</span>
+<span class="token operator">-</span><span class="token operator">-</span><span class="token operator">-</span>
+JAVA版
+public static void heapSort<span class="token punctuation">(</span>int<span class="token punctuation">[</span><span class="token punctuation">]</span> arr<span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    buildHeap<span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>int i <span class="token operator">=</span> arr<span class="token punctuation">.</span>length<span class="token number">-1</span><span class="token punctuation">;</span> i <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">-</span><span class="token operator">-</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+        swap<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> i<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        heapify<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> i<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
 
+public static void buildHeap<span class="token punctuation">(</span>int<span class="token punctuation">[</span><span class="token punctuation">]</span> arr<span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    int n <span class="token operator">=</span> arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>int i <span class="token operator">=</span> n<span class="token operator">/</span><span class="token number">2</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">-</span><span class="token operator">-</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+        heapify<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> n<span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+
+public static void heapify<span class="token punctuation">(</span>int<span class="token punctuation">[</span><span class="token punctuation">]</span> arr<span class="token punctuation">,</span> int n<span class="token punctuation">,</span> int i<span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    int largest <span class="token operator">=</span> i<span class="token punctuation">;</span>
+    int left <span class="token operator">=</span> <span class="token number">2</span><span class="token operator">*</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>
+    int right <span class="token operator">=</span> <span class="token number">2</span><span class="token operator">*</span>i<span class="token operator">+</span><span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>left <span class="token operator">&lt;</span> n <span class="token operator">&amp;</span><span class="token operator">&amp;</span> arr<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">></span> arr<span class="token punctuation">[</span>largest<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+        largest <span class="token operator">=</span> left<span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>right <span class="token operator">&lt;</span> n <span class="token operator">&amp;</span><span class="token operator">&amp;</span> arr<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">></span> arr<span class="token punctuation">[</span>largest<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+        largest <span class="token operator">=</span> right<span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>largest <span class="token operator">!=</span> i<span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+        swap<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> i<span class="token punctuation">,</span> largest<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        heapify<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> n<span class="token punctuation">,</span> largest<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
+
+public static void swap<span class="token punctuation">(</span>int<span class="token punctuation">[</span><span class="token punctuation">]</span> arr<span class="token punctuation">,</span> int i<span class="token punctuation">,</span> int j<span class="token punctuation">)</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;</span>
+    int temp <span class="token operator">=</span> arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    arr<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+<span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#125;</span>
 </code></pre>
 
                 

@@ -402,187 +402,187 @@ def binary_search(arr, target):
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>搜索算法的Python实现：</p>
-<pre><code>1、二分查找算法（Binary Search Algorithm）：
-def binary_search(arr, target):
-    low, high = 0, len(arr) - 1
+<pre class=" language-python"><code class="language-python"><span class="token number">1</span>、二分查找算法（Binary Search Algorithm）：
+<span class="token keyword">def</span> <span class="token function">binary_search</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> target<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    low<span class="token punctuation">,</span> high <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> len<span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span>
     
-    while low &lt;= high:
-        mid = (low + high) // 2
-        if arr[mid] == target:
-            return mid
-        elif arr[mid] &lt; target:
-            low = mid + 1
-        else:
-            high = mid - 1
+    <span class="token keyword">while</span> low <span class="token operator">&lt;=</span> high<span class="token punctuation">:</span>
+        mid <span class="token operator">=</span> <span class="token punctuation">(</span>low <span class="token operator">+</span> high<span class="token punctuation">)</span> <span class="token operator">//</span> <span class="token number">2</span>
+        <span class="token keyword">if</span> arr<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">==</span> target<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> mid
+        <span class="token keyword">elif</span> arr<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">&lt;</span> target<span class="token punctuation">:</span>
+            low <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            high <span class="token operator">=</span> mid <span class="token operator">-</span> <span class="token number">1</span>
     
-    return -1
+    <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span>
 
-2、广度优先搜索算法（Breadth First Search Algorithm）：
-from collections import deque
+<span class="token number">2</span>、广度优先搜索算法（Breadth First Search Algorithm）：
+<span class="token keyword">from</span> collections <span class="token keyword">import</span> deque
 
-def bfs(graph, start, target):
-    visited = set()
-    queue = deque([(start, [])])
+<span class="token keyword">def</span> <span class="token function">bfs</span><span class="token punctuation">(</span>graph<span class="token punctuation">,</span> start<span class="token punctuation">,</span> target<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    visited <span class="token operator">=</span> set<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    queue <span class="token operator">=</span> deque<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">(</span>start<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
     
-    while queue:
-        node, path = queue.popleft()
-        if node not in visited:
-            visited.add(node)
-            path = path + [node]
-            if node == target:
-                return path
-            for neighbor in graph[node]:
-                queue.append((neighbor, path))
+    <span class="token keyword">while</span> queue<span class="token punctuation">:</span>
+        node<span class="token punctuation">,</span> path <span class="token operator">=</span> queue<span class="token punctuation">.</span>popleft<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> node <span class="token operator">not</span> <span class="token keyword">in</span> visited<span class="token punctuation">:</span>
+            visited<span class="token punctuation">.</span>add<span class="token punctuation">(</span>node<span class="token punctuation">)</span>
+            path <span class="token operator">=</span> path <span class="token operator">+</span> <span class="token punctuation">[</span>node<span class="token punctuation">]</span>
+            <span class="token keyword">if</span> node <span class="token operator">==</span> target<span class="token punctuation">:</span>
+                <span class="token keyword">return</span> path
+            <span class="token keyword">for</span> neighbor <span class="token keyword">in</span> graph<span class="token punctuation">[</span>node<span class="token punctuation">]</span><span class="token punctuation">:</span>
+                queue<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">(</span>neighbor<span class="token punctuation">,</span> path<span class="token punctuation">)</span><span class="token punctuation">)</span>
     
-    return None
+    <span class="token keyword">return</span> None
 
-3、深度优先搜索算法（Depth First Search Algorithm）：
-def dfs(graph, start, target, visited=None, path=None):
-    if visited is None:
-        visited = set()
-    if path is None:
-        path = []
+<span class="token number">3</span>、深度优先搜索算法（Depth First Search Algorithm）：
+<span class="token keyword">def</span> <span class="token function">dfs</span><span class="token punctuation">(</span>graph<span class="token punctuation">,</span> start<span class="token punctuation">,</span> target<span class="token punctuation">,</span> visited<span class="token operator">=</span>None<span class="token punctuation">,</span> path<span class="token operator">=</span>None<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> visited <span class="token keyword">is</span> None<span class="token punctuation">:</span>
+        visited <span class="token operator">=</span> set<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> path <span class="token keyword">is</span> None<span class="token punctuation">:</span>
+        path <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
     
-    visited.add(start)
-    path = path + [start]
+    visited<span class="token punctuation">.</span>add<span class="token punctuation">(</span>start<span class="token punctuation">)</span>
+    path <span class="token operator">=</span> path <span class="token operator">+</span> <span class="token punctuation">[</span>start<span class="token punctuation">]</span>
     
-    if start == target:
-        return path
+    <span class="token keyword">if</span> start <span class="token operator">==</span> target<span class="token punctuation">:</span>
+        <span class="token keyword">return</span> path
     
-    for neighbor in graph[start]:
-        if neighbor not in visited:
-            new_path = dfs(graph, neighbor, target, visited, path)
-            if new_path:
-                return new_path
+    <span class="token keyword">for</span> neighbor <span class="token keyword">in</span> graph<span class="token punctuation">[</span>start<span class="token punctuation">]</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> neighbor <span class="token operator">not</span> <span class="token keyword">in</span> visited<span class="token punctuation">:</span>
+            new_path <span class="token operator">=</span> dfs<span class="token punctuation">(</span>graph<span class="token punctuation">,</span> neighbor<span class="token punctuation">,</span> target<span class="token punctuation">,</span> visited<span class="token punctuation">,</span> path<span class="token punctuation">)</span>
+            <span class="token keyword">if</span> new_path<span class="token punctuation">:</span>
+                <span class="token keyword">return</span> new_path
     
-    return None
+    <span class="token keyword">return</span> None
 
-4、A搜索算法（A Search Algorithm）：
-from queue import PriorityQueue
+<span class="token number">4</span>、A搜索算法（A Search Algorithm）：
+<span class="token keyword">from</span> queue <span class="token keyword">import</span> PriorityQueue
 
-def a_star(graph, start, target, heuristic):
-    queue = PriorityQueue()
-    queue.put((0, start))
-    visited = &#123;start: 0&#125;
+<span class="token keyword">def</span> <span class="token function">a_star</span><span class="token punctuation">(</span>graph<span class="token punctuation">,</span> start<span class="token punctuation">,</span> target<span class="token punctuation">,</span> heuristic<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    queue <span class="token operator">=</span> PriorityQueue<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    queue<span class="token punctuation">.</span>put<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> start<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    visited <span class="token operator">=</span> <span class="token operator">&amp;</span><span class="token comment" spellcheck="true">#123;start: 0&amp;#125;</span>
     
-    while not queue.empty():
-        cost, node = queue.get()
-        if node == target:
-            path = []
-            while node in visited:
-                path.append(node)
-                node = visited[node]
-            return path[::-1]
+    <span class="token keyword">while</span> <span class="token operator">not</span> queue<span class="token punctuation">.</span>empty<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        cost<span class="token punctuation">,</span> node <span class="token operator">=</span> queue<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> node <span class="token operator">==</span> target<span class="token punctuation">:</span>
+            path <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+            <span class="token keyword">while</span> node <span class="token keyword">in</span> visited<span class="token punctuation">:</span>
+                path<span class="token punctuation">.</span>append<span class="token punctuation">(</span>node<span class="token punctuation">)</span>
+                node <span class="token operator">=</span> visited<span class="token punctuation">[</span>node<span class="token punctuation">]</span>
+            <span class="token keyword">return</span> path<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
         
-        for neighbor, weight in graph[node].items():
-            new_cost = cost + weight
-            if neighbor not in visited or new_cost &lt; visited[neighbor]:
-                visited[neighbor] = new_cost
-                priority = new_cost + heuristic(neighbor, target)
-                queue.put((priority, neighbor))
+        <span class="token keyword">for</span> neighbor<span class="token punctuation">,</span> weight <span class="token keyword">in</span> graph<span class="token punctuation">[</span>node<span class="token punctuation">]</span><span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            new_cost <span class="token operator">=</span> cost <span class="token operator">+</span> weight
+            <span class="token keyword">if</span> neighbor <span class="token operator">not</span> <span class="token keyword">in</span> visited <span class="token operator">or</span> new_cost <span class="token operator">&lt;</span> visited<span class="token punctuation">[</span>neighbor<span class="token punctuation">]</span><span class="token punctuation">:</span>
+                visited<span class="token punctuation">[</span>neighbor<span class="token punctuation">]</span> <span class="token operator">=</span> new_cost
+                priority <span class="token operator">=</span> new_cost <span class="token operator">+</span> heuristic<span class="token punctuation">(</span>neighbor<span class="token punctuation">,</span> target<span class="token punctuation">)</span>
+                queue<span class="token punctuation">.</span>put<span class="token punctuation">(</span><span class="token punctuation">(</span>priority<span class="token punctuation">,</span> neighbor<span class="token punctuation">)</span><span class="token punctuation">)</span>
     
-    return None
+    <span class="token keyword">return</span> None
 </code></pre>
 <p>以下是JAVA实现：</p>
-<pre><code>1、二分查找算法（Binary Search Algorithm）：
-public static int binarySearch(int[] arr, int target) &#123;
-    int low = 0;
-    int high = arr.length - 1;
+<pre class=" language-java"><code class="language-java"><span class="token number">1</span>、二分查找算法（Binary Search Algorithm）：
+<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">binarySearch</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arr<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> low <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">int</span> high <span class="token operator">=</span> arr<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
     
-    while (low &lt;= high) &#123;
-        int mid = (low + high) / 2;
-        if (arr[mid] == target) &#123;
-            return mid;
-        &#125; else if (arr[mid] &lt; target) &#123;
-            low = mid + 1;
-        &#125; else &#123;
-            high = mid - 1;
-        &#125;
-    &#125;
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>low <span class="token operator">&lt;=</span> high<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> mid <span class="token operator">=</span> <span class="token punctuation">(</span>low <span class="token operator">+</span> high<span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">==</span> target<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> mid<span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">&lt;</span> target<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            low <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">else</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            high <span class="token operator">=</span> mid <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
     
-    return -1;
-&#125;
-2、广度优先搜索算法（Breadth First Search Algorithm）：
-public static List&lt;Integer&gt; bfs(Map&lt;Integer, List&lt;Integer&gt;&gt; graph, int start, int target) &#123;
-    Set&lt;Integer&gt; visited = new HashSet&lt;&gt;();
-    Queue&lt;Pair&lt;Integer, List&lt;Integer&gt;&gt;&gt; queue = new LinkedList&lt;&gt;();
-    queue.offer(new Pair&lt;&gt;(start, new ArrayList&lt;&gt;()));
+    <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token number">2</span>、广度优先搜索算法（Breadth First Search Algorithm）：
+<span class="token keyword">public</span> <span class="token keyword">static</span> List<span class="token operator">&lt;</span>Integer<span class="token operator">></span> <span class="token function">bfs</span><span class="token punctuation">(</span>Map<span class="token operator">&lt;</span>Integer<span class="token punctuation">,</span> List<span class="token operator">&lt;</span>Integer<span class="token operator">>></span> graph<span class="token punctuation">,</span> <span class="token keyword">int</span> start<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    Set<span class="token operator">&lt;</span>Integer<span class="token operator">></span> visited <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Queue<span class="token operator">&lt;</span>Pair<span class="token operator">&lt;</span>Integer<span class="token punctuation">,</span> List<span class="token operator">&lt;</span>Integer<span class="token operator">>>></span> queue <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LinkedList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    queue<span class="token punctuation">.</span><span class="token function">offer</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Pair</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span>start<span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     
-    while (!queue.isEmpty()) &#123;
-        Pair&lt;Integer, List&lt;Integer&gt;&gt; pair = queue.poll();
-        int node = pair.getKey();
-        List&lt;Integer&gt; path = pair.getValue();
+    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>queue<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        Pair<span class="token operator">&lt;</span>Integer<span class="token punctuation">,</span> List<span class="token operator">&lt;</span>Integer<span class="token operator">>></span> pair <span class="token operator">=</span> queue<span class="token punctuation">.</span><span class="token function">poll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> node <span class="token operator">=</span> pair<span class="token punctuation">.</span><span class="token function">getKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        List<span class="token operator">&lt;</span>Integer<span class="token operator">></span> path <span class="token operator">=</span> pair<span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         
-        if (!visited.contains(node)) &#123;
-            visited.add(node);
-            path.add(node);
-            if (node == target) &#123;
-                return path;
-            &#125;
-            for (int neighbor : graph.get(node)) &#123;
-                List&lt;Integer&gt; newPath = new ArrayList&lt;&gt;(path);
-                queue.offer(new Pair&lt;&gt;(neighbor, newPath));
-            &#125;
-        &#125;
-    &#125;
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>visited<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            visited<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            path<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>node <span class="token operator">==</span> target<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                <span class="token keyword">return</span> path<span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> neighbor <span class="token operator">:</span> graph<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                List<span class="token operator">&lt;</span>Integer<span class="token operator">></span> newPath <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                queue<span class="token punctuation">.</span><span class="token function">offer</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Pair</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span>neighbor<span class="token punctuation">,</span> newPath<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
     
-    return null;
-&#125;
-3、深度优先搜索算法（Depth First Search Algorithm）：
-public static List&lt;Integer&gt; dfs(Map&lt;Integer, List&lt;Integer&gt;&gt; graph, int start, int target, Set&lt;Integer&gt; visited, List&lt;Integer&gt; path) &#123;
-    if (visited == null) &#123;
-        visited = new HashSet&lt;&gt;();
-    &#125;
-    if (path == null) &#123;
-        path = new ArrayList&lt;&gt;();
-    &#125;
+    <span class="token keyword">return</span> null<span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token number">3</span>、深度优先搜索算法（Depth First Search Algorithm）：
+<span class="token keyword">public</span> <span class="token keyword">static</span> List<span class="token operator">&lt;</span>Integer<span class="token operator">></span> <span class="token function">dfs</span><span class="token punctuation">(</span>Map<span class="token operator">&lt;</span>Integer<span class="token punctuation">,</span> List<span class="token operator">&lt;</span>Integer<span class="token operator">>></span> graph<span class="token punctuation">,</span> <span class="token keyword">int</span> start<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">,</span> Set<span class="token operator">&lt;</span>Integer<span class="token operator">></span> visited<span class="token punctuation">,</span> List<span class="token operator">&lt;</span>Integer<span class="token operator">></span> path<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>visited <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        visited <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>path <span class="token operator">==</span> null<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        path <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
     
-    visited.add(start);
-    path.add(start);
+    visited<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>start<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    path<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>start<span class="token punctuation">)</span><span class="token punctuation">;</span>
     
-    if (start == target) &#123;
-        return path;
-    &#125;
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>start <span class="token operator">==</span> target<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> path<span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
     
-    for (int neighbor : graph.get(start)) &#123;
-        if (!visited.contains(neighbor)) &#123;
-            List&lt;Integer&gt; newPath = new ArrayList&lt;&gt;(path);
-            List&lt;Integer&gt; result = dfs(graph, neighbor, target, visited, newPath);
-            if (result != null) &#123;
-                return result;
-            &#125;
-        &#125;
-    &#125;
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> neighbor <span class="token operator">:</span> graph<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>start<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>visited<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span>neighbor<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            List<span class="token operator">&lt;</span>Integer<span class="token operator">></span> newPath <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            List<span class="token operator">&lt;</span>Integer<span class="token operator">></span> result <span class="token operator">=</span> <span class="token function">dfs</span><span class="token punctuation">(</span>graph<span class="token punctuation">,</span> neighbor<span class="token punctuation">,</span> target<span class="token punctuation">,</span> visited<span class="token punctuation">,</span> newPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>result <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
     
-    return null;
-&#125;
-4、A搜索算法（A Search Algorithm）：
-public static List&lt;Integer&gt; aStar(Map&lt;Integer, Map&lt;Integer, Integer&gt;&gt; graph, int start, int target, Map&lt;Integer, Integer&gt; heuristic) &#123;
-    PriorityQueue&lt;Pair&lt;Integer, Integer&gt;&gt; queue = new PriorityQueue&lt;&gt;((a, b) -&gt; a.getKey() - b.getKey());
-    queue.offer(new Pair&lt;&gt;(0, start));
-    Map&lt;Integer, Integer&gt; visited = new HashMap&lt;&gt;();
-    visited.put(start, null);
-    Map&lt;Integer, Integer&gt; gScores = new HashMap&lt;&gt;();
-    gScores.put(start, 0);
+    <span class="token keyword">return</span> null<span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token number">4</span>、A搜索算法（A Search Algorithm）：
+<span class="token keyword">public</span> <span class="token keyword">static</span> List<span class="token operator">&lt;</span>Integer<span class="token operator">></span> <span class="token function">aStar</span><span class="token punctuation">(</span>Map<span class="token operator">&lt;</span>Integer<span class="token punctuation">,</span> Map<span class="token operator">&lt;</span>Integer<span class="token punctuation">,</span> Integer<span class="token operator">>></span> graph<span class="token punctuation">,</span> <span class="token keyword">int</span> start<span class="token punctuation">,</span> <span class="token keyword">int</span> target<span class="token punctuation">,</span> Map<span class="token operator">&lt;</span>Integer<span class="token punctuation">,</span> Integer<span class="token operator">></span> heuristic<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    PriorityQueue<span class="token operator">&lt;</span>Pair<span class="token operator">&lt;</span>Integer<span class="token punctuation">,</span> Integer<span class="token operator">>></span> queue <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PriorityQueue</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> a<span class="token punctuation">.</span><span class="token function">getKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> b<span class="token punctuation">.</span><span class="token function">getKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    queue<span class="token punctuation">.</span><span class="token function">offer</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Pair</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> start<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Map<span class="token operator">&lt;</span>Integer<span class="token punctuation">,</span> Integer<span class="token operator">></span> visited <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    visited<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>start<span class="token punctuation">,</span> null<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    Map<span class="token operator">&lt;</span>Integer<span class="token punctuation">,</span> Integer<span class="token operator">></span> gScores <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    gScores<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>start<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     
-    while (!queue.isEmpty()) &#123;
-        Pair&lt;Integer, Integer&gt; pair = queue.poll();
-        int node = pair.getValue();
-        int cost = pair.getKey();
+    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>queue<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        Pair<span class="token operator">&lt;</span>Integer<span class="token punctuation">,</span> Integer<span class="token operator">></span> pair <span class="token operator">=</span> queue<span class="token punctuation">.</span><span class="token function">poll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> node <span class="token operator">=</span> pair<span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">int</span> cost <span class="token operator">=</span> pair<span class="token punctuation">.</span><span class="token function">getKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         
-        if (node == target) &#123;
-            List&lt;Integer&gt; path = new ArrayList&lt;&gt;();
-            while (node != null) &#123;
-                path.add(node);
-                node = visited.get(node);
-            &#125;
-            Collections.reverse(path);
-            return path;
-        &#125;
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>node <span class="token operator">==</span> target<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            List<span class="token operator">&lt;</span>Integer<span class="token operator">></span> path <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">while</span> <span class="token punctuation">(</span>node <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                path<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                node <span class="token operator">=</span> visited<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+            Collections<span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> path<span class="token punctuation">;</span>
+        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
         
-        for (int neighbor : graph.get(node).keySet()) &#123;
-            int gScore = gScores.get(node) + graph.get(node).get(neighbor);
-            if (!g
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> neighbor <span class="token operator">:</span> graph<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">keySet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token keyword">int</span> gScore <span class="token operator">=</span> gScores<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span> <span class="token operator">+</span> graph<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>neighbor<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>g
 </code></pre>
 
                 
