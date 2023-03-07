@@ -535,7 +535,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    15.2k
+                    15.1k
                 </div>
                 
 
@@ -1071,7 +1071,7 @@ inner<span class="token punctuation">.</span><span class="token function">printX
 <span class="token punctuation">}</span>
 </code></pre>
 <p>由于Object类是所有类的父类，因此它的方法在Java编程中非常重要，被广泛地使用。例如，在实现自定义类时，通常需要重写equals()和hashCode()方法，以实现对象相等的比较。在使用集合框架时，通常需要将对象转换为字符串，以便于打印和调试。</p>
-<h3 id="4-2-String类"><a href="#4-2-String类" class="headerlink" title="4.2..String类"></a>4.2..String类</h3><p>1.length()方法：</p>
+<h3 id="4-2-String类"><a href="#4-2-String类" class="headerlink" title="4.2.String类"></a>4.2.String类</h3><p>1.length()方法：</p>
 <pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">return</span> value<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
@@ -1796,7 +1796,6 @@ String value <span class="token operator">=</span> box<span class="token punctua
     <span class="token keyword">return</span> total<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p>在这个例子中，参数列表中的 List&lt;? extends Number&gt; 表示可以接受任何 Number 类型的子类的 List，例如 List<Integer>、List<Double> 等。因为我们只需要从列表中获取 Number 类型的对象，并调用其 doubleValue 方法进行累加。</p>
 <p>2、使用 super 通配符可以将泛型类型参数限定为某个类型的超类型，例如：</p>
 <pre class=" language-java"><code class="language-java">List<span class="token operator">&lt;</span><span class="token operator">?</span> <span class="token keyword">super</span> Integer<span class="token operator">></span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span>Number<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -1808,7 +1807,6 @@ String value <span class="token operator">=</span> box<span class="token punctua
     list<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p>在这个例子中，参数列表中的 List&lt;? super Integer&gt; 表示可以接受任何 Integer 类型的超类的 List，例如 List<Number>、List<Object> 等。因为我们只需要往列表中添加 Integer 类型的对象，并不需要从列表中获取任何对象。</p>
 <h2 id="9-JAVA集合"><a href="#9-JAVA集合" class="headerlink" title="9.JAVA集合"></a>9.JAVA集合</h2><p>Java 中的集合（Collection）是一种用于存储对象的容器，可以用来管理和操作一组元素。Java 提供了多种集合类型，包括 List、Set、Queue 和 Map 等。其中，List、Set 和 Queue 是继承自 Collection 接口的子接口，而 Map 则是一个独立的接口。</p>
 <ul>
 <li>List<br>List 是一个有序的集合，可以按照元素插入的顺序进行访问。常用的实现类有 ArrayList 和 LinkedList。ArrayList 是一个基于动态数组的实现，支持随机访问和快速插入&#x2F;删除操作；LinkedList 是一个基于双向链表的实现，支持高效的插入&#x2F;删除操作。</li>
@@ -1822,7 +1820,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 list<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>list<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 输出 [apple, orange]</span>
 </code></pre>
-<p>2、Set<br>Set 是一个无序的集合，不允许重复元素。常用的实现类有 HashSet 和 TreeSet。HashSet 是一个基于哈希表的实现，支持快速的插入&#x2F;查找操作；TreeSet 是一个基于红黑树的实现，支持自然排序和范围查询等操作。</p>
+<ul>
+<li>Set<br>Set 是一个无序的集合，不允许重复元素。常用的实现类有 HashSet 和 TreeSet。HashSet 是一个基于哈希表的实现，支持快速的插入&#x2F;查找操作；TreeSet 是一个基于红黑树的实现，支持自然排序和范围查询等操作。</li>
+</ul>
 <p>Set 接口也提供了一系列方法，可以对集合进行增删改查等操作。例如：</p>
 <pre class=" language-java"><code class="language-java">Set<span class="token operator">&lt;</span>String<span class="token operator">></span> set <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 set<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">"apple"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1832,7 +1832,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 set<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span><span class="token string">"banana"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>set<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 输出 [apple, orange]</span>
 </code></pre>
-<p>3、Queue<br>Queue 是一个队列，支持先进先出（FIFO）的操作。常用的实现类有 LinkedList 和 PriorityQueue。LinkedList 是一个基于双向链表的实现，支持快速的入队&#x2F;出队操作；PriorityQueue 是一个基于堆的实现，支持按照优先级进行排序。</p>
+<ul>
+<li>Queue<br>Queue 是一个队列，支持先进先出（FIFO）的操作。常用的实现类有 LinkedList 和 PriorityQueue。LinkedList 是一个基于双向链表的实现，支持快速的入队&#x2F;出队操作；PriorityQueue 是一个基于堆的实现，支持按照优先级进行排序。</li>
+</ul>
 <p>Queue 接口定义了一些方法，用于对队列进行入队出队等操作。例如：</p>
 <pre class=" language-java"><code class="language-java">Queue<span class="token operator">&lt;</span>String<span class="token operator">></span> queue <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LinkedList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 queue<span class="token punctuation">.</span><span class="token function">offer</span><span class="token punctuation">(</span><span class="token string">"apple"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1842,7 +1844,9 @@ System<span class="token punctuation">.</span>out<span class="token punctuation"
 System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>queue<span class="token punctuation">.</span><span class="token function">poll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 输出 apple</span>
 System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>queue<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 输出 [banana, orange]</span>
 </code></pre>
-<p>4、Map<br>Map 是一个键值对集合，可以通过键来访问值。常用的实现类有 HashMap 和 TreeMap。HashMap 是一个基于哈希表的实现，支持快速的查找&#x2F;插入操作；TreeMap 是一个基于红黑树的实现，支持按照键的自然排序和范围查询等操作。</p>
+<ul>
+<li>Map<br>Map 是一个键值对集合，可以通过键来访问值。常用的实现类有 HashMap 和 TreeMap。HashMap 是一个基于哈希表的实现，支持快速的查找&#x2F;插入操作；TreeMap 是一个基于红黑树的实现，支持按照键的自然排序和范围查询等操作。</li>
+</ul>
 <p>Map 接口定义了一系列方法，用于对映射进行操作。例如：</p>
 <pre class=" language-java"><code class="language-java">Map<span class="token operator">&lt;</span>String<span class="token punctuation">,</span> Integer<span class="token operator">></span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"apple"</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
