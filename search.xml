@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Python入门</title>
+      <link href="/2023/03/07/python-lesson-one/"/>
+      <url>/2023/03/07/python-lesson-one/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Python学习目录"><a href="#Python学习目录" class="headerlink" title="Python学习目录"></a>Python学习目录</h2><p>1.基础语法：</p><ul><li>数据类型和变量</li><li>字符串和编码</li><li>条件和循环</li><li>列表和元组</li><li>字典和集合</li><li>函数</li><li>高级特性（切片、迭代、列表生成式、生成器、迭代器、装饰器等）</li><li>模块</li><li>面向对象编程</li><li>错误、调试和测试</li></ul><p>2.标准库：</p><ul><li>常用内置模块（os、sys、datetime、math、random、json、re等）</li><li>文件和目录操作</li><li>网络编程（socket）</li><li>多线程编程（threading）</li><li>正则表达式（re模块）</li></ul><p>3.第三方库：</p><ul><li>NumPy（数组计算）</li><li>pandas（数据分析）</li><li>Matplotlib（数据可视化）</li><li>Scikit-learn（机器学习）</li><li>requests（网络请求）</li><li>Flask（Web开发）</li><li>Django（Web开发）</li><li>TensorFlow（深度学习）</li></ul><p>4.其他：</p><ul><li>虚拟环境和包管理工具（virtualenv、pip）</li><li>IDE和编辑器（PyCharm、VSCode、Sublime Text等）</li><li>编码规范和风格指南（PEP 8）</li></ul><h2 id="Python常用框架"><a href="#Python常用框架" class="headerlink" title="Python常用框架"></a>Python常用框架</h2><p>1.Django：一个全栈式的Web框架，包括ORM、表单验证、模板引擎等功能，可以快速构建Web应用。</p><p>2.Flask：一个轻量级Web框架，适用于构建小型Web应用或API服务，易于学习和使用。</p><p>3.Tornado：一个高性能的Web框架，主要用于构建异步Web服务和长连接应用。</p><p>4.Pyramid：一个通用的Web框架，提供了灵活的URL映射和模板渲染等功能，可用于构建中小型Web应用。</p><p>5.Bottle：一个微型的Web框架，仅依赖Python标准库，适用于构建简单的Web应用和API服务。</p><p>6.CherryPy：一个轻量级的Web框架，提供了高性能的HTTP服务器和可插拔的功能组件，可用于构建中小型Web应用。</p><p>7.Scrapy：一个开源的Web爬虫框架，可以用于抓取大规模的数据，支持异步处理和分布式部署。</p><p>8.NumPy：一个开源的数值计算库，提供了多维数组和矩阵运算、线性代数、随机数生成等功能，可用于科学计算和数据分析。</p><p>9.Pandas：一个数据分析库，提供了数据结构和数据分析工具，支持数据清洗、分组、聚合等操作。</p><p>10.TensorFlow：一个开源的人工智能框架，支持深度学习、神经网络和自然语言处理等领域，可用于构建各种机器学习应用。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python编程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python基础 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>JAVA入门（2）</title>
       <link href="/2023/03/07/java-lesson-two/"/>
       <url>/2023/03/07/java-lesson-two/</url>
