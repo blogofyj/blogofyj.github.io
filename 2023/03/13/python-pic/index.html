@@ -4,9 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hadoop技术, Blogs Of YJ">
-    <meta name="description" content="Hadoop是一个开源的分布式计算框架，可用于处理大数据集。它是Apache软件基金会的一个项目，其核心组件包括Hadoop Distributed File System（HDFS）和MapReduce计算模型。
-HDFS是一个分布式文件">
+    <meta name="keywords" content="Python(气温变化做图), Blogs Of YJ">
+    <meta name="description" content="做气温变化趋势图
+import pandas as pd
+import matplotlib.pyplot as plt
+from matplotlib.font_manager import FontProperties
+
+font_se">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +22,7 @@ HDFS是一个分布式文件">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hadoop技术 | Blogs Of YJ</title>
+    <title>Python(气温变化做图) | Blogs Of YJ</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
     <style>
@@ -470,12 +474,12 @@ HDFS是一个分布式文件">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hadoop技术</h1>
+                    <h1 class="description center-align post-title">Python(气温变化做图)</h1>
                 </div>
             </div>
         </div>
@@ -499,8 +503,8 @@ HDFS是一个分布式文件">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Hadoop%E5%9F%BA%E7%A1%80/">
-                                <span class="chip bg-color">Hadoop基础</span>
+                            <a href="/tags/Python%E5%9F%BA%E7%A1%80/">
+                                <span class="chip bg-color">Python基础</span>
                             </a>
                         
                     </div>
@@ -511,8 +515,8 @@ HDFS是一个分布式文件">
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Hadoop%E6%8A%80%E6%9C%AF/" class="post-category">
-                                Hadoop技术
+                            <a href="/categories/Python%E7%BC%96%E7%A8%8B/" class="post-category">
+                                Python编程
                             </a>
                         
                     </div>
@@ -524,7 +528,7 @@ HDFS是一个分布式文件">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2023-03-09
+                    2023-03-13
                 </div>
                 
 
@@ -533,7 +537,7 @@ HDFS是一个分布式文件">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    4.1k
+                    527
                 </div>
                 
 
@@ -550,88 +554,120 @@ HDFS是一个分布式文件">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Hadoop是一个开源的分布式计算框架，可用于处理大数据集。它是Apache软件基金会的一个项目，其核心组件包括Hadoop Distributed File System（HDFS）和MapReduce计算模型。</p>
-<p>HDFS是一个分布式文件系统，可以将大量数据分布式地存储在多个节点上，并提供高可靠性和高可用性的数据访问。MapReduce是一种分布式数据处理模型，用于对HDFS中存储的大数据集进行分布式处理和分析。</p>
-<p>Hadoop还包括其他一些组件，如YARN（Yet Another Resource Negotiator），它负责在集群中协调应用程序和计算资源的分配，以及Hive，它是一个数据仓库系统，可以使用SQL查询来处理和分析大规模数据。</p>
-<p>Hadoop技术已经成为大数据处理和分析的标准解决方案之一，它的高可扩展性、高可靠性和低成本使得越来越多的企业和组织开始采用Hadoop技术来处理他们的大数据。</p>
-<h2 id="1-Hadoop学习目录"><a href="#1-Hadoop学习目录" class="headerlink" title="1.Hadoop学习目录"></a>1.Hadoop学习目录</h2><p>1.大数据概述：了解大数据概念、挑战和机遇，以及Hadoop技术的作用和优势。</p>
-<p>2.Hadoop生态系统：了解Hadoop生态系统中的不同组件，包括HDFS、MapReduce、YARN、Hive、Pig、Spark等。</p>
-<p>3.安装和配置：学习如何安装和配置Hadoop集群，包括如何设置HDFS和YARN的配置文件。</p>
-<p>4.Hadoop编程模型：掌握MapReduce编程模型，包括Map、Reduce、Partition等基本概念，以及如何使用Java或其他编程语言编写MapReduce程序。</p>
-<p>5.HDFS文件系统：学习如何使用HDFS存储和管理大数据，包括如何上传、下载、复制和删除数据，以及如何使用命令行和Web界面管理HDFS。</p>
-<p>6.数据分析：了解如何使用Hadoop进行数据分析，包括使用Pig、Hive、Spark等工具对数据进行查询、处理和分析，以及如何使用HBase和Cassandra等NoSQL数据库存储和查询数据。</p>
-<p>7.高级主题：包括Hadoop的高可用性、性能调优、安全等方面的内容，以及如何使用Flume、Kafka、ZooKeeper等工具进行数据采集、消息传递和分布式协调。</p>
-<p>8.实战项目：进行实战项目练习，例如使用Hadoop处理大规模数据、构建数据仓库、实现推荐系统等。</p>
-<h3 id="1-1-大数据概述"><a href="#1-1-大数据概述" class="headerlink" title="1.1.大数据概述"></a>1.1.大数据概述</h3><p>大数据指的是规模巨大、多样化、高速增长的数据集合，超出了传统数据处理软件能够处理的能力范围。大数据的兴起源于互联网的发展，越来越多的人使用网络服务，产生了海量的数据。随着物联网、移动互联网、社交媒体等新兴技术的普及，大数据的规模和复杂性也在不断增加。</p>
-<p>大数据的挑战在于如何高效地存储、处理和分析这些数据，以提取有用的信息和洞察。传统的数据处理方法已经无法胜任，需要新的技术和工具来应对这一挑战。Hadoop就是应对大数据挑战的一种解决方案，它提供了分布式存储和计算框架，能够高效地处理海量数据。</p>
-<p>大数据也带来了很多机遇，它可以帮助企业、政府等机构更好地理解和应对市场、用户、环境等方面的变化。例如，企业可以利用大数据分析挖掘用户行为、市场趋势等信息，以制定更准确的营销策略和产品规划；政府可以利用大数据分析了解社会热点、民生问题等情况，以制定更科学的政策和计划。</p>
-<h3 id="1-2-Hadoop生态系统"><a href="#1-2-Hadoop生态系统" class="headerlink" title="1.2.Hadoop生态系统"></a>1.2.Hadoop生态系统</h3><p>Hadoop生态系统是由多个组件和工具构成的开源大数据平台，它们相互配合，共同完成大数据的存储、处理、分析等任务。以下是Hadoop生态系统的主要组件和工具：</p>
-<p>1.Hadoop Common：Hadoop的公共库，包括Hadoop的核心组件、API、工具等，为其他组件提供基础支持。</p>
-<p>2.Hadoop Distributed File System（HDFS）：Hadoop的分布式文件系统，用于存储和管理大数据。HDFS具有高可靠性、可扩展性和容错性，能够处理PB级别的数据。</p>
-<p>3.YARN（Yet Another Resource Negotiator）：Hadoop的资源管理器，用于管理集群资源，为作业分配资源，并监控作业运行状态。YARN支持多种计算框架，例如MapReduce、Spark、Tez等。</p>
-<p>4.MapReduce：Hadoop的分布式计算框架，用于处理大规模数据。MapReduce将作业分成Map和Reduce两个阶段，将大任务分成多个小任务并行执行，提高了处理效率。</p>
-<p>5.Hive：基于Hadoop的数据仓库工具，可以将结构化数据映射到Hadoop集群中的文件系统上，支持SQL查询和分析。</p>
-<p>6.Pig：基于Hadoop的高级数据流语言和平台，可以用于分析大规模数据。Pig具有灵活的数据模型和丰富的内置函数，可以处理各种数据格式和结构。</p>
-<p>7.Spark：基于内存计算的分布式计算框架，具有高速、易用、灵活等优点。Spark支持多种计算任务，包括批处理、流处理、机器学习等。</p>
-<p>除了上述组件和工具，Hadoop生态系统还包括其他一些工具和项目，例如：</p>
-<p>8.HBase：基于Hadoop的分布式NoSQL数据库，适用于实时查询和更新大量数据。</p>
-<p>9.ZooKeeper：分布式协调服务，用于管理分布式应用程序的配置、命名、同步和分组等任务。</p>
-<p>10.Flume：分布式的日志收集、聚合和传输系统，用于收集和传输海量日志数据。</p>
-<p>11.Kafka：分布式流式处理平台，用于高效地处理和传输数据流。</p>
-<p>总之，Hadoop生态系统提供了一系列的工具和组件，使得大数据处理变得更加高效、便捷和可靠。</p>
-<h3 id="1-3-安装和配置"><a href="#1-3-安装和配置" class="headerlink" title="1.3.安装和配置"></a>1.3.安装和配置</h3><p>1.下载Hadoop：从官网（<a target="_blank" rel="noopener" href="https://hadoop.apache.org/%EF%BC%89%E4%B8%8B%E8%BD%BD%E6%9C%80%E6%96%B0%E7%89%88%E7%9A%84Hadoop%EF%BC%8C%E5%B9%B6%E8%A7%A3%E5%8E%8B%E5%88%B0%E6%8C%87%E5%AE%9A%E7%9B%AE%E5%BD%95%E3%80%82%E5%9C%A8%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%AD%EF%BC%8C%E9%80%9A%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%8D%95%E6%9C%BA%E6%A8%A1%E5%BC%8F%E8%BF%90%E8%A1%8CHadoop%E3%80%82">https://hadoop.apache.org/）下载最新版的Hadoop，并解压到指定目录。在本地开发环境中，通常使用单机模式运行Hadoop。</a></p>
-<p>2.配置环境变量：将Hadoop的bin目录添加到系统的PATH环境变量中，以便在命令行中直接使用Hadoop命令。</p>
-<p>3.配置Hadoop：修改Hadoop的配置文件，以适应不同的需求。Hadoop的配置文件位于conf目录下，包括core-site.xml、hdfs-site.xml、mapred-site.xml和yarn-site.xml等。</p>
-<ul>
-<li>core-site.xml：配置Hadoop的通用参数，例如Hadoop的文件系统、IO方式等。</li>
-<li>hdfs-site.xml：配置HDFS相关的参数，例如HDFS的数据副本数、块大小等。</li>
-<li>mapred-site.xml：配置MapReduce相关的参数，例如MapReduce的任务数量、输出压缩方式等。</li>
-<li>yarn-site.xml：配置YARN相关的参数，例如YARN的资源管理方式、调度方式等。</li>
-</ul>
-<p>4.启动Hadoop：使用start-all.sh脚本启动Hadoop，该脚本会启动HDFS、YARN和其他相关服务。</p>
-<p>5.测试Hadoop：使用Hadoop自带的例子程序，例如WordCount程序，验证Hadoop的安装和配置是否正确。如果运行成功，可以开始编写自己的MapReduce程序，进行大数据处理。</p>
-<h3 id="1-4-Hadoop编程模型"><a href="#1-4-Hadoop编程模型" class="headerlink" title="1.4.Hadoop编程模型"></a>1.4.Hadoop编程模型</h3><p>Hadoop编程模型基于MapReduce，是一种分布式计算模型，常用于大规模数据处理。MapReduce将计算任务分解为两个部分：Map和Reduce。</p>
-<p>Map任务将输入数据划分为若干个小数据块，并对每个数据块进行处理，输出一组键值对，其中键表示数据的类型，值表示数据的内容。Map任务可以在多个节点上并行执行，每个节点只处理一部分数据，以提高处理速度和效率。</p>
-<p>Reduce任务将Map任务的输出数据按照键值对中的键进行分组，并对每组数据进行处理，输出一个最终结果。Reduce任务也可以在多个节点上并行执行，每个节点只处理一部分数据，以提高处理速度和效率。</p>
-<p>Hadoop编程模型的主要流程如下：</p>
-<p>1.输入数据：从Hadoop的文件系统（HDFS）中读取输入数据，将其分成若干个小数据块。</p>
-<p>2.Map阶段：将输入数据的每个小数据块作为Map任务的输入，通过Map函数进行处理，将处理结果输出为一组键值对。</p>
-<p>3.Shuffle阶段：将Map任务的输出数据按照键值对中的键进行分组，将同一组数据发送到同一个Reduce任务中进行处理。</p>
-<p>4.Reduce阶段：将Shuffle阶段的输出数据作为Reduce任务的输入，通过Reduce函数进行处理，输出一个最终结果。</p>
-<p>5.输出数据：将Reduce任务的输出数据写入HDFS中，作为最终结果。</p>
-<p>除了MapReduce，Hadoop还支持其他编程模型，例如Hive、Pig和Spark等，这些模型基于MapReduce模型，并提供更高级别的抽象和接口，方便用户进行数据处理和分析。</p>
-<h3 id="1-5-HDFS文件系统"><a href="#1-5-HDFS文件系统" class="headerlink" title="1.5.HDFS文件系统"></a>1.5.HDFS文件系统</h3><p>HDFS（Hadoop Distributed File System）是Hadoop的分布式文件系统，被设计用于存储和管理大规模数据集。它是一个高容错性、高可靠性的文件系统，可以运行在廉价硬件上，并且支持水平扩展。</p>
-<p>HDFS的主要特点如下：</p>
-<p>1.大容量：HDFS可以存储PB级别的数据，可以容易地扩展存储容量。</p>
-<p>2.可靠性：HDFS使用数据冗余来提高数据的可靠性，如果某个节点出现故障，数据可以从其他节点恢复。</p>
-<p>3.高效性：HDFS优化了大规模数据的读写操作，支持流式访问，可以快速读取和写入大文件。</p>
-<p>4.可扩展性：HDFS支持水平扩展，可以根据需要添加更多的节点，以满足不同的需求。</p>
-<p>HDFS的文件系统结构类似于传统的文件系统，包括文件和目录。但是，HDFS的文件系统是分布式的，每个文件被分成多个数据块，并存储在不同的节点上。每个数据块的默认大小是128 MB，可以根据需要进行配置。当一个文件被上传到HDFS中时，它会被分成多个数据块，并存储在不同的节点上，以提高数据的可靠性和容错性。</p>
-<p>HDFS的核心组件包括NameNode和DataNode。NameNode负责管理文件系统的元数据（例如文件和目录的名称、权限和位置等），而DataNode负责存储和管理实际的数据块。</p>
-<p>HDFS是Hadoop生态系统的重要组成部分，常用于存储和管理大规模数据集，例如日志数据、图像数据和音频数据等。</p>
-<h3 id="1-6-数据分析"><a href="#1-6-数据分析" class="headerlink" title="1.6.数据分析"></a>1.6.数据分析</h3><p>数据分析是一种通过对数据进行收集、处理、清洗、建模和解释的方法来发现有用信息的过程。数据分析可以用于解决各种问题，例如发现趋势、预测未来事件、评估性能、识别机会等。</p>
-<p>在大数据领域，数据分析通常需要处理大量的数据，并从中提取有用的信息。Hadoop生态系统提供了许多工具和技术来支持大规模数据分析，例如：</p>
-<p>1.MapReduce：MapReduce是一种分布式计算模型，可以用于处理大规模数据集。它将数据分成若干个小数据块，并在多个节点上并行处理这些数据块，以提高处理速度和效率。</p>
-<p>2.Hive：Hive是一种基于Hadoop的数据仓库工具，可以用SQL语言进行数据分析。它将SQL查询转换为MapReduce作业，并在后台自动执行。</p>
-<p>3.Pig：Pig是一种基于Hadoop的数据流语言，可以用于数据分析和转换。它可以将数据流式处理，以提高处理效率。</p>
-<p>4.Spark：Spark是一种快速、通用的分布式计算系统，可以用于处理大规模数据集。它提供了许多高级API，例如Spark SQL、Spark Streaming和MLlib等，支持数据分析、机器学习和实时处理等。</p>
-<p>5.Mahout：Mahout是一个开源的机器学习库，可以用于数据挖掘、分类、聚类和推荐等。</p>
-<p>这些工具和技术可以帮助数据分析人员更轻松地处理和分析大规模数据集，并从中发现有用的信息和洞见。</p>
-<h3 id="1-7-高级主题"><a href="#1-7-高级主题" class="headerlink" title="1.7.高级主题"></a>1.7.高级主题</h3><p>以下是一些Hadoop高级主题：</p>
-<p>1.YARN：YARN是Hadoop的资源管理器，它负责管理Hadoop集群中的资源分配和作业调度。YARN将计算资源分成容器，可以在不同的节点上分配和管理这些容器。它支持多种应用程序框架，例如MapReduce、Spark和HBase等。</p>
-<p>2.HBase：HBase是一种分布式的、面向列的NoSQL数据库，可以存储大规模结构化数据。它使用Hadoop HDFS作为底层存储，并提供了快速的数据访问和实时查询功能。</p>
-<p>3.ZooKeeper：ZooKeeper是一个分布式的协调服务，可以用于管理分布式系统中的配置信息、锁定和同步等。它可以帮助分布式应用程序更好地管理和协调数据，确保数据一致性和可靠性。</p>
-<p>4.Oozie：Oozie是一个基于Hadoop的工作流引擎，可以用于定义、管理和执行复杂的、分布式的作业流程。它可以将不同的Hadoop作业组合成一个完整的工作流程，并在后台自动执行。</p>
-<p>5.Sqoop：Sqoop是一个开源工具，可以用于将关系型数据库中的数据导入到Hadoop中。它支持多种数据库和数据格式，并提供了高效的数据传输和转换功能。</p>
-<p>这些高级主题可以帮助用户更深入地了解Hadoop的内部机制和各个组件之间的相互作用。同时，它们也提供了更多的功能和工具，以满足不同的数据处理和分析需求。</p>
-<h3 id="1-8-实战项目"><a href="#1-8-实战项目" class="headerlink" title="1.8.实战项目"></a>1.8.实战项目</h3><p>以下是一些基于Hadoop的实战项目：</p>
-<p>1.日志分析：使用Hadoop生态系统中的工具和技术来分析大量的Web日志数据，以了解网站的访问情况、用户行为和趋势等。可以使用工具如Hive、Pig、MapReduce和Spark等。</p>
-<p>2.电商推荐系统：使用Hadoop生态系统中的机器学习库和数据处理工具，例如Mahout和Spark MLlib等，来构建一个电商推荐系统。该系统可以基于用户的历史购买记录、浏览记录和其他行为数据，推荐个性化的产品或服务。</p>
-<p>3.大数据可视化：使用Hadoop和相关的可视化工具，例如Apache Superset、Tableau和Power BI等，来构建大数据可视化应用程序。该应用程序可以帮助用户更直观地了解和分析大规模数据集。</p>
-<p>4.智能医疗系统：使用Hadoop生态系统中的工具和技术，例如Spark Streaming和机器学习库，来构建一个智能医疗系统。该系统可以基于患者的医疗记录、生理数据和其他相关信息，提供个性化的诊断和治疗建议。</p>
-<p>5.金融风险管理：使用Hadoop生态系统中的工具和技术，例如Hive和MapReduce，来构建一个金融风险管理系统。该系统可以分析市场数据、经济指标和其他相关信息，以预测风险和市场趋势，并提供投资建议。</p>
-<p>这些实战项目可以帮助用户将Hadoop的知识应用到实际的场景中，并提供了丰富的经验和技能。同时，它们也可以为用户提供机会，深入了解各种Hadoop技术和工具的应用，从而提高其技术水平和竞争力。</p>
-<h2 id="2-学习链接"><a href="#2-学习链接" class="headerlink" title="2.学习链接"></a>2.学习链接</h2><p>黑马程序员：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1CU4y1N7Sh/?spm_id_from=333.337.search-card.all.click">https://www.bilibili.com/video/BV1CU4y1N7Sh/?spm_id_from=333.337.search-card.all.click</a><br>尚硅谷：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Qp4y1n7EN/?spm_id_from=333.337.search-card.all.click">https://www.bilibili.com/video/BV1Qp4y1n7EN/?spm_id_from=333.337.search-card.all.click</a></p>
+                <p>做气温变化趋势图</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">from</span> matplotlib<span class="token punctuation">.</span>font_manager <span class="token keyword">import</span> FontProperties
+
+font_set <span class="token operator">=</span> FontProperties<span class="token punctuation">(</span>fname<span class="token operator">=</span>r<span class="token string">"simfang.ttf"</span><span class="token punctuation">,</span> size<span class="token operator">=</span><span class="token number">15</span><span class="token punctuation">)</span>
+df<span class="token operator">=</span>pd<span class="token punctuation">.</span>read_excel<span class="token punctuation">(</span><span class="token string">"data_final1.xlsx"</span><span class="token punctuation">,</span> names<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">"Year"</span><span class="token punctuation">,</span> <span class="token string">'6月'</span><span class="token punctuation">,</span> <span class="token string">'7月'</span><span class="token punctuation">,</span> <span class="token string">'8月'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># plt.figure(figsize=(9, 7), dpi=600)</span>
+
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>df<span class="token punctuation">[</span><span class="token string">"Year"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>df<span class="token punctuation">[</span><span class="token string">"6月"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>marker<span class="token operator">=</span><span class="token string">'o'</span><span class="token punctuation">,</span>label<span class="token operator">=</span><span class="token string">"6月"</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">#原始数据</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>df<span class="token punctuation">[</span><span class="token string">"Year"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>df<span class="token punctuation">[</span><span class="token string">"7月"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>marker<span class="token operator">=</span><span class="token string">'o'</span><span class="token punctuation">,</span>label<span class="token operator">=</span><span class="token string">"7月"</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">#原始数据</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>df<span class="token punctuation">[</span><span class="token string">"Year"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>df<span class="token punctuation">[</span><span class="token string">"8月"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>marker<span class="token operator">=</span><span class="token string">'o'</span><span class="token punctuation">,</span>label<span class="token operator">=</span><span class="token string">"8月"</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">#原始数据</span>
+
+plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">"年份"</span><span class="token punctuation">,</span>FontProperties<span class="token operator">=</span>font_set<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">"气温"</span><span class="token punctuation">,</span>FontProperties<span class="token operator">=</span>font_set<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">"1961年-2021年气温变化图"</span><span class="token punctuation">,</span> FontProperties<span class="token operator">=</span>font_set<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span>prop<span class="token operator">=</span>font_set<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>做平均气温变化图</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">from</span> matplotlib<span class="token punctuation">.</span>font_manager <span class="token keyword">import</span> FontProperties
+
+font_set <span class="token operator">=</span> FontProperties<span class="token punctuation">(</span>fname<span class="token operator">=</span>r<span class="token string">"simfang.ttf"</span><span class="token punctuation">,</span> size<span class="token operator">=</span><span class="token number">15</span><span class="token punctuation">)</span>
+df<span class="token operator">=</span>pd<span class="token punctuation">.</span>read_excel<span class="token punctuation">(</span><span class="token string">"data_final2.xlsx"</span><span class="token punctuation">,</span> names<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">"Year"</span><span class="token punctuation">,</span> <span class="token string">'Avg'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># plt.figure(figsize=(9, 7), dpi=600)</span>
+
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>df<span class="token punctuation">[</span><span class="token string">"Year"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>df<span class="token punctuation">[</span><span class="token string">"Avg"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>marker<span class="token operator">=</span><span class="token string">'o'</span><span class="token punctuation">,</span>label<span class="token operator">=</span><span class="token string">"Avg"</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">#原始数据</span>
+
+x <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1991</span><span class="token punctuation">,</span><span class="token number">2021</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+y <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">21.61</span><span class="token punctuation">,</span><span class="token number">21.26</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>len<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> y<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">"-."</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'r'</span><span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">"年份"</span><span class="token punctuation">,</span>FontProperties<span class="token operator">=</span>font_set<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">"气温"</span><span class="token punctuation">,</span>FontProperties<span class="token operator">=</span>font_set<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">"1991年-2021年气温变化图"</span><span class="token punctuation">,</span> FontProperties<span class="token operator">=</span>font_set<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span>prop<span class="token operator">=</span>font_set<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>做气温MK图</p>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">from</span> matplotlib<span class="token punctuation">.</span>font_manager <span class="token keyword">import</span> FontProperties
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+font_set <span class="token operator">=</span> FontProperties<span class="token punctuation">(</span>fname<span class="token operator">=</span>r<span class="token string">"simfang.ttf"</span><span class="token punctuation">,</span> size<span class="token operator">=</span><span class="token number">15</span><span class="token punctuation">)</span>
+df<span class="token operator">=</span>pd<span class="token punctuation">.</span>read_excel<span class="token punctuation">(</span><span class="token string">"data_final2.xlsx"</span><span class="token punctuation">,</span> names<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">"Year"</span><span class="token punctuation">,</span> <span class="token string">'Avg'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">Mk</span><span class="token punctuation">(</span>input_data<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    data <span class="token operator">=</span> input_data<span class="token punctuation">[</span><span class="token string">"Avg"</span><span class="token punctuation">]</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
+    n <span class="token operator">=</span> <span class="token number">31</span>
+    <span class="token comment" spellcheck="true">#计算UFk</span>
+    Sk1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    Exk1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    Varxk1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    UFk <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    s1 <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> j <span class="token keyword">in</span> range<span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> data<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">></span> data<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">:</span>
+                s1<span class="token operator">+=</span><span class="token number">1</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                s1<span class="token operator">+=</span><span class="token number">0</span>
+        Sk1<span class="token punctuation">.</span>append<span class="token punctuation">(</span>s1<span class="token punctuation">)</span>
+        Exk1<span class="token punctuation">.</span>append<span class="token punctuation">(</span>i<span class="token operator">*</span><span class="token punctuation">(</span>i<span class="token number">-1</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">4</span><span class="token punctuation">)</span>
+        Varxk1<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">*</span>i<span class="token operator">*</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token operator">*</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">72</span> <span class="token punctuation">)</span>
+        UFk<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">(</span>Sk1<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">-</span>Exk1<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">/</span>np<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span>Varxk1<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+    <span class="token comment" spellcheck="true">#计算UBk</span>
+    data1 <span class="token operator">=</span> list<span class="token punctuation">(</span>reversed<span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#逆转</span>
+    Sk2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    Exk2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    Varxk2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    UBk <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    s2 <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> j <span class="token keyword">in</span> range<span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> data1<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">></span> data1<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">:</span>
+                s2<span class="token operator">+=</span><span class="token number">1</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                s2<span class="token operator">+=</span><span class="token number">0</span>
+        Sk2<span class="token punctuation">.</span>append<span class="token punctuation">(</span>s2<span class="token punctuation">)</span>
+        Exk2<span class="token punctuation">.</span>append<span class="token punctuation">(</span>i<span class="token operator">*</span><span class="token punctuation">(</span>i<span class="token number">-1</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">4</span><span class="token punctuation">)</span>
+        Varxk2<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">*</span>i<span class="token operator">*</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token operator">*</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">72</span> <span class="token punctuation">)</span>
+        UBk<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">(</span>Exk2<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">-</span>Sk2<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">/</span>np<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span>Varxk2<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    UBk <span class="token operator">=</span> list<span class="token punctuation">(</span>reversed<span class="token punctuation">(</span>UBk<span class="token punctuation">)</span><span class="token punctuation">)</span>
+    diff <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>UFk<span class="token punctuation">)</span> <span class="token operator">-</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>UBk<span class="token punctuation">)</span>
+    K <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>len<span class="token punctuation">(</span>diff<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> diff<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">*</span>diff<span class="token punctuation">[</span>i<span class="token number">-1</span><span class="token punctuation">]</span> <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            K<span class="token punctuation">.</span>append<span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> UFk<span class="token punctuation">,</span>UBk<span class="token punctuation">,</span>K
+
+UFk<span class="token punctuation">,</span>UBk<span class="token punctuation">,</span>K <span class="token operator">=</span> Mk<span class="token punctuation">(</span>df<span class="token punctuation">)</span>
+
+xmk <span class="token operator">=</span> np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token number">1991</span><span class="token punctuation">,</span><span class="token number">2021</span><span class="token punctuation">,</span><span class="token number">31</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>xmk<span class="token punctuation">,</span> UFk<span class="token punctuation">,</span>label <span class="token operator">=</span> <span class="token string">"UFk"</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>xmk<span class="token punctuation">,</span> UBk<span class="token punctuation">,</span>label <span class="token operator">=</span> <span class="token string">"UBk"</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">"年份"</span><span class="token punctuation">,</span>FontProperties<span class="token operator">=</span>font_set<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">"UFk-UBk"</span><span class="token punctuation">)</span>
+x_lim <span class="token operator">=</span> plt<span class="token punctuation">.</span>xlim<span class="token punctuation">(</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x_lim<span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1.96</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1.96</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">"--"</span><span class="token punctuation">,</span>color<span class="token operator">=</span><span class="token string">"r"</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x_lim<span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">"m--"</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x_lim<span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">1.96</span><span class="token punctuation">,</span><span class="token number">1.96</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">"--"</span><span class="token punctuation">,</span>color<span class="token operator">=</span><span class="token string">"r"</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">"Mk 测试"</span><span class="token punctuation">,</span>FontProperties<span class="token operator">=</span>font_set<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
 
                 
             </div>
@@ -658,7 +694,7 @@ HDFS是一个分布式文件">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://blogofyj.github.io/2023/03/09/hadoop/">https://blogofyj.github.io/2023/03/09/hadoop/</a>
+                    <a href="https://blogofyj.github.io/2023/03/13/python-pic/">https://blogofyj.github.io/2023/03/13/python-pic/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -696,8 +732,8 @@ HDFS是一个分布式文件">
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Hadoop%E5%9F%BA%E7%A1%80/">
-                                    <span class="chip bg-color">Hadoop基础</span>
+                                <a href="/tags/Python%E5%9F%BA%E7%A1%80/">
+                                    <span class="chip bg-color">Python基础</span>
                                 </a>
                             
                         </div>
@@ -1043,9 +1079,10 @@ HDFS是一个分布式文件">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2023/03/13/python-pic/">
                     <div class="card-image">
@@ -1063,9 +1100,9 @@ HDFS是一个分布式文件">
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-03-13
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-13
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1078,6 +1115,7 @@ HDFS是一个分布式文件">
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1096,13 +1134,13 @@ HDFS是一个分布式文件">
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/03/07/python-lesson-one/">
+                <a href="/2023/03/09/hadoop/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Python入门">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Hadoop技术">
                         
-                        <span class="card-title">Python入门</span>
+                        <span class="card-title">Hadoop技术</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1113,14 +1151,14 @@ HDFS是一个分布式文件">
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-09
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Python%E7%BC%96%E7%A8%8B/" class="post-category">
-                                    Python编程
+                            <a href="/categories/Hadoop%E6%8A%80%E6%9C%AF/" class="post-category">
+                                    Hadoop技术
                                 </a>
                             
                             
@@ -1130,8 +1168,8 @@ HDFS是一个分布式文件">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Python%E5%9F%BA%E7%A1%80/">
-                        <span class="chip bg-color">Python基础</span>
+                    <a href="/tags/Hadoop%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">Hadoop基础</span>
                     </a>
                     
                 </div>
