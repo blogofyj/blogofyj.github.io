@@ -4,13 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Python(气温变化做图), Blogs Of YJ">
-    <meta name="description" content="做气温变化趋势图
-import pandas as pd
-import matplotlib.pyplot as plt
-from matplotlib.font_manager import FontProperties
-
-font_se">
+    <meta name="keywords" content="the world of outside, Blogs Of YJ">
+    <meta name="description" content="18 Best Youtube Channels to Watch in 20231	Kurzgesagt2	AlternateHistoryHub3	Veritasium4	FitnessBlender5	Good Mythical Mo">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -22,7 +17,7 @@ font_se">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Python(气温变化做图) | Blogs Of YJ</title>
+    <title>the world of outside | Blogs Of YJ</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
     <style>
@@ -474,12 +469,12 @@ font_se">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Python(气温变化做图)</h1>
+                    <h1 class="description center-align post-title">the world of outside</h1>
                 </div>
             </div>
         </div>
@@ -503,8 +498,8 @@ font_se">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Python%E5%9F%BA%E7%A1%80/">
-                                <span class="chip bg-color">Python基础</span>
+                            <a href="/tags/diary/">
+                                <span class="chip bg-color">diary</span>
                             </a>
                         
                     </div>
@@ -515,8 +510,8 @@ font_se">
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Python%E7%BC%96%E7%A8%8B/" class="post-category">
-                                Python编程
+                            <a href="/categories/diary/" class="post-category">
+                                diary
                             </a>
                         
                     </div>
@@ -528,7 +523,7 @@ font_se">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2023-03-13
+                    2023-05-10
                 </div>
                 
 
@@ -537,7 +532,7 @@ font_se">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    527
+                    747
                 </div>
                 
 
@@ -554,120 +549,25 @@ font_se">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>做气温变化趋势图</p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
-<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
-<span class="token keyword">from</span> matplotlib<span class="token punctuation">.</span>font_manager <span class="token keyword">import</span> FontProperties
-
-font_set <span class="token operator">=</span> FontProperties<span class="token punctuation">(</span>fname<span class="token operator">=</span>r<span class="token string">"simfang.ttf"</span><span class="token punctuation">,</span> size<span class="token operator">=</span><span class="token number">15</span><span class="token punctuation">)</span>
-df<span class="token operator">=</span>pd<span class="token punctuation">.</span>read_excel<span class="token punctuation">(</span><span class="token string">"data_final1.xlsx"</span><span class="token punctuation">,</span> names<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">"Year"</span><span class="token punctuation">,</span> <span class="token string">'6月'</span><span class="token punctuation">,</span> <span class="token string">'7月'</span><span class="token punctuation">,</span> <span class="token string">'8月'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># plt.figure(figsize=(9, 7), dpi=600)</span>
-
-plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>df<span class="token punctuation">[</span><span class="token string">"Year"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>df<span class="token punctuation">[</span><span class="token string">"6月"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>marker<span class="token operator">=</span><span class="token string">'o'</span><span class="token punctuation">,</span>label<span class="token operator">=</span><span class="token string">"6月"</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">#原始数据</span>
-plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>df<span class="token punctuation">[</span><span class="token string">"Year"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>df<span class="token punctuation">[</span><span class="token string">"7月"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>marker<span class="token operator">=</span><span class="token string">'o'</span><span class="token punctuation">,</span>label<span class="token operator">=</span><span class="token string">"7月"</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">#原始数据</span>
-plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>df<span class="token punctuation">[</span><span class="token string">"Year"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>df<span class="token punctuation">[</span><span class="token string">"8月"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>marker<span class="token operator">=</span><span class="token string">'o'</span><span class="token punctuation">,</span>label<span class="token operator">=</span><span class="token string">"8月"</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">#原始数据</span>
-
-plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">"年份"</span><span class="token punctuation">,</span>FontProperties<span class="token operator">=</span>font_set<span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">"气温"</span><span class="token punctuation">,</span>FontProperties<span class="token operator">=</span>font_set<span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">"1961年-2021年气温变化图"</span><span class="token punctuation">,</span> FontProperties<span class="token operator">=</span>font_set<span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span>prop<span class="token operator">=</span>font_set<span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
-<p>做平均气温变化图</p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
-<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
-<span class="token keyword">from</span> matplotlib<span class="token punctuation">.</span>font_manager <span class="token keyword">import</span> FontProperties
-
-font_set <span class="token operator">=</span> FontProperties<span class="token punctuation">(</span>fname<span class="token operator">=</span>r<span class="token string">"simfang.ttf"</span><span class="token punctuation">,</span> size<span class="token operator">=</span><span class="token number">15</span><span class="token punctuation">)</span>
-df<span class="token operator">=</span>pd<span class="token punctuation">.</span>read_excel<span class="token punctuation">(</span><span class="token string">"data_final2.xlsx"</span><span class="token punctuation">,</span> names<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">"Year"</span><span class="token punctuation">,</span> <span class="token string">'Avg'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true"># plt.figure(figsize=(9, 7), dpi=600)</span>
-
-plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>df<span class="token punctuation">[</span><span class="token string">"Year"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>df<span class="token punctuation">[</span><span class="token string">"Avg"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>marker<span class="token operator">=</span><span class="token string">'o'</span><span class="token punctuation">,</span>label<span class="token operator">=</span><span class="token string">"Avg"</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">#原始数据</span>
-
-x <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1991</span><span class="token punctuation">,</span><span class="token number">2021</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
-y <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">21.61</span><span class="token punctuation">,</span><span class="token number">21.26</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
-<span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>len<span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-    plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> y<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">"-."</span><span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">'r'</span><span class="token punctuation">)</span>
-
-plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">"年份"</span><span class="token punctuation">,</span>FontProperties<span class="token operator">=</span>font_set<span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">"气温"</span><span class="token punctuation">,</span>FontProperties<span class="token operator">=</span>font_set<span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">"1991年-2021年气温变化图"</span><span class="token punctuation">,</span> FontProperties<span class="token operator">=</span>font_set<span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span>prop<span class="token operator">=</span>font_set<span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
-<p>做气温MK图</p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd
-<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
-<span class="token keyword">from</span> matplotlib<span class="token punctuation">.</span>font_manager <span class="token keyword">import</span> FontProperties
-<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
-
-font_set <span class="token operator">=</span> FontProperties<span class="token punctuation">(</span>fname<span class="token operator">=</span>r<span class="token string">"simfang.ttf"</span><span class="token punctuation">,</span> size<span class="token operator">=</span><span class="token number">15</span><span class="token punctuation">)</span>
-df<span class="token operator">=</span>pd<span class="token punctuation">.</span>read_excel<span class="token punctuation">(</span><span class="token string">"data_final2.xlsx"</span><span class="token punctuation">,</span> names<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">"Year"</span><span class="token punctuation">,</span> <span class="token string">'Avg'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-
-
-<span class="token keyword">def</span> <span class="token function">Mk</span><span class="token punctuation">(</span>input_data<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    data <span class="token operator">=</span> input_data<span class="token punctuation">[</span><span class="token string">"Avg"</span><span class="token punctuation">]</span>
-    <span class="token keyword">print</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span>
-    n <span class="token operator">=</span> <span class="token number">31</span>
-    <span class="token comment" spellcheck="true">#计算UFk</span>
-    Sk1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
-    Exk1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
-    Varxk1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
-    UFk <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
-    s1 <span class="token operator">=</span> <span class="token number">0</span>
-    <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token keyword">for</span> j <span class="token keyword">in</span> range<span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token keyword">if</span> data<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">></span> data<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">:</span>
-                s1<span class="token operator">+=</span><span class="token number">1</span>
-            <span class="token keyword">else</span><span class="token punctuation">:</span>
-                s1<span class="token operator">+=</span><span class="token number">0</span>
-        Sk1<span class="token punctuation">.</span>append<span class="token punctuation">(</span>s1<span class="token punctuation">)</span>
-        Exk1<span class="token punctuation">.</span>append<span class="token punctuation">(</span>i<span class="token operator">*</span><span class="token punctuation">(</span>i<span class="token number">-1</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">4</span><span class="token punctuation">)</span>
-        Varxk1<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">*</span>i<span class="token operator">*</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token operator">*</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">72</span> <span class="token punctuation">)</span>
-        UFk<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">(</span>Sk1<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">-</span>Exk1<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">/</span>np<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span>Varxk1<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-
-    <span class="token comment" spellcheck="true">#计算UBk</span>
-    data1 <span class="token operator">=</span> list<span class="token punctuation">(</span>reversed<span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">#逆转</span>
-    Sk2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
-    Exk2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
-    Varxk2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
-    UBk <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
-    s2 <span class="token operator">=</span> <span class="token number">0</span>
-    <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token keyword">for</span> j <span class="token keyword">in</span> range<span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token keyword">if</span> data1<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">></span> data1<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">:</span>
-                s2<span class="token operator">+=</span><span class="token number">1</span>
-            <span class="token keyword">else</span><span class="token punctuation">:</span>
-                s2<span class="token operator">+=</span><span class="token number">0</span>
-        Sk2<span class="token punctuation">.</span>append<span class="token punctuation">(</span>s2<span class="token punctuation">)</span>
-        Exk2<span class="token punctuation">.</span>append<span class="token punctuation">(</span>i<span class="token operator">*</span><span class="token punctuation">(</span>i<span class="token number">-1</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">4</span><span class="token punctuation">)</span>
-        Varxk2<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">*</span>i<span class="token operator">*</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token operator">*</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token operator">/</span><span class="token number">72</span> <span class="token punctuation">)</span>
-        UBk<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">(</span>Exk2<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">-</span>Sk2<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">/</span>np<span class="token punctuation">.</span>sqrt<span class="token punctuation">(</span>Varxk2<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-    UBk <span class="token operator">=</span> list<span class="token punctuation">(</span>reversed<span class="token punctuation">(</span>UBk<span class="token punctuation">)</span><span class="token punctuation">)</span>
-    diff <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>UFk<span class="token punctuation">)</span> <span class="token operator">-</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span>UBk<span class="token punctuation">)</span>
-    K <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-    <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span>len<span class="token punctuation">(</span>diff<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-        <span class="token keyword">if</span> diff<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">*</span>diff<span class="token punctuation">[</span>i<span class="token number">-1</span><span class="token punctuation">]</span> <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
-            K<span class="token punctuation">.</span>append<span class="token punctuation">(</span>i<span class="token punctuation">)</span>
-    <span class="token keyword">return</span> UFk<span class="token punctuation">,</span>UBk<span class="token punctuation">,</span>K
-
-UFk<span class="token punctuation">,</span>UBk<span class="token punctuation">,</span>K <span class="token operator">=</span> Mk<span class="token punctuation">(</span>df<span class="token punctuation">)</span>
-
-xmk <span class="token operator">=</span> np<span class="token punctuation">.</span>linspace<span class="token punctuation">(</span><span class="token number">1991</span><span class="token punctuation">,</span><span class="token number">2021</span><span class="token punctuation">,</span><span class="token number">31</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>xmk<span class="token punctuation">,</span> UFk<span class="token punctuation">,</span>label <span class="token operator">=</span> <span class="token string">"UFk"</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>xmk<span class="token punctuation">,</span> UBk<span class="token punctuation">,</span>label <span class="token operator">=</span> <span class="token string">"UBk"</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>xlabel<span class="token punctuation">(</span><span class="token string">"年份"</span><span class="token punctuation">,</span>FontProperties<span class="token operator">=</span>font_set<span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>ylabel<span class="token punctuation">(</span><span class="token string">"UFk-UBk"</span><span class="token punctuation">)</span>
-x_lim <span class="token operator">=</span> plt<span class="token punctuation">.</span>xlim<span class="token punctuation">(</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x_lim<span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1.96</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">1.96</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">"--"</span><span class="token punctuation">,</span>color<span class="token operator">=</span><span class="token string">"r"</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x_lim<span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">"m--"</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x_lim<span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">1.96</span><span class="token punctuation">,</span><span class="token number">1.96</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token string">"--"</span><span class="token punctuation">,</span>color<span class="token operator">=</span><span class="token string">"r"</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">"Mk 测试"</span><span class="token punctuation">,</span>FontProperties<span class="token operator">=</span>font_set<span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
+                <h2 id="18-Best-Youtube-Channels-to-Watch-in-2023"><a href="#18-Best-Youtube-Channels-to-Watch-in-2023" class="headerlink" title="18 Best Youtube Channels to Watch in 2023"></a>18 Best Youtube Channels to Watch in 2023</h2><p>1	Kurzgesagt<br>2	AlternateHistoryHub<br>3	Veritasium<br>4	FitnessBlender<br>5	Good Mythical Morning<br>6	Girlfriend Reviews<br>7	PewDiePie<br>8	MrBeast<br>9	Tasty<br>10	The School of Life<br>11	TED-Ed<br>12	The Dodo<br>13	Vanity Fair<br>14	Marques Brownlee<br>15	Tifo Football<br>16	Llama Arts<br>17	patrickJMT<br>18	WIRED</p>
+<p>Kurzgesagt (Science)：If you’re interested in learning more about science in a much more exciting way than reading books, then look no further than Kurzgesagt. Philipp Detmer founded this channel, and he created animated educational videos.</p>
+<p>AlternateHistoryHub (History)：History can be an extremely complicated and messy topic to talk about. There are various arguments on whether the winning side wrote it, and sometimes we find new evidence that revises what was already written.</p>
+<p>Veritasium (Science Experiments)：Like Kurzgesagt, Veritasium also talks about science. The difference is that this channel discusses the questions you think about every other day, more often than more complex topics. However, they still talk about and regularly conduct experiments to prove (and sometimes disprove) known scientific theories. </p>
+<p>FitnessBlender (Fitness and Health)：While exercise is crucial to physical and mental health, finding the motivation and proper resources can be challenging. If you need a channel that fulfills all your fitness needs, look no further than FitnessBlender. </p>
+<p>Good Mythical Morning (Comedy)：Good Mythical Morning is a channel hosted by Rhett and Link, internet comedians, where they would play games, do crazy experiments, and talk about some of the latest experiments.</p>
+<p>Girlfriend Reviews (Gaming)：Playing video games is a ton of fun, but buying the latest games is often expensive. So sometimes, we need to watch the latest reviews to get a better idea of what the game’s all about and if it’s worth it or not.</p>
+<p>PewDiePie (Gaming)：With more than 111 million subscribers, PewDiePie, a.k.a Felix Kjellberg, is currently the most subscribed YouTube creator. He primarily posts gaming videos on his channel, but does comedy sketches, meme reviews, and many more.</p>
+<p>MrBeast (Entertainment)：MrBeast, real-name Jimmy Donaldson, posts many random yet attention-grabbing videos that will almost always go viral as he averages more than 50 million views on his videos! </p>
+<p>Tasty (Culinary&#x2F;Food)：If you love to make (and eat) good food, then the Tasty YouTube channel has everything you need. They create short yet mouthwatering videos and give simple steps to make the delicious-looking food in their videos.</p>
+<p>The School of Life (Education&#x2F;Life Lessons)：The School of Life is a YouTube channel and a real-life school that teaches adults all kinds of topics that many schools and parents often forget to teach their children, including:Philosophy，Literature，Psychotherapy，Relationships，And much more. Consisting of philosophers, psychologists, and writers, The School of Life posts many videos that can help us lead calmer lives, develop a better understanding of ourselves and others, and increase our confidence in dealing with our problems.</p>
+<p>TED-Ed (Education)：TED-Ed posts “lessons worth sharing” in the form of short and curated educational videos discussing virtually any topic they think would fulfill their mission of spreading great ideas.</p>
+<p>The Dodo (Animals)：While cats and dogs are usually in some of the most viral videos on YouTube, The Dodo posts various animals on their channel, regardless of their size.</p>
+<p>Vanity Fair (Pop Culture)：Vanity Fair is originally a monthly magazine in the United States that talks about pop culture, fashion, and everything trending.</p>
+<p>Marques Brownlee (Technology)：Marques Brownlee, or as he’s known professionally, MKBHD, is a tech-focused YouTuber that has over 15 million subscribers and more than 2.8 billion total video views. He’s one of the best, if not the best tech reviewer, on YouTube, and a former Senior VP of Google even lauded him as “the best technology reviewer on the planet right now.”</p>
+<p>Tifo Football (Football&#x2F;Soccer)：They create insightful tactical breakdowns of football matches, talk about the history of some fascinating stories about football, and sometimes even cover geopolitical events in world football. </p>
+<p>Llama Arts (Animation)：Llama Arts uploads animations of horror stories that Mr. Nightmare — another YouTuber — reads on his channel. They animate the stories from Mr. Nightmare’s channel to help viewers visualize them better.</p>
+<p>PatrickJMT (Math)：Patrick, the creator of PatrickJMT, is a college mathematics instructor and creates math videos for all levels of education to help them get a better understanding of math principles and equations.</p>
+<p>Wired (Technology)：Similar to Vanity Fair, Wired is also a monthly American magazine. However, Wired focuses more on technology rather than pop culture. </p>
 
                 
             </div>
@@ -694,7 +594,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://blogofyj.github.io/2023/03/13/python-pic/">https://blogofyj.github.io/2023/03/13/python-pic/</a>
+                    <a href="https://blogofyj.github.io/2023/05/10/the-world-of-outside/">https://blogofyj.github.io/2023/05/10/the-world-of-outside/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -732,8 +632,8 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Python%E5%9F%BA%E7%A1%80/">
-                                    <span class="chip bg-color">Python基础</span>
+                                <a href="/tags/diary/">
+                                    <span class="chip bg-color">diary</span>
                                 </a>
                             
                         </div>
@@ -1079,9 +979,10 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2023/05/10/the-world-of-outside/">
                     <div class="card-image">
@@ -1099,9 +1000,9 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-05-10
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1114,6 +1015,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1132,13 +1034,13 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/03/09/hadoop/">
+                <a href="/2023/03/13/python-pic/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Hadoop技术">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="Python(气温变化做图)">
                         
-                        <span class="card-title">Hadoop技术</span>
+                        <span class="card-title">Python(气温变化做图)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1149,14 +1051,14 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-13
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Hadoop%E6%8A%80%E6%9C%AF/" class="post-category">
-                                    Hadoop技术
+                            <a href="/categories/Python%E7%BC%96%E7%A8%8B/" class="post-category">
+                                    Python编程
                                 </a>
                             
                             
@@ -1166,8 +1068,8 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hadoop%E5%9F%BA%E7%A1%80/">
-                        <span class="chip bg-color">Hadoop基础</span>
+                    <a href="/tags/Python%E5%9F%BA%E7%A1%80/">
+                        <span class="chip bg-color">Python基础</span>
                     </a>
                     
                 </div>
