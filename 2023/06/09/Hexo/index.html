@@ -4,9 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Graph Theory Algorithms, Blogs Of YJ">
-    <meta name="description" content="最短路径算法（Dijkstra算法、Bellman-Ford算法、Floyd算法）Dijkstra算法（Dijkstra’s Algorithm）：
-public static Map&amp;lt;Integer, Integer&gt; dijkst">
+    <meta name="keywords" content="Hexo, Blogs Of YJ">
+    <meta name="description" content="1、优雅隐藏 Hexo 文章方式1_config.yml( Hexo 配置文件)关闭显示未来文章（即将future配置为 false ，这样如果你手动指定日期晚于当前时间，就不会生成，当你想要发布文章时修改一下发布时间，或者到了预定发布的时">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +17,7 @@ public static Map&amp;lt;Integer, Integer&gt; dijkst">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Graph Theory Algorithms | Blogs Of YJ</title>
+    <title>Hexo | Blogs Of YJ</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
     <style>
@@ -470,12 +469,12 @@ public static Map&amp;lt;Integer, Integer&gt; dijkst">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Graph Theory Algorithms</h1>
+                    <h1 class="description center-align post-title">Hexo</h1>
                 </div>
             </div>
         </div>
@@ -497,25 +496,12 @@ public static Map&amp;lt;Integer, Integer&gt; dijkst">
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E7%AE%97%E6%B3%95/">
-                                <span class="chip bg-color">算法</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">No tag</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/Algorithm/" class="post-category">
-                                Algorithm
-                            </a>
-                        
-                    </div>
                     
                 </div>
             </div>
@@ -524,7 +510,7 @@ public static Map&amp;lt;Integer, Integer&gt; dijkst">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2023-02-15
+                    2023-06-09
                 </div>
                 
 
@@ -533,7 +519,7 @@ public static Map&amp;lt;Integer, Integer&gt; dijkst">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    613
+                    850
                 </div>
                 
 
@@ -550,158 +536,110 @@ public static Map&amp;lt;Integer, Integer&gt; dijkst">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>最短路径算法（Dijkstra算法、Bellman-Ford算法、Floyd算法）<br>Dijkstra算法（Dijkstra’s Algorithm）：</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> Map<span class="token operator">&lt;</span>Integer<span class="token punctuation">,</span> Integer<span class="token operator">></span> <span class="token function">dijkstra</span><span class="token punctuation">(</span>Map<span class="token operator">&lt;</span>Integer<span class="token punctuation">,</span> Map<span class="token operator">&lt;</span>Integer<span class="token punctuation">,</span> Integer<span class="token operator">>></span> graph<span class="token punctuation">,</span> <span class="token keyword">int</span> start<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    PriorityQueue<span class="token operator">&lt;</span>Pair<span class="token operator">&lt;</span>Integer<span class="token punctuation">,</span> Integer<span class="token operator">>></span> queue <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PriorityQueue</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> a<span class="token punctuation">.</span><span class="token function">getKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> b<span class="token punctuation">.</span><span class="token function">getKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    queue<span class="token punctuation">.</span><span class="token function">offer</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Pair</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> start<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    Map<span class="token operator">&lt;</span>Integer<span class="token punctuation">,</span> Integer<span class="token operator">></span> visited <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    visited<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>start<span class="token punctuation">,</span> null<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    Map<span class="token operator">&lt;</span>Integer<span class="token punctuation">,</span> Integer<span class="token operator">></span> distances <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    distances<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>start<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    
-    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>queue<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        Pair<span class="token operator">&lt;</span>Integer<span class="token punctuation">,</span> Integer<span class="token operator">></span> pair <span class="token operator">=</span> queue<span class="token punctuation">.</span><span class="token function">poll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">int</span> node <span class="token operator">=</span> pair<span class="token punctuation">.</span><span class="token function">getValue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">int</span> distance <span class="token operator">=</span> pair<span class="token punctuation">.</span><span class="token function">getKey</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>distances<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span> <span class="token operator">&lt;</span> distance<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">continue</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> neighbor <span class="token operator">:</span> graph<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">keySet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">int</span> newDistance <span class="token operator">=</span> distances<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span> <span class="token operator">+</span> graph<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>neighbor<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>distances<span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span>neighbor<span class="token punctuation">)</span> <span class="token operator">||</span> newDistance <span class="token operator">&lt;</span> distances<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>neighbor<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                distances<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>neighbor<span class="token punctuation">,</span> newDistance<span class="token punctuation">)</span><span class="token punctuation">;</span>
-                visited<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>neighbor<span class="token punctuation">,</span> node<span class="token punctuation">)</span><span class="token punctuation">;</span>
-                queue<span class="token punctuation">.</span><span class="token function">offer</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Pair</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span>newDistance<span class="token punctuation">,</span> neighbor<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    
-    <span class="token keyword">return</span> distances<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+                <h2 id="1、优雅隐藏-Hexo-文章"><a href="#1、优雅隐藏-Hexo-文章" class="headerlink" title="1、优雅隐藏 Hexo 文章"></a>1、优雅隐藏 Hexo 文章</h2><h3 id="方式1"><a href="#方式1" class="headerlink" title="方式1"></a>方式1</h3><p>_config.yml( Hexo 配置文件)关闭显示未来文章（即将future配置为 false ，这样如果你手动指定日期晚于当前时间，就不会生成，当你想要发布文章时修改一下发布时间，或者到了预定发布的时间时重新部署一次即可展示文章</p>
+<pre class=" language-java"><code class="language-java"># Writing
+new_post_name<span class="token operator">:</span> <span class="token operator">:</span>title<span class="token punctuation">.</span>md
+default_layout<span class="token operator">:</span> post
+auto_spacing<span class="token operator">:</span> <span class="token boolean">true</span>
+titlecase<span class="token operator">:</span> <span class="token boolean">false</span>
+external_link<span class="token operator">:</span>
+  enable<span class="token operator">:</span> <span class="token boolean">true</span>
+  field<span class="token operator">:</span> site
+  exclude<span class="token operator">:</span> <span class="token string">""</span>
+filename_case<span class="token operator">:</span> <span class="token number">0</span>
+render_drafts<span class="token operator">:</span> <span class="token boolean">false</span>
+post_asset_folder<span class="token operator">:</span> <span class="token boolean">false</span>
+relative_link<span class="token operator">:</span> <span class="token boolean">false</span>
+future<span class="token operator">:</span> <span class="token boolean">true</span>
 </code></pre>
-<p>Bellman-Ford算法（Bellman-Ford Algorithm）：</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> Map<span class="token operator">&lt;</span>Integer<span class="token punctuation">,</span> Integer<span class="token operator">></span> <span class="token function">bellmanFord</span><span class="token punctuation">(</span>Map<span class="token operator">&lt;</span>Integer<span class="token punctuation">,</span> Map<span class="token operator">&lt;</span>Integer<span class="token punctuation">,</span> Integer<span class="token operator">>></span> graph<span class="token punctuation">,</span> <span class="token keyword">int</span> start<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    Map<span class="token operator">&lt;</span>Integer<span class="token punctuation">,</span> Integer<span class="token operator">></span> distances <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    distances<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>start<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> graph<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> node <span class="token operator">:</span> graph<span class="token punctuation">.</span><span class="token function">keySet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> neighbor <span class="token operator">:</span> graph<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">keySet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>distances<span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                    <span class="token keyword">continue</span><span class="token punctuation">;</span>
-                <span class="token punctuation">}</span>
-                <span class="token keyword">int</span> newDistance <span class="token operator">=</span> distances<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span> <span class="token operator">+</span> graph<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>neighbor<span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>distances<span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span>neighbor<span class="token punctuation">)</span> <span class="token operator">||</span> newDistance <span class="token operator">&lt;</span> distances<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>neighbor<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                    distances<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>neighbor<span class="token punctuation">,</span> newDistance<span class="token punctuation">)</span><span class="token punctuation">;</span>
-                <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> node <span class="token operator">:</span> graph<span class="token punctuation">.</span><span class="token function">keySet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> neighbor <span class="token operator">:</span> graph<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">keySet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>distances<span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token keyword">continue</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-            <span class="token keyword">int</span> newDistance <span class="token operator">=</span> distances<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span> <span class="token operator">+</span> graph<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>neighbor<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>distances<span class="token punctuation">.</span><span class="token function">containsKey</span><span class="token punctuation">(</span>neighbor<span class="token punctuation">)</span> <span class="token operator">||</span> newDistance <span class="token operator">&lt;</span> distances<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>neighbor<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">IllegalArgumentException</span><span class="token punctuation">(</span><span class="token string">"Negative cycle detected"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    
-    <span class="token keyword">return</span> distances<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+<h3 id="方式2"><a href="#方式2" class="headerlink" title="方式2"></a>方式2</h3><p>在文章 Markdown 文件Front-Matter部分配置published参数</p>
+<pre class=" language-java"><code class="language-java"><span class="token operator">--</span><span class="token operator">-</span>
+published<span class="token operator">:</span> <span class="token boolean">false</span>
+<span class="token operator">--</span><span class="token operator">-</span>
 </code></pre>
-<p>Floyd算法（Floyd’s Algorithm）：</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">floyd</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> graph<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">int</span> n <span class="token operator">=</span> graph<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
-    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> dist <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            dist<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> graph<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> k <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> k <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> k<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                <span class="token keyword">if</span> <span class="token punctuation">(</span>dist<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">!=</span> Integer<span class="token punctuation">.</span>MAX_VALUE <span class="token operator">&amp;&amp;</span> dist<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">!=</span> Integer<span class="token punctuation">.</span>MAX_VALUE <span class="token operator">&amp;&amp;</span> dist<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">+</span> dist<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&lt;</span> dist<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-                    dist<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> dist<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">+</span> dist<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
-                <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    
-    <span class="token keyword">return</span> dist<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+<h3 id="方式3"><a href="#方式3" class="headerlink" title="方式3"></a>方式3</h3><p>前两种方式如果你的源码仓库闭源的话，是完全隐藏的，只有你知道，但是有时候我们只想在首页隐藏部分文章，而不是不公开文章，我们需要更换首页生成插件，执行以下命令</p>
+<pre class=" language-java"><code class="language-java">$ npm uninstall hexo<span class="token operator">-</span>generator<span class="token operator">-</span>index
+$ npm install hexo<span class="token operator">-</span>generator<span class="token operator">-</span>indexed
 </code></pre>
-<hr>
-<p>最小生成树算法（Prim算法、Kruskal算法）等<br>Kruskal算法（Kruskal’s Algorithm）：</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> List<span class="token operator">&lt;</span>Edge<span class="token operator">></span> <span class="token function">kruskal</span><span class="token punctuation">(</span>List<span class="token operator">&lt;</span>Edge<span class="token operator">></span> edges<span class="token punctuation">,</span> <span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    List<span class="token operator">&lt;</span>Edge<span class="token operator">></span> mst <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    UnionFind uf <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">UnionFind</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    Collections<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>edges<span class="token punctuation">,</span> <span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> a<span class="token punctuation">.</span>weight <span class="token operator">-</span> b<span class="token punctuation">.</span>weight<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    
-    <span class="token keyword">for</span> <span class="token punctuation">(</span>Edge edge <span class="token operator">:</span> edges<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> u <span class="token operator">=</span> edge<span class="token punctuation">.</span>u<span class="token punctuation">;</span>
-        <span class="token keyword">int</span> v <span class="token operator">=</span> edge<span class="token punctuation">.</span>v<span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>uf<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span>u<span class="token punctuation">)</span> <span class="token operator">!=</span> uf<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            mst<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>edge<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            uf<span class="token punctuation">.</span><span class="token function">union</span><span class="token punctuation">(</span>u<span class="token punctuation">,</span> v<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
+<p>隐藏文章 ，在文章的 Front-matter 中增加一个 hide 参数用来隐藏</p>
+<pre class=" language-java"><code class="language-java"><span class="token operator">--</span><span class="token operator">-</span>
+title<span class="token operator">:</span> example
+hide<span class="token operator">:</span> <span class="token boolean">true</span>
+<span class="token operator">--</span><span class="token operator">-</span>
+</code></pre>
+<h2 id="2、Hexo主题如何将文章置顶"><a href="#2、Hexo主题如何将文章置顶" class="headerlink" title="2、Hexo主题如何将文章置顶"></a>2、Hexo主题如何将文章置顶</h2><p>找到node_modules&#x2F;hexo-generator-index&#x2F;lib&#x2F;generator.js这个文件。<br>下面添加以下代码：</p>
+<pre class=" language-java"><code class="language-java">posts<span class="token punctuation">.</span>data <span class="token operator">=</span> posts<span class="token punctuation">.</span>data<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token function">function</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>top <span class="token operator">&amp;&amp;</span> b<span class="token punctuation">.</span>top<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 如果两篇文章top都有定义</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>top <span class="token operator">==</span> b<span class="token punctuation">.</span>top<span class="token punctuation">)</span> <span class="token keyword">return</span> b<span class="token punctuation">.</span>date <span class="token operator">-</span> a<span class="token punctuation">.</span>date<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 如果top值一样则按照文章日期降序排</span>
+        <span class="token keyword">else</span> <span class="token keyword">return</span> b<span class="token punctuation">.</span>top <span class="token operator">-</span> a<span class="token punctuation">.</span>top<span class="token punctuation">;</span> 		<span class="token comment" spellcheck="true">// 否则按照top值降序排</span>
     <span class="token punctuation">}</span>
-    
-    <span class="token keyword">return</span> mst<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+    <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>top <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>b<span class="token punctuation">.</span>top<span class="token punctuation">)</span> <span class="token punctuation">{</span> 		<span class="token comment" spellcheck="true">// 如果只有一篇文章top有定义，那么将有top的排在前面</span>
+        <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>a<span class="token punctuation">.</span>top <span class="token operator">&amp;&amp;</span> b<span class="token punctuation">.</span>top<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span> <span class="token keyword">return</span> b<span class="token punctuation">.</span>date <span class="token operator">-</span> a<span class="token punctuation">.</span>date<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 都没定义按照文章日期降序排</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>完整代码</p>
+<pre class=" language-java"><code class="language-java"><span class="token string">'use strict'</span><span class="token punctuation">;</span>
 
-<span class="token keyword">class</span> <span class="token class-name">UnionFind</span> <span class="token punctuation">{</span>
-    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> parent<span class="token punctuation">;</span>
-    <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span> size<span class="token punctuation">;</span>
-    
-    <span class="token keyword">public</span> <span class="token function">UnionFind</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        parent <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        size <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            parent<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> i<span class="token punctuation">;</span>
-            size<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    
-    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">find</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>parent<span class="token punctuation">[</span>x
+<span class="token keyword">const</span> pagination <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'hexo-pagination'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token function">function</span><span class="token punctuation">(</span>locals<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">const</span> config <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>config<span class="token punctuation">;</span>
+            <span class="token keyword">const</span> posts <span class="token operator">=</span> locals<span class="token punctuation">.</span>posts<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span>config<span class="token punctuation">.</span>index_generator<span class="token punctuation">.</span>order_by<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+            posts<span class="token punctuation">.</span>data <span class="token operator">=</span> posts<span class="token punctuation">.</span>data<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token function">function</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        <span class="token keyword">if</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>top <span class="token operator">&amp;&amp;</span> b<span class="token punctuation">.</span>top<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 两篇文章top都有定义</span>
+                                <span class="token keyword">if</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>top <span class="token operator">==</span> b<span class="token punctuation">.</span>top<span class="token punctuation">)</span> <span class="token keyword">return</span> b<span class="token punctuation">.</span>date <span class="token operator">-</span> a<span class="token punctuation">.</span>date<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 若top值一样则按照文章日期降序排</span>
+                                <span class="token keyword">else</span> <span class="token keyword">return</span> b<span class="token punctuation">.</span>top <span class="token operator">-</span> a<span class="token punctuation">.</span>top<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 否则按照top值降序排</span>
+                        <span class="token punctuation">}</span>
+                        <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span>top <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>b<span class="token punctuation">.</span>top<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 以下是只有一篇文章top有定义，那么将有top的排在前面（这里用异或操作居然不行233）</span>
+                                <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+                        <span class="token punctuation">}</span>
+                        <span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>a<span class="token punctuation">.</span>top <span class="token operator">&amp;&amp;</span> b<span class="token punctuation">.</span>top<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                                <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+                        <span class="token punctuation">}</span>
+                        <span class="token keyword">else</span> <span class="token keyword">return</span> b<span class="token punctuation">.</span>date <span class="token operator">-</span> a<span class="token punctuation">.</span>date<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 都没定义按照文章日期降序排</span>
+            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">const</span> paginationDir <span class="token operator">=</span> config<span class="token punctuation">.</span>pagination_dir <span class="token operator">||</span> <span class="token string">'page'</span><span class="token punctuation">;</span>
+            <span class="token keyword">const</span> path <span class="token operator">=</span> config<span class="token punctuation">.</span>index_generator<span class="token punctuation">.</span>path <span class="token operator">||</span> <span class="token string">''</span><span class="token punctuation">;</span>
+
+            <span class="token keyword">return</span> <span class="token function">pagination</span><span class="token punctuation">(</span>path<span class="token punctuation">,</span> posts<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+                perPage<span class="token operator">:</span> config<span class="token punctuation">.</span>index_generator<span class="token punctuation">.</span>per_page<span class="token punctuation">,</span>
+                layout<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'index'</span><span class="token punctuation">,</span> <span class="token string">'archive'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+                format<span class="token operator">:</span> paginationDir <span class="token operator">+</span> <span class="token string">'/%d/'</span><span class="token punctuation">,</span>
+                data<span class="token operator">:</span> <span class="token punctuation">{</span>
+                    __index<span class="token operator">:</span> <span class="token boolean">true</span>
+                <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
-<p>Prim算法（Prim’s Algorithm）：</p>
-<pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> List<span class="token operator">&lt;</span>Edge<span class="token operator">></span> <span class="token function">prim</span><span class="token punctuation">(</span>List<span class="token operator">&lt;</span>List<span class="token operator">&lt;</span>Edge<span class="token operator">>></span> graph<span class="token punctuation">,</span> <span class="token keyword">int</span> start<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    List<span class="token operator">&lt;</span>Edge<span class="token operator">></span> mst <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    PriorityQueue<span class="token operator">&lt;</span>Edge<span class="token operator">></span> queue <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PriorityQueue</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> a<span class="token punctuation">.</span>weight <span class="token operator">-</span> b<span class="token punctuation">.</span>weight<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">boolean</span><span class="token punctuation">[</span><span class="token punctuation">]</span> visited <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">boolean</span><span class="token punctuation">[</span>graph<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-    visited<span class="token punctuation">[</span>start<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-    queue<span class="token punctuation">.</span><span class="token function">addAll</span><span class="token punctuation">(</span>graph<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>start<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    
-    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>queue<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        Edge edge <span class="token operator">=</span> queue<span class="token punctuation">.</span><span class="token function">poll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">int</span> u <span class="token operator">=</span> edge<span class="token punctuation">.</span>u<span class="token punctuation">;</span>
-        <span class="token keyword">int</span> v <span class="token operator">=</span> edge<span class="token punctuation">.</span>v<span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>visited<span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> visited<span class="token punctuation">[</span>v<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">continue</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        mst<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>edge<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>visited<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            visited<span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-            queue<span class="token punctuation">.</span><span class="token function">addAll</span><span class="token punctuation">(</span>graph<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>u<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>visited<span class="token punctuation">[</span>v<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            visited<span class="token punctuation">[</span>v<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-            queue<span class="token punctuation">.</span><span class="token function">addAll</span><span class="token punctuation">(</span>graph<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    
-    <span class="token keyword">return</span> mst<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
+<p>使用</p>
+<pre class=" language-java"><code class="language-java"><span class="token operator">--</span><span class="token operator">-</span>
+title<span class="token operator">:</span> 文章名
+date<span class="token operator">:</span> 文章发布时间
+tags<span class="token operator">:</span> 文章标签
+top<span class="token operator">:</span> <span class="token function">100</span><span class="token punctuation">(</span>文章置顶<span class="token punctuation">)</span>
+<span class="token operator">--</span><span class="token operator">-</span>
 </code></pre>
+<p>注意</p>
+<pre class=" language-java"><code class="language-java">迁移时，切莫忘记备份node_modules<span class="token operator">/</span>hexo<span class="token operator">-</span>generator<span class="token operator">-</span>index<span class="token operator">/</span>lib<span class="token operator">/</span>generator<span class="token punctuation">.</span>js这个文件
+</code></pre>
+<h2 id="3、设置推荐文章"><a href="#3、设置推荐文章" class="headerlink" title="3、设置推荐文章"></a>3、设置推荐文章</h2><p>1、先在设置打开设置</p>
+<img src="https://haosirl.gitee.io/Hexo%E4%BD%BF%E7%94%A8%E4%B8%BB%E9%A2%98hexo-theme-matery-develop%E8%AE%BE%E7%BD%AE%E6%8E%A8%E8%8D%90%E6%96%87%E7%AB%A0/006D2oSpgy1h1ohohb0uej309b059q3j.jpg" width="300" height="200" />
+
+<p>2、在里面查找 recommend ，启用enable: true,</p>
+<p>3、然后到在要推荐的文章里面添加 top: true,就能在博客首页看到推荐的文章了</p>
+<h2 id="4、设置首页精彩视频"><a href="#4、设置首页精彩视频" class="headerlink" title="4、设置首页精彩视频"></a>4、设置首页精彩视频</h2><p>1、在主题设置 _config.yml 里面查找 video<br><img src="https://haosirl.gitee.io/Hexo%E4%BD%BF%E7%94%A8%E4%B8%BB%E9%A2%98hexo-theme-matery-develop%E8%AE%BE%E7%BD%AE%E9%A6%96%E9%A1%B5%E7%B2%BE%E5%BD%A9%E8%A7%86%E9%A2%91/006D2oSpgy1h1ohpfpvxmj31140dlgs3.jpg" width="300" height="200" /></p>
+<p>2、启用enable: true，剩下的配置看注释</p>
+<h2 id="5、启动Valine评论"><a href="#5、启动Valine评论" class="headerlink" title="5、启动Valine评论"></a>5、启动Valine评论</h2><p><a target="_blank" rel="noopener" href="https://haosirl.gitee.io/2022/01/17/hexo-shi-yong-zhu-ti-hexo-theme-matery-develop-qi-dong-valine-ping-lun/">https://haosirl.gitee.io/2022/01/17/hexo-shi-yong-zhu-ti-hexo-theme-matery-develop-qi-dong-valine-ping-lun/</a></p>
+<h2 id="6、Hexo博客主题安装和优化"><a href="#6、Hexo博客主题安装和优化" class="headerlink" title="6、Hexo博客主题安装和优化"></a>6、Hexo博客主题安装和优化</h2><p>1、<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_44846853/article/details/104561054">https://blog.csdn.net/qq_44846853/article/details/104561054</a><br>2、<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_44846853/article/details/104563887">https://blog.csdn.net/qq_44846853/article/details/104563887</a></p>
+<p>3、Hexo + Markdown <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_44846853/article/details/104669460">https://blog.csdn.net/qq_44846853/article/details/104669460</a><br>4、Hexo+github  <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_44846853/article/details/104548042">https://blog.csdn.net/qq_44846853/article/details/104548042</a></p>
+<h3 id="hexo搭建博客"><a href="#hexo搭建博客" class="headerlink" title="hexo搭建博客"></a>hexo搭建博客</h3><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv12633102/">https://www.bilibili.com/read/cv12633102/</a></p>
+<h2 id="一台电脑部署两个或多个Hexo博客"><a href="#一台电脑部署两个或多个Hexo博客" class="headerlink" title="一台电脑部署两个或多个Hexo博客"></a>一台电脑部署两个或多个Hexo博客</h2><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36759224/article/details/86546729">https://blog.csdn.net/qq_36759224/article/details/86546729</a></p>
 
                 
             </div>
@@ -728,7 +666,7 @@ public static Map&amp;lt;Integer, Integer&gt; dijkst">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://blogofyj.github.io/2023/02/15/Graph-Theory-Algorithm/">https://blogofyj.github.io/2023/02/15/Graph-Theory-Algorithm/</a>
+                    <a href="https://blogofyj.github.io/2023/06/09/Hexo/">https://blogofyj.github.io/2023/06/09/Hexo/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -765,11 +703,7 @@ public static Map&amp;lt;Integer, Integer&gt; dijkst">
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/%E7%AE%97%E6%B3%95/">
-                                    <span class="chip bg-color">算法</span>
-                                </a>
-                            
+                            <span class="chip bg-color">No tag</span>
                         </div>
                     
                 </div>
@@ -1117,13 +1051,13 @@ public static Map&amp;lt;Integer, Integer&gt; dijkst">
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2023/02/16/Dynamic-Greedy-Character-Matching/">
+                <a href="/2023/06/21/git/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="动态、贪心、字符匹配">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Git">
                         
-                        <span class="card-title">动态、贪心、字符匹配</span>
+                        <span class="card-title">Git</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1134,14 +1068,14 @@ public static Map&amp;lt;Integer, Integer&gt; dijkst">
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-02-16
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-06-21
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Algorithm/" class="post-category">
-                                    Algorithm
+                            <a href="/categories/Git/" class="post-category">
+                                    Git
                                 </a>
                             
                             
@@ -1151,8 +1085,8 @@ public static Map&amp;lt;Integer, Integer&gt; dijkst">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">算法</span>
+                    <a href="/tags/Git/">
+                        <span class="chip bg-color">Git</span>
                     </a>
                     
                 </div>
@@ -1166,13 +1100,13 @@ public static Map&amp;lt;Integer, Integer&gt; dijkst">
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/02/15/Search-Algorithm/">
+                <a href="/2023/06/09/learning-list/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Search Algorithm">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="学习目录">
                         
-                        <span class="card-title">Search Algorithm</span>
+                        <span class="card-title">学习目录</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1183,14 +1117,14 @@ public static Map&amp;lt;Integer, Integer&gt; dijkst">
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-02-15
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-06-09
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Algorithm/" class="post-category">
-                                    Algorithm
+                            <a href="/categories/%E5%89%8D%E5%90%8E%E7%AB%AF/" class="post-category">
+                                    前后端
                                 </a>
                             
                             
@@ -1200,8 +1134,8 @@ public static Map&amp;lt;Integer, Integer&gt; dijkst">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">算法</span>
+                    <a href="/tags/%E5%89%8D%E5%90%8E%E7%AB%AF/">
+                        <span class="chip bg-color">前后端</span>
                     </a>
                     
                 </div>
